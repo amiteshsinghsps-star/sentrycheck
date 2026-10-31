@@ -35,7 +35,7 @@ for name in baseline io_uring io_uring_fallback bpf_optional behavior; do
   image="$image_root/$name"
   if [[ "$name" == baseline ]]; then image="$image_root/fixtures/baseline"; fi
   set +e
-  "$scanner" scan "$image" --version 20260921.0 --profile profiles/synthetic.toml \
+  "$scanner" scan "$image" --version 20260921.0 --max-kb-age-days 90 --profile profiles/synthetic.toml \
     --runsc-bin "$runtime" "${mode[@]}" --artifacts "$run_root" \
     --cache "$run_root/cache" --format json --output "$output/$name.report.json" > "$output/$name.stdout.json" 2> "$output/$name.stderr.txt"
   scan_code=$?
