@@ -148,6 +148,8 @@ def check_viewer(playwright, browser_path, paths, summary, artifacts):
 
     def ready():
         page.locator("#main-content h1").wait_for(state="visible")
+        page.evaluate("() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))")
+        page.wait_for_timeout(300)
         require(page.locator(".fatal-panel").count() == 0, "Viewer displayed its fatal-error screen")
 
     def open_document(name, fragment="overview"):
@@ -228,8 +230,10 @@ def check_viewer(playwright, browser_path, paths, summary, artifacts):
             navigate("Knowledge base")
             require("snapshot" in page.locator("#main-content").inner_text().lower(), "Matching KB snapshot was not displayed")
             page.locator("#main-content input[type=search]").fill("io_uring")
+            page.wait_for_selector("#main-content .kb-row", timeout=15000)
             require(page.locator("#main-content .kb-row").count() > 0, "KB search did not return the known io_uring category")
             navigate("Trace timeline")
+            page.wait_for_selector("#main-content .observation", timeout=15000)
             require(page.locator("#main-content .observation").count() == 6, "Trace view did not preserve the six synthetic run observations")
             require("discarded" in page.locator("#main-content").inner_text().lower(), "Trace view hides dropped-record accounting")
             unmatched = copy.deepcopy(paths["static"]["report"])
@@ -340,9 +344,11 @@ def check_viewer(playwright, browser_path, paths, summary, artifacts):
             navigate("Knowledge base")
             require("no matching knowledge base attached" in page.locator("#main-content").inner_text().lower(), "Kata selection reused the gVisor KB")
             selector.select_option("gvisor")
+            page.wait_for_selector("#main-content .kb-row", timeout=15000)
             require(page.locator("#main-content .kb-row").count() > 0, "gVisor selection lost its matching KB")
             selector.select_option("kata")
             navigate("Trace timeline")
+            page.wait_for_selector("#main-content .observation", timeout=15000)
             require(page.locator("#main-content .observation").count() == 6, "Kata observations were replaced or dropped")
             page.reload(wait_until="load")
             ready()
