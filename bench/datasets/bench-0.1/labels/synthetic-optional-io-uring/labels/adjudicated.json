@@ -1,0 +1,80 @@
+{
+  "adjudicator": {
+    "confidence": "high",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "both raters agree independently"
+  },
+  "case_id": "synthetic-optional-io-uring",
+  "class": "tolerated",
+  "confidence": "high",
+  "evidence": [
+    "io_uring_setup: support=partial gaps=['gap-gvisor-amd64-io-uring-setup']",
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-synthetic-optional-io-uring-bm04-20261031T105739Z)",
+    "sandbox trace refused io_uring_setup=errno38, rseq=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/report.json",
+      "sha256": "sha256:8c93aa54159c28d08f8ddaf5f3873f0d3357a7b5917d7710878ce8c24caec111"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/traces/native-0-guest.trace",
+      "sha256": "sha256:fe1c9b6e9773deb4839de6182aabbed11dab64e0cc33c8b5a3cf001ddc7e344d"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/traces/native-1-guest.trace",
+      "sha256": "sha256:d12ab3c8b9bb81bcd9f210ac226aad787c6065476a297d2bf3fa85303b657361"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/traces/native-2-guest.trace",
+      "sha256": "sha256:e9478014890ad49b229ee210cc01b7a025a970ea5fd31802c8a8375c0d7936f5"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:705c75bdc6926e077bfe4459f75c934adec3f449553599e77bb4eb100dd48f16"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:67f8cdc16a45777572f5e5fbf6e6ad00f15dff2504dab0bfcc893e5f0e88be91"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:db051d6d2520f73a6f3789a54f909d7021a0e994adc7f62c9676506feb60fda9"
+    }
+  ],
+  "rater_a": {
+    "confidence": "medium",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "the workload declares a fallback for the unsupported interface, so degraded paths are expected to complete"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "io_uring_setup, rseq was refused under the sandbox and not on native, yet the workload still exited 0, which is a handled fallback"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

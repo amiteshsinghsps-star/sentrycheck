@@ -1,0 +1,170 @@
+{
+  "hostname": "sentrycheck",
+  "linux": {
+    "maskedPaths": [
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/timer_list",
+      "/proc/sched_debug",
+      "/sys/firmware"
+    ],
+    "namespaces": [
+      {
+        "type": "pid"
+      },
+      {
+        "type": "network"
+      },
+      {
+        "type": "ipc"
+      },
+      {
+        "type": "uts"
+      },
+      {
+        "type": "mount"
+      }
+    ],
+    "readonlyPaths": [
+      "/proc/sys",
+      "/proc/sysrq-trigger",
+      "/proc/irq",
+      "/proc/bus"
+    ],
+    "resources": {
+      "cpu": {
+        "period": 100000,
+        "quota": 100000
+      },
+      "memory": {
+        "limit": 536870912
+      },
+      "pids": {
+        "limit": 128
+      }
+    }
+  },
+  "mounts": [
+    {
+      "destination": "/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ],
+      "source": "proc",
+      "type": "proc"
+    },
+    {
+      "destination": "/dev",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/dev/pts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620"
+      ],
+      "source": "devpts",
+      "type": "devpts"
+    },
+    {
+      "destination": "/dev/shm",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "mode=1777",
+        "size=65536k"
+      ],
+      "source": "shm",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/tmp",
+      "options": [
+        "nosuid",
+        "nodev",
+        "mode=1777",
+        "size=134217728"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/run",
+      "options": [
+        "nosuid",
+        "nodev",
+        "mode=755",
+        "size=16777216"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    }
+  ],
+  "ociVersion": "1.1.0",
+  "process": {
+    "args": [
+      "/__sentrycheck/lib/ld-linux-x86-64.so.2",
+      "--library-path",
+      "/__sentrycheck/lib",
+      "/__sentrycheck/strace",
+      "-f",
+      "-qq",
+      "-s",
+      "256",
+      "-o",
+      "/__sentrycheck/native.trace",
+      "--",
+      "/bin/sh",
+      "-ec",
+      "d=$(mktemp -d /tmp/sentrycheck-pg.XXXXXX); if test -f /seed/PG_VERSION; then cp -R /seed/. \"$d\"; chmod 700 \"$d\"; else initdb -D \"$d\" -U sentrycheck -A trust >/tmp/initdb.log 2>&1 || { cat /tmp/initdb.log; exit 41; }; fi; trap 'pg_ctl -D \"$d\" -m immediate stop >/dev/null 2>&1 || true' EXIT; pg_ctl -D \"$d\" -o '-c io_method=io_uring -c listen_addresses= -c unix_socket_directories=/tmp' -w start >/tmp/start.log 2>&1 || { cat /tmp/start.log; exit 42; }; value=$(psql -h /tmp -d postgres -v ON_ERROR_STOP=1 -Atqc 'CREATE TABLE sentrycheck_t AS SELECT i, repeat(md5(i::text), 100) AS v FROM generate_series(1,10000) i; CHECKPOINT; SELECT sum(i) FROM sentrycheck_t;'); test \"$value\" = 50005000; printf '%s\\n' \"$value\""
+    ],
+    "capabilities": {
+      "ambient": [],
+      "bounding": [],
+      "effective": [],
+      "inheritable": [],
+      "permitted": []
+    },
+    "cwd": "/",
+    "env": [
+      "LC_ALL=C",
+      "PATH=/opt/pgsql/bin:/usr/bin:/bin",
+      "PGUSER=sentrycheck"
+    ],
+    "noNewPrivileges": true,
+    "rlimits": [
+      {
+        "hard": 1024,
+        "soft": 1024,
+        "type": "RLIMIT_NOFILE"
+      },
+      {
+        "hard": 134217728,
+        "soft": 134217728,
+        "type": "RLIMIT_FSIZE"
+      }
+    ],
+    "terminal": false,
+    "user": {
+      "gid": 10001,
+      "uid": 10001
+    }
+  },
+  "root": {
+    "path": "rootfs",
+    "readonly": false
+  }
+}

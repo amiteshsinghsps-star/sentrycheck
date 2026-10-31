@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103806Z/logs/preflight.json",
+        "sha256": "sha256:47957d2b2395b9e20c874797511df4dc77354830f2296cc1a3ff6c3dfeb13a69"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103806Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103806Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103806Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103806Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:051569bda6ee287c962078db2fbb17a5830416a9ec3063f84a551241b829efc2"
+      }
+    ],
+    "outputs": [],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103806Z/report.json",
+      "sha256": "sha256:7b3ef32238609d81a56f6e2624c5020dc2de3e0dae017dcc6772244f2d97609c"
+    },
+    "traces": []
+  },
+  "case_id": "registry-python",
+  "ended_at": "2026-10-31T10:38:06Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "repo:bench/.tmp"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; static-only scan; exit=2; max_kb_age_days=400; order=abba-block3; report_status=incomplete",
+  "order_index": 0,
+  "order_pattern": "abba-block3",
+  "predicted": {
+    "class": "indeterminate",
+    "complete": false,
+    "finding_severities": [],
+    "incomplete_reason_codes": [
+      "static-only"
+    ],
+    "status": "incomplete",
+    "tier": "static-only"
+  },
+  "repetitions": {
+    "native_durations_ms": [],
+    "native_exits": [],
+    "sandbox_durations_ms": [],
+    "sandbox_exits": []
+  },
+  "resources": {
+    "disk_mb": 4.22583,
+    "peak_rss_mb": null
+  },
+  "run_id": "r-registry-python-bm04-20261031T103806Z",
+  "runtime": {
+    "binary_sha256": null,
+    "name": "gvisor",
+    "platform": null,
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:37:06Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 59576,
+    "total": 59576
+  },
+  "tool": {
+    "binary_sha256": "sha256:407337980e8cf119441bd33b7ffbac4e1624b0e7f34aafe81d625b3944005775",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "0.5.0"
+  },
+  "valid": true
+}

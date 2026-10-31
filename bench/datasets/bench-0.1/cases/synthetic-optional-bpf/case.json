@@ -1,0 +1,50 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "synthetic-optional-bpf",
+  "expected_interfaces": [
+    "bpf"
+  ],
+  "group": "synthetic",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+    "layer_digests": [
+      "sha256:8849ebdf0461719d99979a6ef381296be761074ae53d8852d5cac7dfdfeb29bc"
+    ],
+    "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+    "local_path": "artifacts/live-images/bpf_optional",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": null,
+    "source_url": null
+  },
+  "label": null,
+  "notes": "Optional BPF probe; completion is asserted, unavailability is tolerated.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout artifacts/live-images/bpf_optional (index artifacts/live-images/bpf_optional/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/synthetic.toml",
+    "sha256": "sha256:e25a228effa5bb22c53a663f39a9f3f43177dbc4c7a8881583132921e571ec2f"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "validation",
+  "suites": [
+    "BM-01",
+    "BM-04",
+    "BM-14"
+  ],
+  "tags": [
+    "ebpf",
+    "optional"
+  ]
+}

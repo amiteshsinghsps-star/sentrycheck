@@ -1,0 +1,68 @@
+{
+  "architecture": "x86_64",
+  "clock": {
+    "synced": true,
+    "timezone": "UTC",
+    "unix_now": 1793439579
+  },
+  "cpu": {
+    "cores": 12,
+    "governor": null,
+    "model": "13th Gen Intel(R) Core(TM) i5-13420H",
+    "pinning": null,
+    "smt": "smt",
+    "threads_per_core": null,
+    "turbo": null
+  },
+  "host_id": "hwsl2-1",
+  "host_load_controlled": false,
+  "kernel": "Linux #1 SMP PREEMPT_DYNAMIC Tue Oct  6 19:13:07 UTC 2026",
+  "load_average": {
+    "fifteen": 0.045,
+    "five": 0.136,
+    "one": 0.477
+  },
+  "memory": {
+    "swap": null,
+    "total_mb": 7758,
+    "transparent_hugepage": "always [madvise] never"
+  },
+  "network": null,
+  "notes": "cpufreq sysfs absent: CPU frequency governor not controllable/observable (typical under WSL2 or a cloud VM) topology=0-1;10-11;2-3;4-5;6-7;8-9",
+  "numa": "1",
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.4 LTS",
+  "platform": "Linux",
+  "recorded_at": "2026-10-31T09:39:39Z",
+  "schema_version": "1.0",
+  "storage": {
+    "device": "/dev/sdd",
+    "filesystem": "ext4",
+    "free_mb": 974310,
+    "work_root": "/home/amitesh/bench-work"
+  },
+  "tools": [
+    {
+      "name": "runsc",
+      "path": "/mnt/c/Users/vijay/OneDrive/Desktop/game/.cache/linux/bin/runsc",
+      "sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+      "version": "runsc version release-20260921.0"
+    },
+    {
+      "name": "runc",
+      "path": "/usr/sbin/runc",
+      "sha256": "sha256:bdce4d45b2dd217491db8a98c8484b161e225ce49c15ebc1ba42077fb7c07d50",
+      "version": "runc version 1.3.4-0ubuntu1~24.04.1"
+    },
+    {
+      "name": "strace",
+      "path": "/usr/bin/strace",
+      "sha256": "sha256:28f957c227012de0b18d1bd7fff2d396cb693ea60ed8013be68de071e84b5001",
+      "version": "strace -- version 6.8"
+    }
+  ],
+  "virtualization": {
+    "is_wsl": true,
+    "nested_kvm": true,
+    "provider": null
+  }
+}

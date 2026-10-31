@@ -1,0 +1,26 @@
+{
+  "arm": "B0_naive",
+  "case_id": "baseline-go",
+  "class": "hard-failure",
+  "correct": false,
+  "gold": "tolerated",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "flagged": [
+      "arch_prctl",
+      "clone",
+      "futex",
+      "madvise",
+      "prctl",
+      "sched_getaffinity"
+    ],
+    "reached_syscalls": 33,
+    "runtime": "2026-09-26/gvisor-20260921.0"
+  },
+  "rule": "flag the workload if any reached syscall is not fully implemented",
+  "run_id": "r-baseline-go-bm04-20261031T102739Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/report.json",
+  "source_sha256": "sha256:3f83740263e5a952d9e42315650618e0a1944c50f546f05cfb603573e5e9b9b4",
+  "suite": "BM-04",
+  "tool_prediction": "compatible"
+}

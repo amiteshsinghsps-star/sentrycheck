@@ -1,0 +1,166 @@
+{
+  "hostname": "sentrycheck",
+  "linux": {
+    "maskedPaths": [
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/timer_list",
+      "/proc/sched_debug",
+      "/sys/firmware"
+    ],
+    "namespaces": [
+      {
+        "type": "pid"
+      },
+      {
+        "type": "network"
+      },
+      {
+        "type": "ipc"
+      },
+      {
+        "type": "uts"
+      },
+      {
+        "type": "mount"
+      }
+    ],
+    "readonlyPaths": [
+      "/proc/sys",
+      "/proc/sysrq-trigger",
+      "/proc/irq",
+      "/proc/bus"
+    ],
+    "resources": {
+      "cpu": {
+        "period": 100000,
+        "quota": 100000
+      },
+      "memory": {
+        "limit": 536870912
+      },
+      "pids": {
+        "limit": 128
+      }
+    }
+  },
+  "mounts": [
+    {
+      "destination": "/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ],
+      "source": "proc",
+      "type": "proc"
+    },
+    {
+      "destination": "/dev",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/dev/pts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620"
+      ],
+      "source": "devpts",
+      "type": "devpts"
+    },
+    {
+      "destination": "/dev/shm",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "mode=1777",
+        "size=65536k"
+      ],
+      "source": "shm",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/tmp",
+      "options": [
+        "nosuid",
+        "nodev",
+        "mode=1777",
+        "size=134217728"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/run",
+      "options": [
+        "nosuid",
+        "nodev",
+        "mode=755",
+        "size=16777216"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    }
+  ],
+  "ociVersion": "1.1.0",
+  "process": {
+    "args": [
+      "/__sentrycheck/lib/ld-linux-x86-64.so.2",
+      "--library-path",
+      "/__sentrycheck/lib",
+      "/__sentrycheck/strace",
+      "-f",
+      "-qq",
+      "-s",
+      "256",
+      "-o",
+      "/__sentrycheck/native.trace",
+      "--",
+      "/workload"
+    ],
+    "capabilities": {
+      "ambient": [],
+      "bounding": [],
+      "effective": [],
+      "inheritable": [],
+      "permitted": []
+    },
+    "cwd": "/",
+    "env": [
+      "PATH=/usr/bin:/bin"
+    ],
+    "noNewPrivileges": true,
+    "rlimits": [
+      {
+        "hard": 1024,
+        "soft": 1024,
+        "type": "RLIMIT_NOFILE"
+      },
+      {
+        "hard": 134217728,
+        "soft": 134217728,
+        "type": "RLIMIT_FSIZE"
+      }
+    ],
+    "terminal": false,
+    "user": {
+      "gid": 0,
+      "uid": 0
+    }
+  },
+  "root": {
+    "path": "rootfs",
+    "readonly": false
+  }
+}

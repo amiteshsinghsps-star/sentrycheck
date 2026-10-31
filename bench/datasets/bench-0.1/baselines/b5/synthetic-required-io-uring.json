@@ -1,0 +1,21 @@
+{
+  "arm": "B5_justrun",
+  "case_id": "synthetic-required-io-uring",
+  "class": "hard-failure",
+  "correct": true,
+  "gold": "hard-failure",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "sandbox_exits": [
+      42,
+      42,
+      42
+    ]
+  },
+  "rule": "run once and read the exit code",
+  "run_id": "r-synthetic-required-io-uring-bm04-20261031T105853Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/report.json",
+  "source_sha256": "sha256:74f5d6f068c32dd6d878e840e22f5f3af1926fe9a6d108380429f50eff66afd4",
+  "suite": "BM-04",
+  "tool_prediction": "hard-failure"
+}

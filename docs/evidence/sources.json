@@ -1,0 +1,104 @@
+{
+  "gvisor-compatibility": {
+    "url": "https://gvisor.dev/docs/user_guide/compatibility/",
+    "retrieved_at": "2026-09-26T10:44:24.148313+00:00",
+    "sha256": "6991f4657e30f4c35b74dd01bdfb382edd31f24a6599def10ab21d7399356de9",
+    "bytes": 23258
+  },
+  "gvisor-amd64": {
+    "url": "https://gvisor.dev/docs/user_guide/compatibility/linux/amd64/",
+    "retrieved_at": "2026-09-26T10:44:25.120897+00:00",
+    "sha256": "c7636a765d451397cbf93db06c61d31dc2cfec8aff921e36a744e46026d291fd",
+    "bytes": 118566
+  },
+  "gvisor-releases": {
+    "url": "https://api.github.com/repos/google/gvisor/releases?per_page=3",
+    "retrieved_at": "2026-09-26T10:44:26.350140+00:00",
+    "sha256": "731854e80ed0f126bd026139f5c8140ab3ed0460175a74a8d4d93b5e2dfb0b8e",
+    "bytes": 37803
+  },
+  "kubernetes-validation": {
+    "url": "https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/",
+    "retrieved_at": "2026-09-26T10:44:28.601518+00:00",
+    "sha256": "e058748126c60ab961ec231a050d2c4da2f20f7b433104450ddd5219126225ff",
+    "bytes": 597132
+  },
+  "kubernetes-mutation": {
+    "url": "https://kubernetes.io/docs/reference/access-authn-authz/mutating-admission-policy/",
+    "retrieved_at": "2026-09-26T10:44:30.370862+00:00",
+    "sha256": "af13012be4a1a5026c441028b552c4f55e21ee7b86a7fb61d9d299706c132a89",
+    "bytes": 532626
+  },
+  "kubernetes-runtimeclass": {
+    "url": "https://kubernetes.io/docs/concepts/containers/runtime-class/",
+    "retrieved_at": "2026-09-26T10:44:31.346524+00:00",
+    "sha256": "7cc86d4068f3855e0aed2bae4d5025327b3bddb0b8c3039ecfc97db16df37aa1",
+    "bytes": 512149
+  },
+  "gvisor-performance": {
+    "url": "https://gvisor.dev/docs/architecture_guide/performance/",
+    "retrieved_at": "2026-09-26T10:44:32.306285+00:00",
+    "sha256": "65c9e6b3fe0fae9e59b8f5490b11e7ef8e120de1fe81c60759574f030848ac6a",
+    "bytes": 115161
+  },
+  "gvisor-filesystem": {
+    "url": "https://gvisor.dev/docs/user_guide/filesystem/",
+    "retrieved_at": "2026-09-26T10:44:33.127166+00:00",
+    "sha256": "cde00a174981bd14fd097344fc1e23b1f1bf488278b84be9eadb956de5979335",
+    "bytes": 41204
+  },
+  "release-ref": {
+    "url": "https://api.github.com/repos/google/gvisor/git/ref/tags/release-20260921.0",
+    "retrieved_at": "2026-09-26T14:04:24.610796+00:00",
+    "sha256": "5c1e045d6e44b3e283a526ee9323be922c46128ca4d473457fbb5031520d395a",
+    "bytes": 369
+  },
+  "release-amd64": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/release-20260921.0/pkg/sentry/syscalls/linux/linux64.go",
+    "retrieved_at": "2026-09-26T14:04:25.290485+00:00",
+    "sha256": "037d31b0e8be9917cb37dbedc014c1686e0092dbab6c98a5bebe28c9f6213b45",
+    "bytes": 49991
+  },
+  "release-tag": {
+    "url": "https://api.github.com/repos/google/gvisor/git/tags/5a15761b5dcfe8ca10c7e8eaf5f1ae57b7c059f5",
+    "retrieved_at": "2026-09-26T14:05:09.731581+00:00",
+    "sha256": "82654eb75ebbc708f289814a972e3db6dd5002be772f924b4e2599c00ebc72b5",
+    "bytes": 670
+  },
+  "release-tree": {
+    "url": "https://api.github.com/repos/google/gvisor/git/trees/release-20260921.0?recursive=1",
+    "retrieved_at": "2026-09-26T14:05:10.690283+00:00",
+    "sha256": "43d12b4ba22ff1f6de57aff048409bf99775da7950f28c512f97f2164dbfffd5",
+    "bytes": 1190310
+  },
+  "release-compatibility": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/compatibility.md",
+    "retrieved_at": "2026-09-26T14:06:16.825816+00:00",
+    "sha256": "6a9bc902028425ca9c265ef402a5c1ccdb9a075787df03155ace61e60d3ab630",
+    "bytes": 4362
+  },
+  "release-strace": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/strace/strace.go",
+    "retrieved_at": "2026-09-26T14:07:51.305900+00:00",
+    "sha256": "f4f1d8f69db5f5e1fb8d9738e2ab2aa3b396b247ae08772d6d81239328eff7c8",
+    "bytes": 26575
+  },
+  "release-config": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/config/config.go",
+    "retrieved_at": "2026-09-26T14:59:15.438213+00:00",
+    "sha256": "2b961953ab3e9b695afc7509d5cf4dc45cbc0fda5bae782bb82d9583ad9c56ac",
+    "bytes": 55007
+  },
+  "release-sidecar-install": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/cmd/install_sidecars.go",
+    "retrieved_at": "2026-09-26T15:00:06.165230+00:00",
+    "sha256": "b90065eb3cc241756bdf276e1b32e8641981aec9b1b833881d9efd621092bc15",
+    "bytes": 6980
+  },
+  "release-containerd": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/containerd/quick_start.md",
+    "retrieved_at": "2026-09-26T15:27:50.839263+00:00",
+    "sha256": "9dd10870b99802ca81f43f5386ae4d17fff7df2376f40456aca0acb9e29bab2b",
+    "bytes": 5979
+  }
+}

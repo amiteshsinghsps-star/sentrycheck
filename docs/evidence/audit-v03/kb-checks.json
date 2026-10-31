@@ -1,0 +1,14 @@
+{
+  "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+  "entries": 237,
+  "syscall_rows": 647,
+  "capability_error_stubs": 40,
+  "full_rows": 416,
+  "rejections": {
+    "changed_constructor_source": "syscall constructor source changed; review support and CapError semantics before updating the KB",
+    "opposite_cgroup_claim": "cgroup caveat must be reviewed: source text changed",
+    "unknown_supported_constructor": "unrecognized syscall constructor SupportedSurprise",
+    "multiline_table_row": "unrecognized syscall table row at line 35"
+  },
+  "status": "passed"
+}

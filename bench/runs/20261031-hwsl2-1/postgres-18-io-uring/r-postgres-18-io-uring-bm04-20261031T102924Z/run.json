@@ -1,0 +1,283 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/native-0-config.json",
+        "sha256": "sha256:46ce2f47cb2c87dfc294cb0372518df68e67b1e7465ef4c51c100ebb36a1f32b"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/native-1-config.json",
+        "sha256": "sha256:46ce2f47cb2c87dfc294cb0372518df68e67b1e7465ef4c51c100ebb36a1f32b"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/native-2-config.json",
+        "sha256": "sha256:46ce2f47cb2c87dfc294cb0372518df68e67b1e7465ef4c51c100ebb36a1f32b"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/preflight.json",
+        "sha256": "sha256:b9fc49d9a54efb5e344f07432023d9160df1d2ce5a271c2af4cc91570206523d"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:866acb663f8ba21fde114b2580df819e58e02844478ee8a2219a462a1afd932e"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:866acb663f8ba21fde114b2580df819e58e02844478ee8a2219a462a1afd932e"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:866acb663f8ba21fde114b2580df819e58e02844478ee8a2219a462a1afd932e"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:0422929da66d403da13a7d0af670e3e9184faab4bbce44f0cda0ae9b75fabaa4"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:b3b8d8c508caa1559bdce1edbab6f8249e71b1537be79b749e6ed33b622c672b",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:b3b8d8c508caa1559bdce1edbab6f8249e71b1537be79b749e6ed33b622c672b",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:b3b8d8c508caa1559bdce1edbab6f8249e71b1537be79b749e6ed33b622c672b",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:40eee235679505523d54284b54e45caf3358671e61cb62f02a173862c23843b6",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:be5dad0a1c2b2402e6b08f2fbca7ac5e158853954913a99790f01a7fe4c0f81f",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:0cd71695f6aa880f0745193772e8aebad0e27bc12c2e9a862df67eff48fcc87a",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/report.json",
+      "sha256": "sha256:8bb300e6bbe7b5f361edd34cbdebb3b48dc5538a5bd3d0075b8b16643e92192f"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/traces/native-0-guest.trace",
+        "sha256": "sha256:72d4d45d630d8f5e8c19504987c560b2655c5b72e31d8e0d858e7326b34b4b21"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/traces/native-1-guest.trace",
+        "sha256": "sha256:e6e648f8bb50b9ec592aeb4ea301a4edd6cba979018f1abab0ab20867a802fa4"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/traces/native-2-guest.trace",
+        "sha256": "sha256:9d5a19f28d05e301a6da01d0b4208dbaf850a072e3f177533aa0fe1fc5cf721e"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:46cc36558c0318feaa29ea271403143566487a9c479102a27baf8c2a0f3f888b"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:9007ea593adafb339c6ce2f22b529bfefdf6785c058965f7595b4884100efa7c"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T102924Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:0043e1e5e32ea1a48ef038c33d0effd6bec3dd2d13179bf1ad94bf83448383ef"
+      }
+    ]
+  },
+  "case_id": "postgres-18-io-uring",
+  "ended_at": "2026-10-31T10:29:24Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=1; max_kb_age_days=400; order=abba-block1; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 1,
+  "order_pattern": "abba-block1",
+  "predicted": {
+    "class": "hard-failure",
+    "complete": true,
+    "finding_severities": [
+      "compatibility-risk",
+      "hard-failure"
+    ],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      3465,
+      3572,
+      3508
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      3424,
+      3541,
+      3232
+    ],
+    "sandbox_exits": [
+      42,
+      42,
+      42
+    ]
+  },
+  "resources": {
+    "disk_mb": 140.191397,
+    "peak_rss_mb": null
+  },
+  "run_id": "r-postgres-18-io-uring-bm04-20261031T102924Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:28:17Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 47047,
+    "total": 65673
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

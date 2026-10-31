@@ -1,0 +1,280 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/native-0-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/native-1-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/native-2-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/preflight.json",
+        "sha256": "sha256:afa3da0d845c68ceb888c611e77ec45237f6b99bccc0d32e6d77eb5bc2459d1d"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:355d04345cf9d218e3c891cb7219b6d2a2e6fced5f4a66f92a2b17af2498f248"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/report.json",
+      "sha256": "sha256:9d890e7e78179a25d4d861449c300a99928ce4caa43d515c1a88c757d8bbf5d9"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/traces/native-0-guest.trace",
+        "sha256": "sha256:cb2b07af1b8f14ebec4aa509da6567ce49a5b1ccafdb068730d8e825855905d9"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/traces/native-1-guest.trace",
+        "sha256": "sha256:b14110e01664ab60dc64d905b10005642855f745df8bfbc2c02dee711a018366"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/traces/native-2-guest.trace",
+        "sha256": "sha256:dd0e8c0f5fa0970ea9dd7d35c566039c086497e03ff20c9563184c88fdd46aed"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:03486f4521a33cc84a15b995c1597d50be09ca07281fa506e97c754b710339c6"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:85dca6d6bdbafd698a1a0b5acca891cd57bc073635d2dc6d6d6624e766dad05e"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104213Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:cbc7a091b57307d4dd39eefc029624b59af1db28f43e8283bb729033012df17b"
+      }
+    ]
+  },
+  "case_id": "synthetic-baseline",
+  "ended_at": "2026-10-31T10:42:13Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=abba-block4; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 1,
+  "order_pattern": "abba-block4",
+  "predicted": {
+    "class": "compatible",
+    "complete": true,
+    "finding_severities": [],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      102,
+      76,
+      76
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      127,
+      101,
+      101
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 0.11103,
+    "peak_rss_mb": 33.800781
+  },
+  "run_id": "r-synthetic-baseline-bm04-20261031T104213Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:41:44Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 1202,
+    "total": 28936
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

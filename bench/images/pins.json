@@ -1,0 +1,127 @@
+{
+  "pins": [
+    {
+      "config_architecture": "amd64",
+      "config_digest": "sha256:ae59e9992c6b3e963dd9dac9c476287048177ad8f90ac646669afb738705f56d",
+      "config_os": "linux",
+      "digest_changed": false,
+      "fetched_at": "2026-10-31T09:30:30Z",
+      "first_pinned_at": "2026-10-31T09:30:30Z",
+      "index_digest": "sha256:c7991fba0de91eb5c08e6eabb656ed0c32418a4e1cacef507ee7523323613d5b",
+      "layers": [
+        {
+          "bytes": 3853109,
+          "digest": "sha256:7b229517ed222597277036d94892173207d01a731ab3a88eeb1de2e963a2c788",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 3853109,
+          "stored": true
+        },
+        {
+          "bytes": 56221524,
+          "digest": "sha256:8776aa3d2ba7247a375d06dcec03856b99dbb0e16e904a5672d3bf08c852d4f1",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 56221524,
+          "stored": true
+        },
+        {
+          "bytes": 1262440,
+          "digest": "sha256:7246d4c6a55dd0f8dd00d2e63aece3a68d91e6a5d04c4e748fc2706897d96312",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 1262440,
+          "stored": true
+        },
+        {
+          "bytes": 442,
+          "digest": "sha256:304511616d6a6d472222f696b9045e20dc90e8043b2a8ba2acb61746595781f3",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 442,
+          "stored": true
+        }
+      ],
+      "layers_stored": true,
+      "layout": "bench/images/docker.io-library-node-22-alpine",
+      "manifest_digest": "sha256:025b8e975a61d94e33abeafaad1255ef44e4898cf1a1b6446860009c72e6d284",
+      "manifest_media_type": "application/vnd.oci.image.manifest.v1+json",
+      "pinned_digest": null,
+      "reference": "docker.io/library/node:22-alpine",
+      "registry": "registry-1.docker.io",
+      "repository": "library/node",
+      "requested": "22-alpine",
+      "rootfs_diff_ids": [
+        "sha256:75c137aedfb2760f88629236cb7b797630aed0c3d91d626d1d1bb694878fc2ba",
+        "sha256:30ad2d1597a9c97acebab3677fb203383cecf282375bb030d114b01f98a1adb4",
+        "sha256:7f78e22f72fbece43b0a1236ad7b98579faaa411ce7445c98d8f6bfc7f06b1bc",
+        "sha256:92ef3b67b69bfad75b1f2a2df8279578ae15f7282b28f5d29bb4a85709285ecd"
+      ],
+      "source_url": "https://hub.docker.com/r/library/node",
+      "total_bytes": 61345950
+    },
+    {
+      "config_architecture": "amd64",
+      "config_digest": "sha256:ae4e8b7c575fabea88a029b6cae757f342ca2525e07f7c22272d5105c346b35e",
+      "config_os": "linux",
+      "digest_changed": false,
+      "fetched_at": "2026-10-31T09:30:04Z",
+      "first_pinned_at": "2026-10-31T09:30:04Z",
+      "index_digest": "sha256:06141c968f3576c91f3cacc63240388cee0292af8ded4a9f6e94181ac43852c1",
+      "layers": [
+        {
+          "bytes": 29855236,
+          "digest": "sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 29855236,
+          "stored": true
+        },
+        {
+          "bytes": 1289740,
+          "digest": "sha256:3eb77115150676568f88e2957181b8f7e3014e797f1ce8cd640086dfbed45e35",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 1289740,
+          "stored": true
+        },
+        {
+          "bytes": 12121979,
+          "digest": "sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 12121979,
+          "stored": true
+        },
+        {
+          "bytes": 251,
+          "digest": "sha256:acca7542dfc736e9ce20cbefc58b2d09822276d15d4a0c531531a6f1b057928e",
+          "gzip": true,
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 251,
+          "stored": true
+        }
+      ],
+      "layers_stored": true,
+      "layout": "bench/images/docker.io-library-python-3.12-slim",
+      "manifest_digest": "sha256:1148dbb014615300fa7e713b2f94f550c0d1c69780c0805f84f093ceee34dd0b",
+      "manifest_media_type": "application/vnd.oci.image.manifest.v1+json",
+      "pinned_digest": null,
+      "reference": "docker.io/library/python:3.12-slim",
+      "registry": "registry-1.docker.io",
+      "repository": "library/python",
+      "requested": "3.12-slim",
+      "rootfs_diff_ids": [
+        "sha256:a5d6d345f6afa08d7c31272055746d60a838b290bfcc82c0a23e8e984d61a933",
+        "sha256:fab99bd4639aec48a77ec4d2e3564c0907e0e1e962bbf773219a0b503a168955",
+        "sha256:bca572b9549074f7cbc5f2d9d29f589038ff21c5f68cef2965167a33f177a9c0",
+        "sha256:cae4cb2b5e819765b847e67faa443b377607452f2ec949d142cad15d9d7ea0b3"
+      ],
+      "source_url": "https://hub.docker.com/r/library/python",
+      "total_bytes": 43274616
+    }
+  ],
+  "redistribution": "layer blobs stay on this host under bench/images; only digests, sizes, media types and config identity are published",
+  "schema_version": "1.0",
+  "title": "digest-pinned workload images (PRD section 7.7)"
+}

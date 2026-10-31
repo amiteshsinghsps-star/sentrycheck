@@ -1,0 +1,51 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "synthetic-optional-io-uring",
+  "expected_interfaces": [
+    "io_uring_setup",
+    "pwrite64"
+  ],
+  "group": "synthetic",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+    "layer_digests": [
+      "sha256:f6e23b168bf5fb4ceebf39df6cefa51189fb9fec9591e17d7f682fc306b635eb"
+    ],
+    "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+    "local_path": "artifacts/live-images/io_uring_fallback",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": null,
+    "source_url": null
+  },
+  "label": null,
+  "notes": "Attempts io_uring then falls back; tolerated, so a prediction of hard failure here is a false positive.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout artifacts/live-images/io_uring_fallback (index artifacts/live-images/io_uring_fallback/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/synthetic.toml",
+    "sha256": "sha256:e25a228effa5bb22c53a663f39a9f3f43177dbc4c7a8881583132921e571ec2f"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "validation",
+  "suites": [
+    "BM-01",
+    "BM-04",
+    "BM-14"
+  ],
+  "tags": [
+    "io_uring",
+    "fallback"
+  ]
+}

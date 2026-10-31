@@ -1,0 +1,19 @@
+{
+  "namespace": "sentrycheck-system",
+  "snapshotName": "cluster",
+  "trustedKeys": {},
+  "maxScanAgeSeconds": 86400,
+  "probeTTLSeconds": 120,
+  "snapshotTTLSeconds": 120,
+  "runtimes": [
+    {
+      "name": "sentrycheck-gvisor",
+      "handler": "runsc",
+      "runtime": "gvisor",
+      "version": "20260921.0",
+      "architecture": "amd64",
+      "expectedRuntimeType": "io.containerd.runsc.v1",
+      "manageScheduling": true
+    }
+  ]
+}

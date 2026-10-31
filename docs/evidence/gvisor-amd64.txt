@@ -1,0 +1,1959 @@
+ 
+
+ Linux/amd64 - gVisor 
+
+ gVisor
+
+ Documentation 
+ Blog 
+ Users 
+ Compatibility 
+ Security 
+ Community 
+ GitHub 
+
+ Project 
+
+ What is gVisor? 
+
+ Roadmap 
+
+ Contributing 
+
+ Security and Vulnerability Reporting 
+
+ Community 
+
+ Participation 
+
+ gVisor Project Governance 
+
+ Who's Using gVisor 
+
+ Code of Conduct 
+
+ Provisional style guide 
+
+ User Guide 
+
+ Installation 
+
+ Production guide 
+
+ Changing Platforms 
+
+ Filesystem 
+
+ FUSE 
+
+ Networking 
+
+ GPU Support 
+
+ TPU Support 
+
+ RDMA Support 
+
+ Runtime Monitoring 
+
+ Observability 
+
+ Checkpoint/Restore 
+
+ Debugging 
+
+ FAQ 
+
+ Systemd cgroup driver 
+
+ Rootfs Tar Snapshots 
+
+ Filesystem Snapshots 
+
+ Rootless 
+
+ Containerd 
+
+ Containerd Quick Start 
+
+ CRI-O Quick Start 
+
+ Containerd Advanced Configuration 
+
+ Personalities 
+
+ Bubblewrap (bwrap) Personality 
+
+ Quick Start 
+
+ Docker Quick Start 
+
+ Kubernetes Quick Start 
+
+ OCI Quick Start 
+
+ Tutorials 
+
+ WordPress with Docker 
+
+ Wordpress with Docker Compose 
+
+ WordPress with Kubernetes 
+
+ Configuring Falco with gVisor 
+
+ Knative Services 
+
+ Docker in gVisor 
+
+ Docker in a GKE sandbox 
+
+ Using CNI 
+
+ SDK/API Reference 
+
+ Go 
+
+ API Reference 
+
+ Quickstart 
+
+ Python 
+
+ API Reference 
+
+ Quickstart 
+
+ Architecture Guide 
+
+ Introduction to gVisor security 
+
+ Security Model 
+
+ Resource Model 
+
+ Platform Guide 
+
+ Performance Guide 
+
+ Networking Guide 
+
+ Compatibility 
+
+ Applications 
+
+ Linux/arm64 
+
+ Linux/amd64 
+
+ Linux/amd64 
+
+ This table is a reference of linux syscalls for the amd64 architecture and
+their compatibility status in gVisor. gVisor does not support all syscalls and
+some syscalls may have a partial implementation. However, note that a syscall
+not being implemented in gVisor does not imply that applications using it
+will not work. Most language runtimes and libraries that call a syscall marked
+as unimplemented in this table have fallback code to use an alternative
+syscall that is supported in gVisor. See the
+ compatibility page for more info. 
+
+ This page is automatically generated from the source code. 
+
+ Of 352 syscalls, 290 syscalls have a full or partial
+implementation. There are currently 62 unsupported
+syscalls. 
+
+ # 
+ Name 
+ Support 
+ Notes 
+
+ 0 
+ read 
+ Full Support 
+ Fully Supported. 
+
+ 1 
+ write 
+ Full Support 
+ Fully Supported. 
+
+ 2 
+ open 
+ Full Support 
+ Fully Supported. 
+
+ 3 
+ close 
+ Full Support 
+ Fully Supported. 
+
+ 4 
+ stat 
+ Full Support 
+ Fully Supported. 
+
+ 5 
+ fstat 
+ Full Support 
+ Fully Supported. 
+
+ 6 
+ lstat 
+ Full Support 
+ Fully Supported. 
+
+ 7 
+ poll 
+ Full Support 
+ Fully Supported. 
+
+ 8 
+ lseek 
+ Full Support 
+ Fully Supported. 
+
+ 9 
+ mmap 
+ Full Support 
+ Fully Supported. 
+
+ 10 
+ mprotect 
+ Full Support 
+ Fully Supported. 
+
+ 11 
+ munmap 
+ Full Support 
+ Fully Supported. 
+
+ 12 
+ brk 
+ Full Support 
+ Fully Supported. 
+
+ 13 
+ rt_sigaction 
+ Full Support 
+ Fully Supported. 
+
+ 14 
+ rt_sigprocmask 
+ Full Support 
+ Fully Supported. 
+
+ 15 
+ rt_sigreturn 
+ Full Support 
+ Fully Supported. 
+
+ 16 
+ ioctl 
+ Full Support 
+ Fully Supported. 
+
+ 17 
+ pread64 
+ Full Support 
+ Fully Supported. 
+
+ 18 
+ pwrite64 
+ Full Support 
+ Fully Supported. 
+
+ 19 
+ readv 
+ Full Support 
+ Fully Supported. 
+
+ 20 
+ writev 
+ Full Support 
+ Fully Supported. 
+
+ 21 
+ access 
+ Full Support 
+ Fully Supported. 
+
+ 22 
+ pipe 
+ Full Support 
+ Fully Supported. 
+
+ 23 
+ select 
+ Full Support 
+ Fully Supported. 
+
+ 24 
+ sched_yield 
+ Full Support 
+ Fully Supported. 
+
+ 25 
+ mremap 
+ Full Support 
+ Fully Supported. 
+
+ 26 
+ msync 
+ Partial Support 
+ Full data flush is not guaranteed at this time. 
+
+ 27 
+ mincore 
+ Partial Support 
+ Stub implementation. The sandbox does not have access to this information. Reports all mapped pages are resident. 
+
+ 28 
+ madvise 
+ Partial Support 
+ Options MADV_DONTNEED, MADV_DONTFORK are supported. Other advice is ignored. 
+
+ 29 
+ shmget 
+ Partial Support 
+ Option SHM_HUGETLB is not supported. 
+
+ 30 
+ shmat 
+ Partial Support 
+ Option SHM_RND is not supported. 
+
+ 31 
+ shmctl 
+ Partial Support 
+ Options SHM_LOCK, SHM_UNLOCK are not supported. 
+
+ 32 
+ dup 
+ Full Support 
+ Fully Supported. 
+
+ 33 
+ dup2 
+ Full Support 
+ Fully Supported. 
+
+ 34 
+ pause 
+ Full Support 
+ Fully Supported. 
+
+ 35 
+ nanosleep 
+ Full Support 
+ Fully Supported. 
+
+ 36 
+ getitimer 
+ Full Support 
+ Fully Supported. 
+
+ 37 
+ alarm 
+ Full Support 
+ Fully Supported. 
+
+ 38 
+ setitimer 
+ Full Support 
+ Fully Supported. 
+
+ 39 
+ getpid 
+ Full Support 
+ Fully Supported. 
+
+ 40 
+ sendfile 
+ Full Support 
+ Fully Supported. 
+
+ 41 
+ socket 
+ Full Support 
+ Fully Supported. 
+
+ 42 
+ connect 
+ Full Support 
+ Fully Supported. 
+
+ 43 
+ accept 
+ Full Support 
+ Fully Supported. 
+
+ 44 
+ sendto 
+ Full Support 
+ Fully Supported. 
+
+ 45 
+ recvfrom 
+ Full Support 
+ Fully Supported. 
+
+ 46 
+ sendmsg 
+ Full Support 
+ Fully Supported. 
+
+ 47 
+ recvmsg 
+ Full Support 
+ Fully Supported. 
+
+ 48 
+ shutdown 
+ Full Support 
+ Fully Supported. 
+
+ 49 
+ bind 
+ Full Support 
+ Fully Supported. 
+
+ 50 
+ listen 
+ Full Support 
+ Fully Supported. 
+
+ 51 
+ getsockname 
+ Full Support 
+ Fully Supported. 
+
+ 52 
+ getpeername 
+ Full Support 
+ Fully Supported. 
+
+ 53 
+ socketpair 
+ Full Support 
+ Fully Supported. 
+
+ 54 
+ setsockopt 
+ Full Support 
+ Fully Supported. 
+
+ 55 
+ getsockopt 
+ Full Support 
+ Fully Supported. 
+
+ 56 
+ clone 
+ Partial Support 
+ Options CLONE_NEWTIME and CLONE_SYSVSEM not supported. 
+
+ 57 
+ fork 
+ Full Support 
+ Fully Supported. 
+
+ 58 
+ vfork 
+ Full Support 
+ Fully Supported. 
+
+ 59 
+ execve 
+ Full Support 
+ Fully Supported. 
+
+ 60 
+ exit 
+ Full Support 
+ Fully Supported. 
+
+ 61 
+ wait4 
+ Full Support 
+ Fully Supported. 
+
+ 62 
+ kill 
+ Full Support 
+ Fully Supported. 
+
+ 63 
+ uname 
+ Full Support 
+ Fully Supported. 
+
+ 64 
+ semget 
+ Full Support 
+ Fully Supported. 
+
+ 65 
+ semop 
+ Partial Support 
+ Option SEM_UNDO not supported. 
+
+ 66 
+ semctl 
+ Full Support 
+ Fully Supported. 
+
+ 67 
+ shmdt 
+ Full Support 
+ Fully Supported. 
+
+ 68 
+ msgget 
+ Full Support 
+ Fully Supported. 
+
+ 69 
+ msgsnd 
+ Full Support 
+ Fully Supported. 
+
+ 70 
+ msgrcv 
+ Full Support 
+ Fully Supported. 
+
+ 71 
+ msgctl 
+ Full Support 
+ Fully Supported. 
+
+ 72 
+ fcntl 
+ Full Support 
+ Fully Supported. 
+
+ 73 
+ flock 
+ Full Support 
+ Fully Supported. 
+
+ 74 
+ fsync 
+ Full Support 
+ Fully Supported. 
+
+ 75 
+ fdatasync 
+ Full Support 
+ Fully Supported. 
+
+ 76 
+ truncate 
+ Full Support 
+ Fully Supported. 
+
+ 77 
+ ftruncate 
+ Full Support 
+ Fully Supported. 
+
+ 78 
+ getdents 
+ Full Support 
+ Fully Supported. 
+
+ 79 
+ getcwd 
+ Full Support 
+ Fully Supported. 
+
+ 80 
+ chdir 
+ Full Support 
+ Fully Supported. 
+
+ 81 
+ fchdir 
+ Full Support 
+ Fully Supported. 
+
+ 82 
+ rename 
+ Full Support 
+ Fully Supported. 
+
+ 83 
+ mkdir 
+ Full Support 
+ Fully Supported. 
+
+ 84 
+ rmdir 
+ Full Support 
+ Fully Supported. 
+
+ 85 
+ creat 
+ Full Support 
+ Fully Supported. 
+
+ 86 
+ link 
+ Full Support 
+ Fully Supported. 
+
+ 87 
+ unlink 
+ Full Support 
+ Fully Supported. 
+
+ 88 
+ symlink 
+ Full Support 
+ Fully Supported. 
+
+ 89 
+ readlink 
+ Full Support 
+ Fully Supported. 
+
+ 90 
+ chmod 
+ Full Support 
+ Fully Supported. 
+
+ 91 
+ fchmod 
+ Full Support 
+ Fully Supported. 
+
+ 92 
+ chown 
+ Full Support 
+ Fully Supported. 
+
+ 93 
+ fchown 
+ Full Support 
+ Fully Supported. 
+
+ 94 
+ lchown 
+ Full Support 
+ Fully Supported. 
+
+ 95 
+ umask 
+ Full Support 
+ Fully Supported. 
+
+ 96 
+ gettimeofday 
+ Full Support 
+ Fully Supported. 
+
+ 97 
+ getrlimit 
+ Full Support 
+ Fully Supported. 
+
+ 98 
+ getrusage 
+ Partial Support 
+ Fields ru_maxrss, ru_minflt, ru_majflt, ru_inblock, ru_oublock are not supported. Fields ru_utime and ru_stime have low precision. 
+
+ 99 
+ sysinfo 
+ Partial Support 
+ Fields loads, sharedram, bufferram, totalswap, freeswap, totalhigh, freehigh not supported. 
+
+ 100 
+ times 
+ Full Support 
+ Fully Supported. 
+
+ 101 
+ ptrace 
+ Partial Support 
+ Options PTRACE_PEEKSIGINFO, PTRACE_SECCOMP_GET_FILTER not supported. 
+
+ 102 
+ getuid 
+ Full Support 
+ Fully Supported. 
+
+ 103 
+ syslog 
+ Partial Support 
+ Outputs a dummy message for security reasons. 
+
+ 104 
+ getgid 
+ Full Support 
+ Fully Supported. 
+
+ 105 
+ setuid 
+ Full Support 
+ Fully Supported. 
+
+ 106 
+ setgid 
+ Full Support 
+ Fully Supported. 
+
+ 107 
+ geteuid 
+ Full Support 
+ Fully Supported. 
+
+ 108 
+ getegid 
+ Full Support 
+ Fully Supported. 
+
+ 109 
+ setpgid 
+ Full Support 
+ Fully Supported. 
+
+ 110 
+ getppid 
+ Full Support 
+ Fully Supported. 
+
+ 111 
+ getpgrp 
+ Full Support 
+ Fully Supported. 
+
+ 112 
+ setsid 
+ Full Support 
+ Fully Supported. 
+
+ 113 
+ setreuid 
+ Full Support 
+ Fully Supported. 
+
+ 114 
+ setregid 
+ Full Support 
+ Fully Supported. 
+
+ 115 
+ getgroups 
+ Full Support 
+ Fully Supported. 
+
+ 116 
+ setgroups 
+ Full Support 
+ Fully Supported. 
+
+ 117 
+ setresuid 
+ Full Support 
+ Fully Supported. 
+
+ 118 
+ getresuid 
+ Full Support 
+ Fully Supported. 
+
+ 119 
+ setresgid 
+ Full Support 
+ Fully Supported. 
+
+ 120 
+ getresgid 
+ Full Support 
+ Fully Supported. 
+
+ 121 
+ getpgid 
+ Full Support 
+ Fully Supported. 
+
+ 122 
+ setfsuid 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/260 
+
+ 123 
+ setfsgid 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/260 
+
+ 124 
+ getsid 
+ Full Support 
+ Fully Supported. 
+
+ 125 
+ capget 
+ Full Support 
+ Fully Supported. 
+
+ 126 
+ capset 
+ Full Support 
+ Fully Supported. 
+
+ 127 
+ rt_sigpending 
+ Full Support 
+ Fully Supported. 
+
+ 128 
+ rt_sigtimedwait 
+ Full Support 
+ Fully Supported. 
+
+ 129 
+ rt_sigqueueinfo 
+ Full Support 
+ Fully Supported. 
+
+ 130 
+ rt_sigsuspend 
+ Full Support 
+ Fully Supported. 
+
+ 131 
+ sigaltstack 
+ Full Support 
+ Fully Supported. 
+
+ 132 
+ utime 
+ Full Support 
+ Fully Supported. 
+
+ 133 
+ mknod 
+ Full Support 
+ Fully Supported. 
+
+ 134 
+ uselib 
+ Unimplemented 
+ Obsolete; Returns "invalid system call number". 
+
+ 135 
+ personality 
+ Partial Support 
+ Only setting no-op personality bits and retrieving them are supported. 
+
+ 136 
+ ustat 
+ Unimplemented 
+ Needs filesystem support.; Returns "invalid system call number". 
+
+ 137 
+ statfs 
+ Full Support 
+ Fully Supported. 
+
+ 138 
+ fstatfs 
+ Full Support 
+ Fully Supported. 
+
+ 139 
+ sysfs 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/165 
+
+ 140 
+ getpriority 
+ Partial Support 
+ Stub implementation. 
+
+ 141 
+ setpriority 
+ Partial Support 
+ Stub implementation. 
+
+ 142 
+ sched_setparam 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_NICE; "invalid system call number" otherwise. 
+
+ 143 
+ sched_getparam 
+ Partial Support 
+ Stub implementation. 
+
+ 144 
+ sched_setscheduler 
+ Partial Support 
+ Stub implementation. 
+
+ 145 
+ sched_getscheduler 
+ Partial Support 
+ Stub implementation. 
+
+ 146 
+ sched_get_priority_max 
+ Partial Support 
+ Stub implementation. 
+
+ 147 
+ sched_get_priority_min 
+ Partial Support 
+ Stub implementation. 
+
+ 148 
+ sched_rr_get_interval 
+ Unimplemented 
+ Returns "operation not permitted". 
+
+ 149 
+ mlock 
+ Partial Support 
+ Stub implementation. The sandbox lacks appropriate permissions. 
+
+ 150 
+ munlock 
+ Partial Support 
+ Stub implementation. The sandbox lacks appropriate permissions. 
+
+ 151 
+ mlockall 
+ Partial Support 
+ Stub implementation. The sandbox lacks appropriate permissions. 
+
+ 152 
+ munlockall 
+ Partial Support 
+ Stub implementation. The sandbox lacks appropriate permissions. 
+
+ 153 
+ vhangup 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_TTY_CONFIG; "invalid system call number" otherwise. 
+
+ 154 
+ modify_ldt 
+ Unimplemented 
+ Returns "operation not permitted". 
+
+ 155 
+ pivot_root 
+ Full Support 
+ Fully Supported. 
+
+ 156 
+ sysctl 
+ Unimplemented 
+ Deprecated. Use /proc/sys instead.; Returns "operation not permitted". 
+
+ 157 
+ prctl 
+ Partial Support 
+ Not all options are supported. 
+
+ 158 
+ arch_prctl 
+ Partial Support 
+ Options ARCH_GET_GS, ARCH_SET_GS not supported. 
+
+ 159 
+ adjtimex 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_TIME; "invalid system call number" otherwise. 
+
+ 160 
+ setrlimit 
+ Partial Support 
+ Not all rlimits are enforced. 
+
+ 161 
+ chroot 
+ Full Support 
+ Fully Supported. 
+
+ 162 
+ sync 
+ Full Support 
+ Fully Supported. 
+
+ 163 
+ acct 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_PACCT; "invalid system call number" otherwise. 
+
+ 164 
+ settimeofday 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_TIME; "invalid system call number" otherwise. 
+
+ 165 
+ mount 
+ Full Support 
+ Fully Supported. 
+
+ 166 
+ umount2 
+ Full Support 
+ Fully Supported. 
+
+ 167 
+ swapon 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_ADMIN; "invalid system call number" otherwise. 
+
+ 168 
+ swapoff 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_ADMIN; "invalid system call number" otherwise. 
+
+ 169 
+ reboot 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_BOOT; "invalid system call number" otherwise. 
+
+ 170 
+ sethostname 
+ Full Support 
+ Fully Supported. 
+
+ 171 
+ setdomainname 
+ Full Support 
+ Fully Supported. 
+
+ 172 
+ iopl 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_RAWIO; "invalid system call number" otherwise. 
+
+ 173 
+ ioperm 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_RAWIO; "invalid system call number" otherwise. 
+
+ 174 
+ create_module 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_MODULE; "invalid system call number" otherwise. 
+
+ 175 
+ init_module 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_MODULE; "invalid system call number" otherwise. 
+
+ 176 
+ delete_module 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_MODULE; "invalid system call number" otherwise. 
+
+ 177 
+ get_kernel_syms 
+ Unimplemented 
+ Not supported in Linux > 2.6.; Returns "invalid system call number". 
+
+ 178 
+ query_module 
+ Unimplemented 
+ Not supported in Linux > 2.6.; Returns "invalid system call number". 
+
+ 179 
+ quotactl 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_ADMIN; "invalid system call number" otherwise. 
+
+ 180 
+ nfsservctl 
+ Unimplemented 
+ Removed after Linux 3.1.; Returns "invalid system call number". 
+
+ 181 
+ getpmsg 
+ Unimplemented 
+ Not implemented in Linux.; Returns "invalid system call number". 
+
+ 182 
+ putpmsg 
+ Unimplemented 
+ Not implemented in Linux.; Returns "invalid system call number". 
+
+ 183 
+ afs_syscall 
+ Partial Support 
+ Test implementation. 
+
+ 184 
+ tuxcall 
+ Unimplemented 
+ Not implemented in Linux.; Returns "invalid system call number". 
+
+ 185 
+ security 
+ Unimplemented 
+ Not implemented in Linux.; Returns "invalid system call number". 
+
+ 186 
+ gettid 
+ Full Support 
+ Fully Supported. 
+
+ 187 
+ readahead 
+ Full Support 
+ Fully Supported. 
+
+ 188 
+ setxattr 
+ Full Support 
+ Fully Supported. 
+
+ 189 
+ lsetxattr 
+ Full Support 
+ Fully Supported. 
+
+ 190 
+ fsetxattr 
+ Full Support 
+ Fully Supported. 
+
+ 191 
+ getxattr 
+ Full Support 
+ Fully Supported. 
+
+ 192 
+ lgetxattr 
+ Full Support 
+ Fully Supported. 
+
+ 193 
+ fgetxattr 
+ Full Support 
+ Fully Supported. 
+
+ 194 
+ listxattr 
+ Full Support 
+ Fully Supported. 
+
+ 195 
+ llistxattr 
+ Full Support 
+ Fully Supported. 
+
+ 196 
+ flistxattr 
+ Full Support 
+ Fully Supported. 
+
+ 197 
+ removexattr 
+ Full Support 
+ Fully Supported. 
+
+ 198 
+ lremovexattr 
+ Full Support 
+ Fully Supported. 
+
+ 199 
+ fremovexattr 
+ Full Support 
+ Fully Supported. 
+
+ 200 
+ tkill 
+ Full Support 
+ Fully Supported. 
+
+ 201 
+ time 
+ Full Support 
+ Fully Supported. 
+
+ 202 
+ futex 
+ Partial Support 
+ Robust futexes not supported. 
+
+ 203 
+ sched_setaffinity 
+ Partial Support 
+ Stub implementation. 
+
+ 204 
+ sched_getaffinity 
+ Partial Support 
+ Stub implementation. 
+
+ 205 
+ set_thread_area 
+ Unimplemented 
+ Expected to return ENOSYS on 64-bit; Returns "invalid system call number". 
+
+ 206 
+ io_setup 
+ Partial Support 
+ Generally supported with exceptions. User ring optimizations are not implemented. See: https://gvisor.dev/issue/204 
+
+ 207 
+ io_destroy 
+ Partial Support 
+ Generally supported with exceptions. User ring optimizations are not implemented. See: https://gvisor.dev/issue/204 
+
+ 208 
+ io_getevents 
+ Partial Support 
+ Generally supported with exceptions. User ring optimizations are not implemented. See: https://gvisor.dev/issue/204 
+
+ 209 
+ io_submit 
+ Partial Support 
+ Generally supported with exceptions. User ring optimizations are not implemented. See: https://gvisor.dev/issue/204 
+
+ 210 
+ io_cancel 
+ Partial Support 
+ Generally supported with exceptions. User ring optimizations are not implemented. See: https://gvisor.dev/issue/204 
+
+ 211 
+ get_thread_area 
+ Unimplemented 
+ Expected to return ENOSYS on 64-bit; Returns "invalid system call number". 
+
+ 212 
+ lookup_dcookie 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_ADMIN; "invalid system call number" otherwise. 
+
+ 213 
+ epoll_create 
+ Full Support 
+ Fully Supported. 
+
+ 214 
+ epoll_ctl_old 
+ Unimplemented 
+ Deprecated.; Returns "invalid system call number". 
+
+ 215 
+ epoll_wait_old 
+ Unimplemented 
+ Deprecated.; Returns "invalid system call number". 
+
+ 216 
+ remap_file_pages 
+ Unimplemented 
+ Deprecated since Linux 3.16.; Returns "invalid system call number". 
+
+ 217 
+ getdents64 
+ Full Support 
+ Fully Supported. 
+
+ 218 
+ set_tid_address 
+ Full Support 
+ Fully Supported. 
+
+ 219 
+ restart_syscall 
+ Full Support 
+ Fully Supported. 
+
+ 220 
+ semtimedop 
+ Full Support 
+ Fully Supported. 
+
+ 221 
+ fadvise64 
+ Partial Support 
+ The syscall is 'supported', but ignores all provided advice. 
+
+ 222 
+ timer_create 
+ Full Support 
+ Fully Supported. 
+
+ 223 
+ timer_settime 
+ Full Support 
+ Fully Supported. 
+
+ 224 
+ timer_gettime 
+ Full Support 
+ Fully Supported. 
+
+ 225 
+ timer_getoverrun 
+ Full Support 
+ Fully Supported. 
+
+ 226 
+ timer_delete 
+ Full Support 
+ Fully Supported. 
+
+ 227 
+ clock_settime 
+ Full Support 
+ Fully Supported. 
+
+ 228 
+ clock_gettime 
+ Full Support 
+ Fully Supported. 
+
+ 229 
+ clock_getres 
+ Full Support 
+ Fully Supported. 
+
+ 230 
+ clock_nanosleep 
+ Full Support 
+ Fully Supported. 
+
+ 231 
+ exit_group 
+ Full Support 
+ Fully Supported. 
+
+ 232 
+ epoll_wait 
+ Full Support 
+ Fully Supported. 
+
+ 233 
+ epoll_ctl 
+ Full Support 
+ Fully Supported. 
+
+ 234 
+ tgkill 
+ Full Support 
+ Fully Supported. 
+
+ 235 
+ utimes 
+ Full Support 
+ Fully Supported. 
+
+ 236 
+ vserver 
+ Unimplemented 
+ Not implemented by Linux; Returns "invalid system call number". 
+
+ 237 
+ mbind 
+ Partial Support 
+ Stub implementation. Only a single NUMA node is advertised, and mempolicy is ignored accordingly, but mbind() will succeed and has effects reflected by get_mempolicy. See: https://gvisor.dev/issue/262 
+
+ 238 
+ set_mempolicy 
+ Partial Support 
+ Stub implementation. 
+
+ 239 
+ get_mempolicy 
+ Partial Support 
+ Stub implementation. 
+
+ 240 
+ mq_open 
+ Full Support 
+ Fully Supported. 
+
+ 241 
+ mq_unlink 
+ Full Support 
+ Fully Supported. 
+
+ 242 
+ mq_timedsend 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/136 
+
+ 243 
+ mq_timedreceive 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/136 
+
+ 244 
+ mq_notify 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/136 
+
+ 245 
+ mq_getsetattr 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/136 
+
+ 246 
+ kexec_load 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_BOOT; "invalid system call number" otherwise. 
+
+ 247 
+ waitid 
+ Full Support 
+ Fully Supported. 
+
+ 248 
+ add_key 
+ Unimplemented 
+ Not available to user.; Returns "permission denied". 
+
+ 249 
+ request_key 
+ Unimplemented 
+ Not available to user.; Returns "permission denied". 
+
+ 250 
+ keyctl 
+ Partial Support 
+ Only supports session keyrings with zero keys in them. 
+
+ 251 
+ ioprio_set 
+ Partial Support 
+ Stub implementation. 
+
+ 252 
+ ioprio_get 
+ Partial Support 
+ Stub implementation. 
+
+ 253 
+ inotify_init 
+ Partial Support 
+ inotify events are only available inside the sandbox. 
+
+ 254 
+ inotify_add_watch 
+ Partial Support 
+ inotify events are only available inside the sandbox. 
+
+ 255 
+ inotify_rm_watch 
+ Partial Support 
+ inotify events are only available inside the sandbox. 
+
+ 256 
+ migrate_pages 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_NICE; "invalid system call number" otherwise. 
+
+ 257 
+ openat 
+ Full Support 
+ Fully Supported. 
+
+ 258 
+ mkdirat 
+ Full Support 
+ Fully Supported. 
+
+ 259 
+ mknodat 
+ Full Support 
+ Fully Supported. 
+
+ 260 
+ fchownat 
+ Full Support 
+ Fully Supported. 
+
+ 261 
+ futimesat 
+ Full Support 
+ Fully Supported. 
+
+ 262 
+ newfstatat 
+ Full Support 
+ Fully Supported. 
+
+ 263 
+ unlinkat 
+ Full Support 
+ Fully Supported. 
+
+ 264 
+ renameat 
+ Full Support 
+ Fully Supported. 
+
+ 265 
+ linkat 
+ Full Support 
+ Fully Supported. 
+
+ 266 
+ symlinkat 
+ Full Support 
+ Fully Supported. 
+
+ 267 
+ readlinkat 
+ Full Support 
+ Fully Supported. 
+
+ 268 
+ fchmodat 
+ Full Support 
+ Fully Supported. 
+
+ 269 
+ faccessat 
+ Full Support 
+ Fully Supported. 
+
+ 270 
+ pselect6 
+ Full Support 
+ Fully Supported. 
+
+ 271 
+ ppoll 
+ Full Support 
+ Fully Supported. 
+
+ 272 
+ unshare 
+ Partial Support 
+ Time, cgroup namespaces not supported. 
+
+ 273 
+ set_robust_list 
+ Full Support 
+ Fully Supported. 
+
+ 274 
+ get_robust_list 
+ Full Support 
+ Fully Supported. 
+
+ 275 
+ splice 
+ Full Support 
+ Fully Supported. 
+
+ 276 
+ tee 
+ Full Support 
+ Fully Supported. 
+
+ 277 
+ sync_file_range 
+ Full Support 
+ Fully Supported. 
+
+ 278 
+ vmsplice 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/138 
+
+ 279 
+ move_pages 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_NICE; "invalid system call number" otherwise. 
+
+ 280 
+ utimensat 
+ Full Support 
+ Fully Supported. 
+
+ 281 
+ epoll_pwait 
+ Full Support 
+ Fully Supported. 
+
+ 282 
+ signalfd 
+ Full Support 
+ Fully Supported. 
+
+ 283 
+ timerfd_create 
+ Full Support 
+ Fully Supported. 
+
+ 284 
+ eventfd 
+ Full Support 
+ Fully Supported. 
+
+ 285 
+ fallocate 
+ Partial Support 
+ Not all options are supported. 
+
+ 286 
+ timerfd_settime 
+ Full Support 
+ Fully Supported. 
+
+ 287 
+ timerfd_gettime 
+ Full Support 
+ Fully Supported. 
+
+ 288 
+ accept4 
+ Full Support 
+ Fully Supported. 
+
+ 289 
+ signalfd4 
+ Full Support 
+ Fully Supported. 
+
+ 290 
+ eventfd2 
+ Full Support 
+ Fully Supported. 
+
+ 291 
+ epoll_create1 
+ Full Support 
+ Fully Supported. 
+
+ 292 
+ dup3 
+ Full Support 
+ Fully Supported. 
+
+ 293 
+ pipe2 
+ Full Support 
+ Fully Supported. 
+
+ 294 
+ inotify_init1 
+ Partial Support 
+ inotify events are only available inside the sandbox. 
+
+ 295 
+ preadv 
+ Full Support 
+ Fully Supported. 
+
+ 296 
+ pwritev 
+ Full Support 
+ Fully Supported. 
+
+ 297 
+ rt_tgsigqueueinfo 
+ Full Support 
+ Fully Supported. 
+
+ 298 
+ perf_event_open 
+ Unimplemented 
+ No support for perf counters; Returns "no such device". 
+
+ 299 
+ recvmmsg 
+ Full Support 
+ Fully Supported. 
+
+ 300 
+ fanotify_init 
+ Unimplemented 
+ Needs CONFIG_FANOTIFY; Returns "invalid system call number". 
+
+ 301 
+ fanotify_mark 
+ Unimplemented 
+ Needs CONFIG_FANOTIFY; Returns "invalid system call number". 
+
+ 302 
+ prlimit64 
+ Full Support 
+ Fully Supported. 
+
+ 303 
+ name_to_handle_at 
+ Unimplemented 
+ Not supported by gVisor filesystems; Returns "operation not supported on transport endpoint". 
+
+ 304 
+ open_by_handle_at 
+ Unimplemented 
+ Not supported by gVisor filesystems; Returns "operation not supported on transport endpoint". 
+
+ 305 
+ clock_adjtime 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_TIME; "invalid system call number" otherwise. 
+
+ 306 
+ syncfs 
+ Full Support 
+ Fully Supported. 
+
+ 307 
+ sendmmsg 
+ Full Support 
+ Fully Supported. 
+
+ 308 
+ setns 
+ Full Support 
+ Fully Supported. 
+
+ 309 
+ getcpu 
+ Full Support 
+ Fully Supported. 
+
+ 310 
+ process_vm_readv 
+ Full Support 
+ Fully Supported. 
+
+ 311 
+ process_vm_writev 
+ Full Support 
+ Fully Supported. 
+
+ 312 
+ kcmp 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_PTRACE; "invalid system call number" otherwise. 
+
+ 313 
+ finit_module 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_MODULE; "invalid system call number" otherwise. 
+
+ 314 
+ sched_setattr 
+ Partial Support 
+ Stub implementation. 
+
+ 315 
+ sched_getattr 
+ Partial Support 
+ Stub implementation. 
+
+ 316 
+ renameat2 
+ Full Support 
+ Fully Supported. 
+
+ 317 
+ seccomp 
+ Partial Support 
+ Only SECCOMP_SET_MODE_FILTER is supported, with flags set to 0 or SECCOMP_FILTER_FLAG_TSYNC. 
+
+ 318 
+ getrandom 
+ Full Support 
+ Fully Supported. 
+
+ 319 
+ memfd_create 
+ Full Support 
+ Fully Supported. 
+
+ 320 
+ kexec_file_load 
+ Unimplemented 
+ Returns "operation not permitted" if the process does not have CAP_SYS_BOOT; "invalid system call number" otherwise. 
+
+ 321 
+ bpf 
+ Partial Support 
+ Only loading, querying, and attaching of CGROUP_DEVICE programs are supported. Loaded programs have no effect. 
+
+ 322 
+ execveat 
+ Full Support 
+ Fully Supported. 
+
+ 323 
+ userfaultfd 
+ Unimplemented 
+ Returns "invalid system call number". See: https://gvisor.dev/issue/266 
+
+ 324 
+ membarrier 
+ Partial Support 
+ Not supported on all platforms. 
+
+ 325 
+ mlock2 
+ Partial Support 
+ Stub implementation. The sandbox lacks appropriate permissions. 
+
+ 326 
+ copy_file_range 
+ Full Support 
+ Fully Supported. 
+
+ 327 
+ preadv2 
+ Partial Support 
+ RWF flags are not supported. See: https://gvisor.dev/issue/2601 
+
+ 328 
+ pwritev2 
+ Partial Support 
+ RWF flags are not supported. See: https://gvisor.dev/issue/2601 
+
+ 329 
+ pkey_mprotect 
+ Unimplemented 
+ Returns "invalid system call number". 
+
+ 330 
+ pkey_alloc 
+ Unimplemented 
+ Returns "invalid system call number". 
+
+ 331 
+ pkey_free 
+ Unimplemented 
+ Returns "invalid system call number". 
+
+ 332 
+ statx 
+ Full Support 
+ Fully Supported. 
+
+ 333 
+ io_pgetevents 
+ Unimplemented 
+ Returns "invalid system call number". 
+
+ 334 
+ rseq 
+ Partial Support 
+ Not supported on all platforms. 
+
+ 424 
+ pidfd_send_signal 
+ Full Support 
+ Fully Supported. 
+
+ 425 
+ io_uring_setup 
+ Partial Support 
+ Not all flags and functionality supported. 
+
+ 426 
+ io_uring_enter 
+ Partial Support 
+ Not all flags and functionality supported. 
+
+ 427 
+ io_uring_register 
+ Unimplemented 
+ Returns "invalid system call number". 
+
+ 428 
+ open_tree 
+ Full Support 
+ Fully Supported. 
+
+ 429 
+ move_mount 
+ Partial Support 
+ Options MOVE_MOUNT_SET_GROUP and MOVE_MOUNT_BENEATH are not supported. 
+
+ 430 
+ fsopen 
+ Partial Support 
+ Message retrieval interface not supported. 
+
+ 431 
+ fsconfig 
+ Partial Support 
+ Only options FSCONFIG_SET_FLAG, FSCONFIG_SET_STRING, and FSCONFIG_CMD_CREATE are supported. All option parsing and error handling happens upon FSCONFIG_CMD_CREATE. 
+
+ 432 
+ fsmount 
+ Partial Support 
+ Options MOUNT_ATTR_NOSYMFOLLOW and MOUNT_ATTR_NODIRATIME are not supported. 
+
+ 433 
+ fspick 
+ Unimplemented 
+ Returns "invalid system call number". 
+
+ 434 
+ pidfd_open 
+ Full Support 
+ Fully Supported. 
+
+ 435 
+ clone3 
+ Partial Support 
+ Options CLONE_NEWTIME, CLONE_SYSVSEM and SetTid are not supported. 
+
+ 436 
+ close_range 
+ Full Support 
+ Fully Supported. 
+
+ 437 
+ openat2 
+ Full Support 
+ Fully Supported. 
+
+ 438 
+ pidfd_getfd 
+ Full Support 
+ Fully Supported. 
+
+ 439 
+ faccessat2 
+ Full Support 
+ Fully Supported. 
+
+ 441 
+ epoll_pwait2 
+ Full Support 
+ Fully Supported. 
+
+ About 
+
+ Roadmap 
+ Contributing 
+ Security 
+ Security Track Record 
+ Governance 
+ Privacy Policy 
+
+ Support 
+
+ Issues 
+ Documentation 
+ Application Compatibility 
+ FAQ 
+
+ Connect 
+
+ GitHub 
+
+ User Mailing List 
+
+ Developer Mailing List 
+
+ Gitter Chat 
+ Blog 
+
+ © 2026 The gVisor Authors 
+

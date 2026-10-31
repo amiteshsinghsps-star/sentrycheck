@@ -1,0 +1,268 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/native-0-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/native-1-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/native-2-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/preflight.json",
+        "sha256": "sha256:94baf26d64feee9398586297578a1aabd1dd54cf5b590d587d168442f7bb8127"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:e9df53c48090e866e99e6711f12a5f150d88546247042a52c7224da84de3006e"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/report.json",
+      "sha256": "sha256:8f87a16f5dd8b0a21b552e72979196108bb9544b7de2a170db9c114d37924b05"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/traces/native-0-guest.trace",
+        "sha256": "sha256:46c84ff6d00b8dc5a62f2ae709c0a52bed4351c136b26c97dfef3f5d20e9d53b"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/traces/native-1-guest.trace",
+        "sha256": "sha256:1a5171a928fd74f616c344ec297e46bb734a40f8ac5e8f74155a744c5b1faf02"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/traces/native-2-guest.trace",
+        "sha256": "sha256:b7c7473113a1297e6e4a38a41a4615cd1dc9620b1ea9c776d9772809d13d0383"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:ed23ac168756365a18d77d4a8b2230e72fb5c8a90bd862423859361f8a2966ea"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:b8c51aef04b418936be640d4b2d7d096a84a77f99f032f2a811f7f4a11a62120"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm01-20261031T102116Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:654e0e11c0c80bcd19878a35eea6b189dd5cafc6bf84d081299f08c3944c4c37"
+      }
+    ]
+  },
+  "case_id": "synthetic-optional-io-uring",
+  "ended_at": "2026-10-31T10:21:16Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=ab-block7; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 0,
+  "order_pattern": "ab-block7",
+  "predicted": {
+    "class": "tolerated",
+    "complete": true,
+    "finding_severities": [],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      51,
+      101,
+      103
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      203,
+      127,
+      126
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 0.41063,
+    "peak_rss_mb": 34.457031
+  },
+  "run_id": "r-synthetic-optional-io-uring-bm01-20261031T102116Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:21:06Z",
+  "suite": "BM-01",
+  "timings_ms": {
+    "scan": 1582,
+    "total": 9873
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

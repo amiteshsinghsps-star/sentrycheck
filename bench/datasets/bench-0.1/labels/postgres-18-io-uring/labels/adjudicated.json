@@ -1,0 +1,84 @@
+{
+  "adjudicator": {
+    "confidence": "high",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "hard-failure",
+    "rationale": "both raters agree independently"
+  },
+  "case_id": "postgres-18-io-uring",
+  "class": "hard-failure",
+  "confidence": "high",
+  "evidence": [
+    "io_uring_enter: support=partial gaps=['gap-gvisor-amd64-io-uring-enter']",
+    "io_uring_setup: support=partial gaps=['gap-gvisor-amd64-io-uring-setup']",
+    "native exits [0, 0, 0], sandbox exits [42, 42, 42] (run r-postgres-18-io-uring-bm04-20261031T103036Z)",
+    "repetition 0 stdout differs: native sha256:b3b8d8c508ca versus sandbox sha256:d5055bba5ecb",
+    "repetition 1 stdout differs: native sha256:b3b8d8c508ca versus sandbox sha256:5a29c52938f2",
+    "repetition 2 stdout differs: native sha256:b3b8d8c508ca versus sandbox sha256:e140f9122b86",
+    "sandbox trace refused io_uring_setup=errno38, rseq=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/report.json",
+      "sha256": "sha256:aa4bf43ea3978ab7ec87455c79fecf135f84e0475da83988bf95d7be4ba88614"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/traces/native-0-guest.trace",
+      "sha256": "sha256:f0d99bc11aa67c9ff158d56844c3358048fe5d7a34d92b4f50aba060f7167a06"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/traces/native-1-guest.trace",
+      "sha256": "sha256:a363f3b86aa305130ac2d19a978bc118723a8fd2b40b84352b170d4fc625a691"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/traces/native-2-guest.trace",
+      "sha256": "sha256:98f0b439890abe26bbb30859400882cd42dd434143c32c6a133ef62d8bee1859"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:a5409a08c3b5d03281572b7bb73af9d2970a4c634b77155bdc6f66853b0b7693"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:67b8b2873b4fac341be500ca70c31c285575dc5ec72a523788778bd100dc44d7"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:7ccbd82cce3f23f5a9bef67d823546218ad454f55e645b3df4bb0a80d97040fa"
+    }
+  ],
+  "rater_a": {
+    "confidence": "high",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "hard-failure",
+    "rationale": "io_uring_enter, io_uring_setup is required by the declared command and documented as a hard failure for this runtime"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "hard-failure",
+    "rationale": "the sandbox exited [42, 42, 42] while native exited [0]"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

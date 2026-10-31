@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="562" viewBox="0 0 960 562" role="img">
+<title>Median sandbox time over median native time (observed, uncontrolled host)</title><rect width="100%" height="100%" fill="#f9faf7"/>
+<text x="24" y="30" font-family="sans-serif" font-size="19" fill="#183c3a">Median sandbox time over median native time (observed, uncontrolled host)</text>
+<text x="24" y="84" font-family="sans-serif" font-size="12">baseline-go</text>
+<rect x="320" y="70" width="373.48" height="15" fill="#3f6fb5"/>
+<text x="700.48" y="82" font-family="sans-serif" font-size="11">ratio 1.527 x</text>
+<text x="24" y="132" font-family="sans-serif" font-size="12">postgres-18-io-uring</text>
+<rect x="320" y="118" width="219.33" height="15" fill="#3f6fb5"/>
+<text x="546.33" y="130" font-family="sans-serif" font-size="11">ratio 0.897 x</text>
+<text x="24" y="180" font-family="sans-serif" font-size="12">registry-node</text>
+<rect x="320" y="166" width="344.95" height="15" fill="#3f6fb5"/>
+<text x="671.95" y="178" font-family="sans-serif" font-size="11">ratio 1.410 x</text>
+<text x="24" y="228" font-family="sans-serif" font-size="12">registry-python</text>
+<rect x="320" y="214" width="317.51" height="15" fill="#3f6fb5"/>
+<text x="644.51" y="226" font-family="sans-serif" font-size="11">ratio 1.298 x</text>
+<text x="24" y="276" font-family="sans-serif" font-size="12">synthetic-baseline</text>
+<rect x="320" y="262" width="416.39" height="15" fill="#3f6fb5"/>
+<text x="743.39" y="274" font-family="sans-serif" font-size="11">ratio 1.702 x</text>
+<text x="24" y="324" font-family="sans-serif" font-size="12">synthetic-behavior-divergence</text>
+<rect x="320" y="310" width="345.30" height="15" fill="#3f6fb5"/>
+<text x="672.30" y="322" font-family="sans-serif" font-size="11">ratio 1.411 x</text>
+<text x="24" y="372" font-family="sans-serif" font-size="12">synthetic-optional-bpf</text>
+<rect x="320" y="358" width="408.26" height="15" fill="#3f6fb5"/>
+<text x="735.26" y="370" font-family="sans-serif" font-size="11">ratio 1.669 x</text>
+<text x="24" y="420" font-family="sans-serif" font-size="12">synthetic-optional-io-uring</text>
+<rect x="320" y="406" width="338.77" height="15" fill="#3f6fb5"/>
+<text x="665.77" y="418" font-family="sans-serif" font-size="11">ratio 1.385 x</text>
+<text x="24" y="468" font-family="sans-serif" font-size="12">synthetic-required-io-uring</text>
+<rect x="320" y="454" width="450.00" height="15" fill="#3f6fb5"/>
+<text x="777.00" y="466" font-family="sans-serif" font-size="11">ratio 1.839 x</text>
+<text x="24" y="540" font-family="sans-serif" font-size="11" fill="#5a6b68">measured on an uncontrolled desktop host under WSL2; these are observations, not a performance claim (PRD principle 4)</text></svg>

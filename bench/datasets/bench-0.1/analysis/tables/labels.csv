@@ -1,0 +1,10 @@
+case_id,class,confidence,label_path,label_sha256
+,tolerated,medium,bench/cases/baseline-go/labels/adjudicated.json,sha256:e8df692ab25f9efe3064a030f13c1662a327f999f34e7b925ef67c65a0e3fc7b
+,hard-failure,high,bench/cases/postgres-18-io-uring/labels/adjudicated.json,sha256:9d9f6e756baa2aff12e16efd5ed5cdd8145e0dd44b6bd8313716ab64a687bcc2
+,tolerated,medium,bench/cases/registry-node/labels/adjudicated.json,sha256:0dd1d6f571ae2f6db729adbd861bac905fbb6e9317cbcece329772a5599b7d05
+,tolerated,medium,bench/cases/registry-python/labels/adjudicated.json,sha256:e05ed1797fa609749d68999e438ae0b3cccbcbfb547525d641120ecb6ced961a
+,compatible,high,bench/cases/synthetic-baseline/labels/adjudicated.json,sha256:f407d11fcf5cb22732a842e5cd92b230cefa2bc0ec358dd811d1d3db9630fde4
+,silent-degradation,medium,bench/cases/synthetic-behavior-divergence/labels/adjudicated.json,sha256:834f07ad8619ff7f679dbe0f81d693c93818285c434b64704010302d3e0c2f07
+,tolerated,high,bench/cases/synthetic-optional-bpf/labels/adjudicated.json,sha256:62d801b7de3f7737300c09f2ecfc6d70dc8c41649f34e08b7a2f43b1c39aaae1
+,tolerated,high,bench/cases/synthetic-optional-io-uring/labels/adjudicated.json,sha256:0508a5f72e64d2024a91ff46e682948d75b2a298e91ce700c887579768954239
+,hard-failure,high,bench/cases/synthetic-required-io-uring/labels/adjudicated.json,sha256:eb30715f4f03e1da42d8b59f6c9902b7f61be240b04a5d8b440013739247abcd

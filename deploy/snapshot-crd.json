@@ -1,0 +1,166 @@
+{
+  "apiVersion": "apiextensions.k8s.io/v1",
+  "kind": "CustomResourceDefinition",
+  "metadata": {
+    "name": "sandboxpolicysnapshots.sentrycheck.io"
+  },
+  "spec": {
+    "group": "sentrycheck.io",
+    "scope": "Cluster",
+    "names": {
+      "plural": "sandboxpolicysnapshots",
+      "singular": "sandboxpolicysnapshot",
+      "kind": "SandboxPolicySnapshot",
+      "shortNames": [
+        "scsnap"
+      ]
+    },
+    "versions": [
+      {
+        "name": "v1alpha1",
+        "served": true,
+        "storage": true,
+        "schema": {
+          "openAPIV3Schema": {
+            "type": "object",
+            "properties": {
+              "apiVersion": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "metadata": {
+                "type": "object"
+              },
+              "spec": {
+                "type": "object",
+                "properties": {
+                  "generatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "expiresAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "runtimes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "handler": {
+                          "type": "string"
+                        },
+                        "runtime": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": "string"
+                        },
+                        "architecture": {
+                          "type": "string"
+                        },
+                        "selectorKey": {
+                          "type": "string"
+                        },
+                        "selectorValue": {
+                          "type": "string"
+                        },
+                        "configured": {
+                          "type": "boolean"
+                        },
+                        "healthyNodes": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "maxItems": 5000
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "handler",
+                        "runtime",
+                        "version",
+                        "architecture",
+                        "selectorKey",
+                        "selectorValue",
+                        "configured",
+                        "healthyNodes"
+                      ]
+                    },
+                    "maxItems": 128
+                  },
+                  "images": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "digest": {
+                          "type": "string"
+                        },
+                        "runtime": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": "string"
+                        },
+                        "architecture": {
+                          "type": "string"
+                        },
+                        "reportDigest": {
+                          "type": "string"
+                        },
+                        "complete": {
+                          "type": "boolean"
+                        },
+                        "hardFailure": {
+                          "type": "boolean"
+                        },
+                        "silentDegradation": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "digest",
+                        "runtime",
+                        "version",
+                        "architecture",
+                        "reportDigest",
+                        "complete",
+                        "hardFailure",
+                        "silentDegradation"
+                      ]
+                    },
+                    "maxItems": 10000
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "maxItems": 10000
+                  }
+                },
+                "required": [
+                  "generatedAt",
+                  "expiresAt",
+                  "runtimes",
+                  "images",
+                  "warnings"
+                ]
+              }
+            },
+            "required": [
+              "spec"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

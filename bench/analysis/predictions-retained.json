@@ -1,0 +1,547 @@
+{
+  "count": 34,
+  "rows": [
+    {
+      "image_digest": "sha256:c234ece14d8912ac7e9d41d9f252a5e95ceea290b40959acda0dd19af0c15eb7",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "indeterminate",
+        "complete": false,
+        "finding_severities": [],
+        "incomplete_reason_codes": [
+          "baseline-failed",
+          "guest-trace-incomplete",
+          "native-only-evidence"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-native-only"
+      },
+      "report": "artifacts/capture-limit/capture.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "tolerated",
+        "complete": false,
+        "finding_severities": [],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/evaluation/fallback.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "hard-failure",
+        "complete": false,
+        "finding_severities": [
+          "compatibility-risk",
+          "hard-failure"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/evaluation/hard-failure.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "indeterminate",
+        "complete": false,
+        "finding_severities": [],
+        "incomplete_reason_codes": [
+          "baseline-failed",
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/evaluation/native-fails.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "indeterminate",
+        "complete": false,
+        "finding_severities": [
+          "compatibility-risk"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance",
+          "native-only-evidence"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-native-only"
+      },
+      "report": "artifacts/evaluation/native-only.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "silent-degradation",
+        "complete": false,
+        "finding_severities": [
+          "silent-degradation"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/evaluation/output-diff.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": false,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/evaluation/performance.report.json"
+    },
+    {
+      "image_digest": "sha256:69f65f24b1faa90c21a3672683191babf95b7d902f76b38877db71d0caccc3a6",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-baselines/go.report.json"
+    },
+    {
+      "image_digest": "sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-baselines/node.report.json"
+    },
+    {
+      "image_digest": "sha256:44ff437bba879d4941b710a369a8f19266aea34b29002807f0c487fabc9eec9b",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-baselines/python.report.json"
+    },
+    {
+      "image_digest": "sha256:85f15ac1e4ab8f4fb0beaf9e3413505e68331a6d72ba5cf0d6bb1fe3fd4d7efb",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "hard-failure",
+        "complete": true,
+        "finding_severities": [
+          "compatibility-risk",
+          "hard-failure"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-postgres/postgres.report.json"
+    },
+    {
+      "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "compatible",
+        "complete": true,
+        "finding_severities": [],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-validation/baseline.report.json"
+    },
+    {
+      "image_digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "silent-degradation",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression",
+          "silent-degradation"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-validation/behavior.report.json"
+    },
+    {
+      "image_digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-validation/bpf_optional.report.json"
+    },
+    {
+      "image_digest": "sha256:67f9d63fc82328555c9f47f2c79f3b8e367fcc5a77ea97c3272088932285cb9e",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "hard-failure",
+        "complete": true,
+        "finding_severities": [
+          "compatibility-risk",
+          "hard-failure"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-validation/io_uring.report.json"
+    },
+    {
+      "image_digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/live-validation/io_uring_fallback.report.json"
+    },
+    {
+      "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/final-live/baseline.report.json"
+    },
+    {
+      "image_digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "silent-degradation",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression",
+          "silent-degradation"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/final-live/behavior.report.json"
+    },
+    {
+      "image_digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/final-live/bpf_optional.report.json"
+    },
+    {
+      "image_digest": "sha256:67f9d63fc82328555c9f47f2c79f3b8e367fcc5a77ea97c3272088932285cb9e",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "hard-failure",
+        "complete": true,
+        "finding_severities": [
+          "compatibility-risk",
+          "hard-failure"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/final-live/io_uring.report.json"
+    },
+    {
+      "image_digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/final-live/io_uring_fallback.report.json"
+    },
+    {
+      "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/live/baseline.report.json"
+    },
+    {
+      "image_digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "silent-degradation",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression",
+          "silent-degradation"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/live/behavior.report.json"
+    },
+    {
+      "image_digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/live/bpf_optional.report.json"
+    },
+    {
+      "image_digest": "sha256:67f9d63fc82328555c9f47f2c79f3b8e367fcc5a77ea97c3272088932285cb9e",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "hard-failure",
+        "complete": true,
+        "finding_severities": [
+          "compatibility-risk",
+          "hard-failure"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/live/io_uring.report.json"
+    },
+    {
+      "image_digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/live/io_uring_fallback.report.json"
+    },
+    {
+      "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": true,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [],
+        "status": "complete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/modified-baseline.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "tolerated",
+        "complete": false,
+        "finding_severities": [],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/synthetic/fallback.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "hard-failure",
+        "complete": false,
+        "finding_severities": [
+          "compatibility-risk",
+          "hard-failure"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/synthetic/hard-failure.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "indeterminate",
+        "complete": false,
+        "finding_severities": [],
+        "incomplete_reason_codes": [
+          "baseline-failed",
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/synthetic/native-fails.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "indeterminate",
+        "complete": false,
+        "finding_severities": [
+          "compatibility-risk"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance",
+          "native-only-evidence"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-native-only"
+      },
+      "report": "artifacts/review-v03/synthetic/native-only.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "silent-degradation",
+        "complete": false,
+        "finding_severities": [
+          "silent-degradation"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/synthetic/output-diff.report.json"
+    },
+    {
+      "image_digest": "sha256:a2226d37c04a3d8a3a9d05e7a36fc70bcc31e169fd75727e9f469664d7725e36",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "performance-regression",
+        "complete": false,
+        "finding_severities": [
+          "performance-regression"
+        ],
+        "incomplete_reason_codes": [
+          "imported-provenance"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-runsc-diff"
+      },
+      "report": "artifacts/review-v03/synthetic/performance.report.json"
+    },
+    {
+      "image_digest": "sha256:6fc7c6108fb2c0ecabbc6e56111ccca1d35ff2271522b0372fb89640cbc7a535",
+      "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+      "predicted": {
+        "class": "indeterminate",
+        "complete": false,
+        "finding_severities": [],
+        "incomplete_reason_codes": [
+          "baseline-failed",
+          "guest-trace-incomplete",
+          "native-only-evidence"
+        ],
+        "status": "incomplete",
+        "tier": "dynamic-native-only"
+      },
+      "report": "artifacts/trace-limit/trace.report.json"
+    }
+  ],
+  "schema_version": "1.0"
+}

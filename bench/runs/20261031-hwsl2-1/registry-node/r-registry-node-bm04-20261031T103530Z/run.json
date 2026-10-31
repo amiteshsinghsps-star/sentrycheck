@@ -1,0 +1,280 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/native-0-config.json",
+        "sha256": "sha256:f555da1341f7bf7272131829237260d26c32088d13fffaa26b652d4a18d0cc52"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/native-1-config.json",
+        "sha256": "sha256:f555da1341f7bf7272131829237260d26c32088d13fffaa26b652d4a18d0cc52"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/native-2-config.json",
+        "sha256": "sha256:f555da1341f7bf7272131829237260d26c32088d13fffaa26b652d4a18d0cc52"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/preflight.json",
+        "sha256": "sha256:09c0c4282dc6e115abb5100d5f4ff6e6a5f94a27cefa0bc86a4cefb138916960"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:f5f3cdddadb33f748b3b553222111f0f1151194b5cf9d78160e30c2cdadce6e4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:f5f3cdddadb33f748b3b553222111f0f1151194b5cf9d78160e30c2cdadce6e4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:f5f3cdddadb33f748b3b553222111f0f1151194b5cf9d78160e30c2cdadce6e4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:5f72e5bcc73c4ef246e2c85b73473a0b7e1a9447c6e60aec93473893b7dbd9b4"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:44610e3c1789476ead53a65de515dbc6be0bec64508b3acb866a18b23e688d7f",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:44610e3c1789476ead53a65de515dbc6be0bec64508b3acb866a18b23e688d7f",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:44610e3c1789476ead53a65de515dbc6be0bec64508b3acb866a18b23e688d7f",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:44610e3c1789476ead53a65de515dbc6be0bec64508b3acb866a18b23e688d7f",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:44610e3c1789476ead53a65de515dbc6be0bec64508b3acb866a18b23e688d7f",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:44610e3c1789476ead53a65de515dbc6be0bec64508b3acb866a18b23e688d7f",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/report.json",
+      "sha256": "sha256:f033b7407e0b5bf1d0bd89f7a0c22494fbff864cf646c01cda2ff82f4e437d5e"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/native-0-guest.trace",
+        "sha256": "sha256:0ffb88fe8cdd65f2959d648f01441e47737a12ca576cf7a4d1961b2641fac118"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/native-1-guest.trace",
+        "sha256": "sha256:839e6120d6c6034d8d1a47dd4fe83256c5f75e3a66f7b6185d81622b7df33ac0"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/native-2-guest.trace",
+        "sha256": "sha256:77a4e35d604ee2ea112aa209e49be51fb054a61b4163f6e44befa5706fa0afed"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:2571b0b9e3abc4d49dbb293bcfaae7a2d193092f2db71a34be39952a113be623"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:9408ddd991047050e88d90283ce8b2abfe822458a44129be6daef9f080f3860f"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:232499006c3cfc4dc7eebf9e3dbcb3683c604673f7fcec82c0ab195e64d063ce"
+      }
+    ]
+  },
+  "case_id": "registry-node",
+  "ended_at": "2026-10-31T10:35:29Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=abba-block2; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 2,
+  "order_pattern": "abba-block2",
+  "predicted": {
+    "class": "tolerated",
+    "complete": true,
+    "finding_severities": [],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      641,
+      767,
+      662
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      940,
+      1000,
+      1045
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 14.132968,
+    "peak_rss_mb": 334.308594
+  },
+  "run_id": "r-registry-node-bm04-20261031T103530Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:34:10Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 55405,
+    "total": 79574
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

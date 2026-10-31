@@ -1,0 +1,159 @@
+{
+  "hostname": "sentrycheck",
+  "linux": {
+    "maskedPaths": [
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/timer_list",
+      "/proc/sched_debug",
+      "/sys/firmware"
+    ],
+    "namespaces": [
+      {
+        "type": "pid"
+      },
+      {
+        "type": "network"
+      },
+      {
+        "type": "ipc"
+      },
+      {
+        "type": "uts"
+      },
+      {
+        "type": "mount"
+      }
+    ],
+    "readonlyPaths": [
+      "/proc/sys",
+      "/proc/sysrq-trigger",
+      "/proc/irq",
+      "/proc/bus"
+    ],
+    "resources": {
+      "cpu": {
+        "period": 100000,
+        "quota": 100000
+      },
+      "memory": {
+        "limit": 536870912
+      },
+      "pids": {
+        "limit": 128
+      }
+    }
+  },
+  "mounts": [
+    {
+      "destination": "/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ],
+      "source": "proc",
+      "type": "proc"
+    },
+    {
+      "destination": "/dev",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/dev/pts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620"
+      ],
+      "source": "devpts",
+      "type": "devpts"
+    },
+    {
+      "destination": "/dev/shm",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "mode=1777",
+        "size=65536k"
+      ],
+      "source": "shm",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/tmp",
+      "options": [
+        "nosuid",
+        "nodev",
+        "mode=1777",
+        "size=134217728"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    },
+    {
+      "destination": "/run",
+      "options": [
+        "nosuid",
+        "nodev",
+        "mode=755",
+        "size=16777216"
+      ],
+      "source": "tmpfs",
+      "type": "tmpfs"
+    }
+  ],
+  "ociVersion": "1.1.0",
+  "process": {
+    "args": [
+      "node",
+      "-e",
+      "const fs=require('node:fs/promises'),os=require('node:os'),path=require('node:path'),crypto=require('node:crypto');(async()=>{let d=await fs.mkdtemp(path.join(os.tmpdir(),'sc-'));let p=path.join(d,'data');await fs.writeFile(p,'sentrycheck');let b=await fs.readFile(p);if(b.toString()!=='sentrycheck')throw Error('io');if(crypto.createHash('sha256').update(b).digest('hex').length!==64)throw Error('hash');await new Promise(r=>setTimeout(r,25));await fs.rm(d,{recursive:true});console.log('sentrycheck-node-ok')})().catch(e=>{console.error(e);process.exit(1)})"
+    ],
+    "capabilities": {
+      "ambient": [],
+      "bounding": [],
+      "effective": [],
+      "inheritable": [],
+      "permitted": []
+    },
+    "cwd": "/",
+    "env": [
+      "NODE_VERSION=22.23.4",
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "YARN_VERSION=1.22.22"
+    ],
+    "noNewPrivileges": true,
+    "rlimits": [
+      {
+        "hard": 1024,
+        "soft": 1024,
+        "type": "RLIMIT_NOFILE"
+      },
+      {
+        "hard": 134217728,
+        "soft": 134217728,
+        "type": "RLIMIT_FSIZE"
+      }
+    ],
+    "terminal": false,
+    "user": {
+      "gid": 0,
+      "uid": 0
+    }
+  },
+  "root": {
+    "path": "rootfs",
+    "readonly": false
+  }
+}

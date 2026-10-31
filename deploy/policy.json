@@ -1,0 +1,85 @@
+{
+  "apiVersion": "admissionregistration.k8s.io/v1",
+  "kind": "ValidatingAdmissionPolicy",
+  "metadata": {
+    "name": "sentrycheck-compatibility"
+  },
+  "spec": {
+    "failurePolicy": "Fail",
+    "paramKind": {
+      "apiVersion": "sentrycheck.io/v1alpha1",
+      "kind": "SandboxPolicySnapshot"
+    },
+    "matchConstraints": {
+      "resourceRules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "apiVersions": [
+            "v1"
+          ],
+          "operations": [
+            "CREATE",
+            "UPDATE"
+          ],
+          "resources": [
+            "pods",
+            "pods/ephemeralcontainers"
+          ]
+        }
+      ]
+    },
+    "matchConditions": [
+      {
+        "name": "managed-or-required-isolation",
+        "expression": "(has(object.spec.runtimeClassName) && object.spec.runtimeClassName in [\"sentrycheck-gvisor\"]) || (has(object.metadata.labels) && 'sentrycheck.io/require-isolation' in object.metadata.labels && object.metadata.labels['sentrycheck.io/require-isolation'] == 'true')"
+      }
+    ],
+    "variables": [
+      {
+        "name": "runtimeName",
+        "expression": "has(object.spec.runtimeClassName) ? object.spec.runtimeClassName : ''"
+      },
+      {
+        "name": "managed",
+        "expression": "params.spec.runtimes.filter(r, r.name == variables.runtimeName)"
+      },
+      {
+        "name": "images",
+        "expression": "object.spec.containers.map(c, c.image) + (has(object.spec.initContainers) ? object.spec.initContainers.map(c, c.image) : []) + (has(object.spec.ephemeralContainers) ? object.spec.ephemeralContainers.map(c, c.image) : [])"
+      },
+      {
+        "name": "requiredIsolation",
+        "expression": "has(object.metadata.labels) && 'sentrycheck.io/require-isolation' in object.metadata.labels && object.metadata.labels['sentrycheck.io/require-isolation'] == 'true'"
+      }
+    ],
+    "validations": [
+      {
+        "expression": "size(variables.managed) == 1",
+        "message": "SENTRYCHECK: the configured or required RuntimeClass must have exactly one current controller snapshot entry.",
+        "reason": "Invalid"
+      },
+      {
+        "expression": "variables.managed.all(r, r.configured && size(r.healthyNodes) > 0)",
+        "message": "SENTRYCHECK: runtime has no verified healthy scheduling target or its handler configuration differs.",
+        "reason": "Invalid"
+      },
+      {
+        "expression": "variables.managed.all(r, has(object.spec.nodeSelector) && r.selectorKey in object.spec.nodeSelector && object.spec.nodeSelector[r.selectorKey] == r.selectorValue && 'kubernetes.io/arch' in object.spec.nodeSelector && object.spec.nodeSelector['kubernetes.io/arch'] == r.architecture && (!has(object.spec.nodeName) || object.spec.nodeName == '' || object.spec.nodeName in r.healthyNodes))",
+        "message": "SENTRYCHECK: Pod must retain the RuntimeClass health and architecture selectors; a direct node assignment must be verified.",
+        "reason": "Invalid"
+      },
+      {
+        "expression": "size(variables.managed) == 0 || variables.images.all(c, c.matches('^[^@]+@sha256:[a-f0-9]{64}$') && variables.managed.all(r, params.spec.images.exists(i, i.runtime == r.runtime && i.version == r.version && i.architecture == r.architecture && c.endsWith('@' + i.digest)) && !params.spec.images.exists(i, i.runtime == r.runtime && i.version == r.version && i.architecture == r.architecture && c.endsWith('@' + i.digest) && !i.complete)))",
+        "message": "SENTRYCHECK: every app, init, and ephemeral image needs complete trusted reports for its immutable digest and exact runtime version/architecture.",
+        "reason": "Invalid"
+      },
+      {
+        "expression": "variables.images.all(c, variables.managed.all(r, !params.spec.images.exists(i, i.runtime == r.runtime && i.version == r.version && i.architecture == r.architecture && c.endsWith('@' + i.digest) && i.hardFailure)))",
+        "message": "SENTRYCHECK: image has a confirmed hard-failure finding for the selected runtime.",
+        "reason": "Invalid"
+      }
+    ]
+  }
+}

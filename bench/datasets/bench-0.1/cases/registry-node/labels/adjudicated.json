@@ -1,0 +1,79 @@
+{
+  "adjudicator": {
+    "confidence": "medium",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "raters disagree; a positive observation in the recorded execution evidence outranks documentation"
+  },
+  "case_id": "registry-node",
+  "class": "tolerated",
+  "confidence": "medium",
+  "evidence": [
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-registry-node-bm04-20261031T103530Z)",
+    "sandbox trace refused futex=errno11, futex=errno512, io_uring_setup=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/report.json",
+      "sha256": "sha256:f033b7407e0b5bf1d0bd89f7a0c22494fbff864cf646c01cda2ff82f4e437d5e"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/native-0-guest.trace",
+      "sha256": "sha256:0ffb88fe8cdd65f2959d648f01441e47737a12ca576cf7a4d1961b2641fac118"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/native-1-guest.trace",
+      "sha256": "sha256:839e6120d6c6034d8d1a47dd4fe83256c5f75e3a66f7b6185d81622b7df33ac0"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/native-2-guest.trace",
+      "sha256": "sha256:77a4e35d604ee2ea112aa209e49be51fb054a61b4163f6e44befa5706fa0afed"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:2571b0b9e3abc4d49dbb293bcfaae7a2d193092f2db71a34be39952a113be623"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:9408ddd991047050e88d90283ce8b2abfe822458a44129be6daef9f080f3860f"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:232499006c3cfc4dc7eebf9e3dbcb3683c604673f7fcec82c0ab195e64d063ce"
+    }
+  ],
+  "rater_a": {
+    "confidence": "high",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "compatible",
+    "rationale": "no expected interface epoll_wait, getrandom, openat is documented as partial or unimplemented for gvisor/amd64"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "futex, io_uring_setup was refused under the sandbox and not on native, yet the workload still exited 0, which is a handled fallback"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

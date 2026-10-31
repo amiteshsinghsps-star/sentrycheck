@@ -1,0 +1,21 @@
+{
+  "arm": "B5_justrun",
+  "case_id": "baseline-go",
+  "class": "compatible",
+  "correct": false,
+  "gold": "tolerated",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "rule": "run once and read the exit code",
+  "run_id": "r-baseline-go-bm04-20261031T102739Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/report.json",
+  "source_sha256": "sha256:3f83740263e5a952d9e42315650618e0a1944c50f546f05cfb603573e5e9b9b4",
+  "suite": "BM-04",
+  "tool_prediction": "compatible"
+}

@@ -1,0 +1,98 @@
+{
+  "architecture": "AMD64",
+  "clock": {
+    "synced": null,
+    "timezone": "India Standard Time",
+    "unix_now": 1793435875
+  },
+  "cpu": {
+    "cores": 12,
+    "governor": null,
+    "model": null,
+    "pinning": null,
+    "smt": null,
+    "threads_per_core": null,
+    "turbo": null
+  },
+  "host_id": "hwin-1",
+  "host_load_controlled": false,
+  "kernel": "Windows 10.0.26300",
+  "load_average": {
+    "fifteen": null,
+    "five": null,
+    "one": null
+  },
+  "memory": {
+    "swap": null,
+    "total_mb": null,
+    "transparent_hugepage": null
+  },
+  "network": null,
+  "notes": "Windows host: /sys and /proc controls do not exist; timing suites must be run against a Linux host record total memory not readable without a platform call; recorded as null",
+  "numa": null,
+  "os_release": "11",
+  "platform": "Windows",
+  "recorded_at": "2026-10-31T08:37:55Z",
+  "schema_version": "1.0",
+  "storage": {
+    "device": null,
+    "filesystem": null,
+    "free_mb": 28135,
+    "work_root": "repo:bench"
+  },
+  "tools": [
+    {
+      "name": "sentrycheck",
+      "path": "target/debug/sentrycheck.exe",
+      "sha256": "sha256:407337980e8cf119441bd33b7ffbac4e1624b0e7f34aafe81d625b3944005775",
+      "version": "sentrycheck 0.5.0"
+    },
+    {
+      "name": "runc",
+      "path": null,
+      "sha256": null,
+      "version": null
+    },
+    {
+      "name": "runsc",
+      "path": ".cache/linux/bin/runsc",
+      "sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+      "version": null
+    },
+    {
+      "name": "strace",
+      "path": "C:\\Program Files\\Git\\usr\\bin\\strace.EXE",
+      "sha256": "sha256:f6021d33c9c93a4d127ea3160c08c9929fec1033d03386a8962fa923147f0324",
+      "version": "strace (cygwin) 3.6.7"
+    },
+    {
+      "name": "docker",
+      "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
+      "sha256": "sha256:6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+      "version": "Docker version 29.8.2, build 7fc2dff"
+    },
+    {
+      "name": "gcc",
+      "path": "C:\\MinGW\\bin\\gcc.EXE",
+      "sha256": "sha256:a20b2286ddee05f01aa5d8f0933826c4cc3dfd04f28aae7d04901565cb5783cb",
+      "version": "gcc.exe (MinGW.org GCC-6.3.0-1) 6.3.0"
+    },
+    {
+      "name": "go",
+      "path": "C:\\Program Files\\Go\\bin\\go.EXE",
+      "sha256": "sha256:4e5cebbe061cc415331b83a1e11f9f98cc3bf861cd24cbed15ab8236e0f79316",
+      "version": "flag provided but not defined: -version"
+    },
+    {
+      "name": "python3",
+      "path": null,
+      "sha256": null,
+      "version": null
+    }
+  ],
+  "virtualization": {
+    "is_wsl": null,
+    "nested_kvm": null,
+    "provider": null
+  }
+}

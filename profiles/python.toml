@@ -1,0 +1,7 @@
+name = "python-filesystem-sqlite-threads"
+description = "Exercise file I/O, hashing, SQLite transactions, and worker threads with deterministic assertions."
+command = ["python3", "-c", "import concurrent.futures,hashlib,pathlib,sqlite3,tempfile; d=tempfile.TemporaryDirectory(); p=pathlib.Path(d.name)/'data'; p.write_bytes(b'sentrycheck'*1000); assert len(p.read_bytes())==11000; db=sqlite3.connect(str(pathlib.Path(d.name)/'db')); db.execute('create table t(x integer)'); db.executemany('insert into t values (?)',[(i,) for i in range(100)]); db.commit(); assert db.execute('select sum(x) from t').fetchone()[0]==4950; pool=concurrent.futures.ThreadPoolExecutor(2); assert list(pool.map(lambda x:x*x,[2,3]))==[4,9]; pool.shutdown(); db.close(); d.cleanup(); print('sentrycheck-python-ok')"]
+timeout_seconds = 30
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

@@ -1,0 +1,57 @@
+# Canonical line endings for SENTRYCHECK records.
+#
+# The benchmark harness hashes schema contracts, knowledge-base snapshots, reports and
+# trace artifacts (PRD v2 BH-06/BH-08: byte-identical output from identical inputs).
+# With core.autocrlf=true a Windows checkout rewrites those files to CRLF, so the same
+# commit hashes differently on two platforms. Force LF in the working tree everywhere.
+* text=auto eol=lf
+
+# Contract and record files
+*.json   text eol=lf
+*.jsonl  text eol=lf
+*.md     text eol=lf
+*.toml   text eol=lf
+*.txt    text eol=lf
+*.yaml   text eol=lf
+*.yml    text eol=lf
+*.svg    text eol=lf
+*.html   text eol=lf
+*.css    text eol=lf
+*.js     text eol=lf
+*.ts     text eol=lf
+*.astro  text eol=lf
+
+# Source and scripts
+*.rs     text eol=lf
+*.py     text eol=lf
+*.go     text eol=lf
+*.c      text eol=lf
+*.h      text eol=lf
+*.sh     text eol=lf
+*.ps1    text eol=lf
+*.cmd    text eol=crlf
+Cargo.lock text eol=lf
+
+# Never normalize: these bytes are digest-pinned evidence
+*.tar    binary
+*.tar.gz binary
+*.tgz    binary
+*.gz     binary
+*.zst    binary
+*.bz2    binary
+*.xz     binary
+*.zip    binary
+*.pdf    binary
+*.png    binary
+*.jpg    binary
+*.ico    binary
+*.wasm   binary
+*.trace  binary
+*.eli    binary
+*.exe    binary
+*.dll    binary
+*.so     binary
+*.dylib  binary
+*.a      binary
+*.obj    binary
+/bin/**  binary

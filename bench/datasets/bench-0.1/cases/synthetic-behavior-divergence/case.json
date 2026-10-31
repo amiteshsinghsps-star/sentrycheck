@@ -1,0 +1,52 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "synthetic-behavior-divergence",
+  "expected_interfaces": [
+    "uname",
+    "getrandom"
+  ],
+  "group": "synthetic",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+    "layer_digests": [
+      "sha256:213acff0726d95ba5a422ce544d9239ad6aaf7a6967f9c0b5e03b3ce08bdeb76"
+    ],
+    "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+    "local_path": "artifacts/live-images/behavior",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": null,
+    "source_url": null
+  },
+  "label": null,
+  "notes": "Prints a value that differs under the sandbox, so the only usable evidence is a stdout diff.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout artifacts/live-images/behavior (index artifacts/live-images/behavior/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/synthetic.toml",
+    "sha256": "sha256:e25a228effa5bb22c53a663f39a9f3f43177dbc4c7a8881583132921e571ec2f"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "validation",
+  "suites": [
+    "BM-01",
+    "BM-03",
+    "BM-04",
+    "BM-14"
+  ],
+  "tags": [
+    "output-diff",
+    "silent-degradation"
+  ]
+}

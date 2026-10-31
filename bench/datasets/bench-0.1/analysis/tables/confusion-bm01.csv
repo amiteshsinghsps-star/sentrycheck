@@ -1,0 +1,7 @@
+gold,hard-failure,silent-degradation,performance-regression,tolerated,compatible,indeterminate
+hard-failure,2,0,0,0,0,0
+silent-degradation,0,1,0,0,0,0
+performance-regression,0,0,0,0,0,0
+tolerated,0,0,0,4,1,0
+compatible,0,0,0,0,1,0
+indeterminate,0,0,0,0,0,0

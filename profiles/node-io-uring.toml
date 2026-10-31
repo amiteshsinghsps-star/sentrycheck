@@ -1,0 +1,7 @@
+name = "node-required-io-uring-file-io"
+description = "Node launches a statically linked liburing helper and asserts its asynchronous write/read result. This deliberately requires io_uring; it does not assume Node/libuv uses io_uring automatically. Build corpus/node-uring into the image first."
+command = ["node", "/workload/uring.js"]
+timeout_seconds = 30
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

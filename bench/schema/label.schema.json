@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$"
+    },
+    "recorded_at": {
+      "type": "string"
+    },
+    "rater": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "human",
+            "rule-adjudicator"
+          ]
+        },
+        "label_class": {
+          "type": "string",
+          "enum": [
+            "hard-failure",
+            "silent-degradation",
+            "tolerated",
+            "compatible",
+            "performance-regression",
+            "indeterminate"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "label_class",
+        "confidence",
+        "rationale"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "log",
+              "trace",
+              "url",
+              "file",
+              "run",
+              "exit-code",
+              "output-diff"
+            ]
+          },
+          "ref": {
+            "type": "string"
+          },
+          "sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "ref",
+          "sha256",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "recorded_at",
+    "rater",
+    "evidence",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SENTRYCHECK benchmark label record",
+  "$id": "urn:sentrycheck:bench:label:1.0"
+}

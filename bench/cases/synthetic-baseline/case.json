@@ -1,0 +1,54 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "synthetic-baseline",
+  "expected_interfaces": [
+    "read",
+    "write",
+    "exit_group"
+  ],
+  "group": "synthetic",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+    "layer_digests": [
+      "sha256:b4e6ccf30cdb13129dce99c0b7e6675afde28ceeadfe0193548098938b33ac77"
+    ],
+    "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+    "local_path": "artifacts/live-images/fixtures/baseline",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": null,
+    "source_url": null
+  },
+  "label": null,
+  "notes": "Deterministic fixture expected to be compatible in both runtimes; the control case.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout artifacts/live-images/fixtures/baseline (index artifacts/live-images/fixtures/baseline/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/synthetic.toml",
+    "sha256": "sha256:e25a228effa5bb22c53a663f39a9f3f43177dbc4c7a8881583132921e571ec2f"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "development",
+  "suites": [
+    "BM-01",
+    "BM-04",
+    "BM-13",
+    "BM-14"
+  ],
+  "tags": [
+    "baseline",
+    "deterministic",
+    "positive-control"
+  ]
+}

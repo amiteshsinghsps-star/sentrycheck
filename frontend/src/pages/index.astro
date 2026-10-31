@@ -1,0 +1,54 @@
+---
+import styles from '../styles.css?raw';
+import viewer from '../viewer.js?raw';
+import demo from '../demo.json';
+const placeholder = JSON.stringify(['__', 'SENTRYCHECK', '_DATA', '__'].join(''));
+const demoJSON = JSON.stringify(demo).replaceAll('<', '\\u003c').replaceAll('>', '\\u003e').replaceAll('&', '\\u0026');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 36'%3E%3Cpath fill='%2323756b' d='M16 2 29 7v11c0 8-8 13-13 16C11 31 3 26 3 18V7L16 2Z'/%3E%3Cpath d='m10 18 4 4 8-10' fill='none' stroke='%23fffefa' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    {import.meta.env.PROD && <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'" />}
+    <title>SENTRYCHECK — Report explorer</title>
+    <style is:inline set:html={styles}></style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to report</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#overview" aria-label="Sentrycheck overview">
+          <svg width="32" height="36" viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="M16 2 29 7v11c0 8-8 13-13 16C11 31 3 26 3 18V7L16 2Z" fill="currentColor"/><path d="m10 18 4 4 8-10" stroke="#f8f7f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>SENTRYCHECK<span class="brand-sub">COMPATIBILITY INTELLIGENCE</span></span>
+        </a>
+        <div class="nav-caption">WORKSPACE <span>01</span></div>
+        <nav id="navigation"></nav>
+        <div class="sidebar-record" id="sidebar-record"></div>
+        <div class="sidebar-bottom">
+          <div class="local-indicator"><span></span> Local report explorer</div>
+          <p>Your report stays in this browser.<br />No account. No upload.</p>
+          <div class="sidebar-version">OPEN SOURCE <span>v0.5.0</span></div>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="breadcrumb"><span>SENTRYCHECK</span><span>/</span><strong id="breadcrumb-title">Report overview</strong></div>
+          <div class="topbar-actions"><span class="offline-chip"><i></i> OFFLINE</span><button class="button button-dark" id="import-button" type="button"><span aria-hidden="true">↗</span> Open report</button></div>
+        </header>
+        <div id="global-notice" aria-live="polite"></div>
+        <main id="main-content" tabindex="-1"></main>
+        <footer class="workspace-footer"><span>SENTRYCHECK <span class="footer-dot">·</span> Evidence before deployment.</span><span>Profile-bounded observations. No compatibility guarantee.</span></footer>
+      </div>
+    </div>
+    <input id="report-file" type="file" accept=".json,.sarif,application/json" hidden />
+    <div id="drop-overlay" hidden><div><strong>Open a local report</strong><span>Drop a SENTRYCHECK JSON or SARIF file here</span><small>Up to 128 MiB · stays in your browser</small></div></div>
+    <div id="toast" role="status" hidden></div>
+    <noscript><p class="noscript">Enable JavaScript to explore this local report. No data is sent to a server.</p></noscript>
+    <script id="sentrycheck-data" type="application/json" is:inline set:html={placeholder}></script>
+    <script id="sentrycheck-demo" type="application/json" is:inline set:html={demoJSON}></script>
+    <script is:inline set:html={viewer}></script>
+  </body>
+</html>

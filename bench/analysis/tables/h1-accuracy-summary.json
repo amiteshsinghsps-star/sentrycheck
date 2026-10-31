@@ -1,0 +1,100 @@
+{
+  "accuracy": {
+    "b0": {
+      "arm": "b0",
+      "count": 9,
+      "high": 0.645798,
+      "hits": 3,
+      "low": 0.120584,
+      "method": "wilson",
+      "rate": 0.333333
+    },
+    "b3": {
+      "arm": "b3",
+      "count": 9,
+      "high": 0.547411,
+      "hits": 2,
+      "low": 0.063225,
+      "method": "wilson",
+      "rate": 0.222222
+    },
+    "b5": {
+      "arm": "b5",
+      "count": 9,
+      "high": 0.645798,
+      "hits": 3,
+      "low": 0.120584,
+      "method": "wilson",
+      "rate": 0.333333
+    },
+    "tool": {
+      "arm": "tool",
+      "count": 9,
+      "high": 0.980109,
+      "hits": 8,
+      "low": 0.565,
+      "method": "wilson",
+      "rate": 0.888889
+    }
+  },
+  "paired_tests": {
+    "b0_vs_b5": {
+      "discordant_b": 0,
+      "discordant_c": 0,
+      "holm_adjusted_p": 1.0,
+      "holm_reject": false,
+      "method": "mcnemar-exact",
+      "n": 0,
+      "note": "no discordant pairs; the two tools never disagreed",
+      "p_value": 1.0
+    },
+    "tool_vs_b0": {
+      "continuity_corrected_chi2": 3.2,
+      "discordant_b": 5,
+      "discordant_c": 0,
+      "holm_adjusted_p": 0.1875,
+      "holm_reject": false,
+      "method": "mcnemar-exact",
+      "n": 5,
+      "p_value": 0.0625
+    },
+    "tool_vs_b3": {
+      "continuity_corrected_chi2": 4.166667,
+      "discordant_b": 6,
+      "discordant_c": 0,
+      "holm_adjusted_p": 0.125,
+      "holm_reject": false,
+      "method": "mcnemar-exact",
+      "n": 6,
+      "p_value": 0.03125
+    },
+    "tool_vs_b5": {
+      "continuity_corrected_chi2": 3.2,
+      "discordant_b": 5,
+      "discordant_c": 0,
+      "holm_adjusted_p": 0.1875,
+      "holm_reject": false,
+      "method": "mcnemar-exact",
+      "n": 5,
+      "p_value": 0.0625
+    }
+  },
+  "sample_size": {
+    "detected": 3,
+    "interval_half_width": 0.365424,
+    "positives": 3,
+    "recall": 1.0,
+    "recall_interval": {
+      "confidence": 0.95,
+      "count": 3,
+      "high": 0.79234,
+      "low": 0.061492,
+      "method": "wilson",
+      "point": 0.333333,
+      "successes": 1.0
+    },
+    "suite": "BM-01",
+    "target_half_width": 0.13,
+    "warning": "recall interval is wider than the PRD 4.4 target"
+  }
+}

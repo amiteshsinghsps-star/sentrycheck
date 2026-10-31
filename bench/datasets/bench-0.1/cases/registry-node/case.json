@@ -1,0 +1,56 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "registry-node",
+  "expected_interfaces": [
+    "epoll_wait",
+    "getrandom",
+    "openat"
+  ],
+  "group": "registry",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:025b8e975a61d94e33abeafaad1255ef44e4898cf1a1b6446860009c72e6d284",
+    "layer_digests": [
+      "sha256:7b229517ed222597277036d94892173207d01a731ab3a88eeb1de2e963a2c788",
+      "sha256:8776aa3d2ba7247a375d06dcec03856b99dbb0e16e904a5672d3bf08c852d4f1",
+      "sha256:7246d4c6a55dd0f8dd00d2e63aece3a68d91e6a5d04c4e748fc2706897d96312",
+      "sha256:304511616d6a6d472222f696b9045e20dc90e8043b2a8ba2acb61746595781f3"
+    ],
+    "license": "see bench/datasets/*/license-manifest.json; not redistributed",
+    "local_path": "bench/images/docker.io-library-node-22-alpine",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": "docker.io/library/node:22-alpine",
+    "source_url": "https://hub.docker.com/r/library/node"
+  },
+  "label": null,
+  "notes": "Alpine/musl baseline; the amd64 digest must be pinned by bench fetch before scoring.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout bench/images/docker.io-library-node-22-alpine (index bench/images/docker.io-library-node-22-alpine/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/node.toml",
+    "sha256": "sha256:869dff10dc7734abbbecf5e802b4ddf7bd41c9f6cdcfd287012bce6d4829b7f4"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "development",
+  "suites": [
+    "BM-01",
+    "BM-04",
+    "BM-11"
+  ],
+  "tags": [
+    "registry",
+    "baseline",
+    "musl"
+  ]
+}

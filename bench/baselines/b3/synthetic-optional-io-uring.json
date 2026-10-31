@@ -1,0 +1,19 @@
+{
+  "arm": "B3_confine_style",
+  "case_id": "synthetic-optional-io-uring",
+  "class": "compatible",
+  "correct": false,
+  "gold": "tolerated",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "extracted_syscalls": 38,
+    "flagged": [],
+    "runtime": "2026-09-26/gvisor-20260921.0"
+  },
+  "rule": "flag workload if any statically extracted syscall is unsupported by runtime",
+  "run_id": "r-synthetic-optional-io-uring-bm04-20261031T105739Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/synthetic-optional-io-uring/r-synthetic-optional-io-uring-bm04-20261031T105739Z/report.json",
+  "source_sha256": "sha256:8c93aa54159c28d08f8ddaf5f3873f0d3357a7b5917d7710878ce8c24caec111",
+  "suite": "BM-04",
+  "tool_prediction": "tolerated"
+}

@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0",
+  "image": "/var/tmp/bench-work/stage-synthetic-baseline/image",
+  "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+  "platform": "linux/amd64",
+  "scanned_at": "2026-10-31T10:42:35Z",
+  "sentrycheck_version": "0.4.0",
+  "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+  "kb_age_days": 34,
+  "target_runtime": {
+    "name": "gvisor",
+    "version": "20260921.0",
+    "architecture": "amd64"
+  },
+  "status": "complete",
+  "assessment": "no-incompatibility-observed-in-profile",
+  "findings": [],
+  "candidate_gaps": [],
+  "capability_set": {
+    "interpretation": "Upper-bound capability candidates for analyzed code only. This is not an exhaustive syscall set or a compatibility verdict; indirect/dynamic dispatch and untested paths remain unknown.",
+    "capabilities": [
+      {
+        "syscall": "exit",
+        "syscall_number": 60,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:349896c91a95f6bf60f49d14dd4ecf684cb75f4ba3e5f2baf3011b853eac1a33",
+        "source_offset": "0x107",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      }
+    ],
+    "fingerprints": [],
+    "elf_files": 1,
+    "cache_hits": 0,
+    "warnings": [
+      "/workload: no section table; executable-segment sweep may miss code before the entry point or embedded data boundaries"
+    ]
+  },
+  "capability_set_only": [
+    {
+      "syscall": "exit",
+      "syscall_number": 60,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:349896c91a95f6bf60f49d14dd4ecf684cb75f4ba3e5f2baf3011b853eac1a33",
+      "source_offset": "0x107",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    }
+  ],
+  "dynamic": {
+    "evidence_tier": "dynamic-runsc-diff",
+    "provenance": "locally-executed",
+    "profile": {
+      "name": "single-mechanism-regression",
+      "description": "Complete invocation of a small deterministic synthetic workload; not representative of a full application.",
+      "command": [
+        "/workload"
+      ],
+      "env": [],
+      "timeout_seconds": 10,
+      "repetitions": 3,
+      "expected_exit_code": 0,
+      "compare_stdout": true,
+      "compare_stderr": false,
+      "timing_ratio": 2.0,
+      "timing_min_native_ms": 100,
+      "coverage": "representative"
+    },
+    "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+    "native": [
+      {
+        "runtime": "runc",
+        "runtime_version": "runc version 1.3.4-0ubuntu1~24.04.1",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 76,
+        "stdout_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-0/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-0/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-0/guest.trace",
+        "trace_sha256": "sha256:d7943391fac233f9f32c765fd261a293e9ac6fc1602c83a0402bb86baf2a1d9c",
+        "trace_kind": "strace-guest",
+        "trace_summary": {
+          "syscalls": {
+            "execve": 1,
+            "exit": 1
+          },
+          "errors": {},
+          "event_count": 2,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 0,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "execve",
+            "arguments": "\"/workload\", [\"/workload\"], 0x7ffd15773aa8 /* 2 vars */",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 1
+          },
+          {
+            "syscall": "exit",
+            "arguments": "0",
+            "result": "?",
+            "return_value": null,
+            "errno": null,
+            "line": 2
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "runc",
+        "runtime_version": "runc version 1.3.4-0ubuntu1~24.04.1",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 76,
+        "stdout_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-1/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-1/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-1/guest.trace",
+        "trace_sha256": "sha256:16b687f3317bed677cdb32204a105c906a715f0450e244da006efd34db1fed67",
+        "trace_kind": "strace-guest",
+        "trace_summary": {
+          "syscalls": {
+            "execve": 1,
+            "exit": 1
+          },
+          "errors": {},
+          "event_count": 2,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 0,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "execve",
+            "arguments": "\"/workload\", [\"/workload\"], 0x7ffc6bb0c988 /* 2 vars */",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 1
+          },
+          {
+            "syscall": "exit",
+            "arguments": "0",
+            "result": "?",
+            "return_value": null,
+            "errno": null,
+            "line": 2
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "runc",
+        "runtime_version": "runc version 1.3.4-0ubuntu1~24.04.1",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 77,
+        "stdout_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-2/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-2/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/native-2/guest.trace",
+        "trace_sha256": "sha256:1a9b8ed0fc92666fe2a4e2ebd7282f0269da92bfe59b525ac5771ead3ef3c6b0",
+        "trace_kind": "strace-guest",
+        "trace_summary": {
+          "syscalls": {
+            "execve": 1,
+            "exit": 1
+          },
+          "errors": {},
+          "event_count": 2,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 0,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "execve",
+            "arguments": "\"/workload\", [\"/workload\"], 0x7ffdac32a688 /* 2 vars */",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 1
+          },
+          {
+            "syscall": "exit",
+            "arguments": "0",
+            "result": "?",
+            "return_value": null,
+            "errno": null,
+            "line": 2
+          }
+        ],
+        "infrastructure_error": null
+      }
+    ],
+    "sandbox": [
+      {
+        "runtime": "gvisor",
+        "runtime_version": "20260921.0",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 126,
+        "stdout_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-0/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-0/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-0/guest.trace",
+        "trace_sha256": "sha256:8057a00e1cc9831d6f0458663dcf05dc1e42864e8ec6ec2954aa1586f2b60af1",
+        "trace_kind": "runsc-guest",
+        "trace_summary": {
+          "syscalls": {
+            "exit": 1
+          },
+          "errors": {},
+          "event_count": 1,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 200,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "exit",
+            "arguments": "0x0",
+            "result": "0 (0x0) (3.331µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 194
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "gvisor",
+        "runtime_version": "20260921.0",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 127,
+        "stdout_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-1/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-1/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-1/guest.trace",
+        "trace_sha256": "sha256:d164ad6188af438f16d767847d2f786e652d746334a0880e45257dc8a9aec64a",
+        "trace_kind": "runsc-guest",
+        "trace_summary": {
+          "syscalls": {
+            "exit": 1
+          },
+          "errors": {},
+          "event_count": 1,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 201,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "exit",
+            "arguments": "0x0",
+            "result": "0 (0x0) (14.369µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 194
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "gvisor",
+        "runtime_version": "20260921.0",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 127,
+        "stdout_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-2/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-2/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-baseline/artifacts/scan-1793443354-752/sandbox-2/guest.trace",
+        "trace_sha256": "sha256:9aa3dd47320e0e3ce5f4847e4653ecbf13120a615e3ea33e0fe0147a997eaf81",
+        "trace_kind": "runsc-guest",
+        "trace_summary": {
+          "syscalls": {
+            "exit": 1
+          },
+          "errors": {},
+          "event_count": 1,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 201,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "exit",
+            "arguments": "0x0",
+            "result": "0 (0x0) (6.086µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 194
+          }
+        ],
+        "infrastructure_error": null
+      }
+    ],
+    "exercised_syscalls": [
+      "execve",
+      "exit"
+    ],
+    "fallback_observations": [],
+    "warnings": []
+  },
+  "silent_fallback_check": {
+    "performed": false,
+    "cluster_context_available": false,
+    "note": "An image scan cannot establish node runtime identity. Use the node probe and admission controller; binary presence alone is not isolation attestation."
+  },
+  "limitations": [
+    "Results cover only the declared profile and environment; absence of a finding is not proof of compatibility.",
+    "Static resolution does not establish reachability, syscall arguments, or a complete capability upper bound for dynamically generated code.",
+    "Output comparisons require deterministic profile assertions; unobserved filesystem, cgroup, and networking semantics remain unknown.",
+    "Elapsed-time comparisons include unequal tracer/runtime startup overhead and do not establish a netstack/gofer root cause."
+  ],
+  "incomplete_reasons": [],
+  "duration_ms": 1114
+}

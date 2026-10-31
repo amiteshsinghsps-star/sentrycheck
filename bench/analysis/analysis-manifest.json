@@ -1,0 +1,40 @@
+{
+  "figures": {
+    "latency-ratio.svg": "sha256:3b192b82aa43bc2319cc6c57bf12b2e7e9f93cfebf590681ec63584cf45424d6",
+    "per-case-b0.svg": "sha256:d70fbf68628e559a880edb59ba79331ebae4b7b6b88b3eb4b80b1e046f65b56b",
+    "per-case-b5.svg": "sha256:557133acf2c0471586215995a81dcd2d526c029981aa4bb15eea7d6a6fb505cc",
+    "per-case-tool.svg": "sha256:80201dab5d1374007c0264c644697718587b3bff787ce5fb336f833559aab7c0",
+    "verdict-accuracy.svg": "sha256:981dabfb4d1969ff499e3f1d48e41f874db11a8e1b3cc4572d80dc9cb9a962cd"
+  },
+  "hypotheses_without_runs": [
+    "BM-03",
+    "BM-05",
+    "BM-06",
+    "BM-07",
+    "BM-09",
+    "BM-10",
+    "BM-11",
+    "BM-12"
+  ],
+  "notes": [
+    "BM-01 has 9 scored cases; 1 disagree with the tool"
+  ],
+  "root": "bench/runs",
+  "schema_version": "1.0",
+  "tables": {
+    "ablation-bm04.csv": "sha256:0d61fe810abc295da28adbc4ffb7f6dad9d688460b2364c3150ab0dc3b54107c",
+    "bm02_static_extraction.csv": "sha256:34009a65667058098d4e15cf6c5c9b0c0310af653b6bb4c6c1e78a4af4596ada",
+    "bm08_scalability.csv": "sha256:93565f22fd6baa0a4e424a8cba95538ebd197523f2005af3758485bc8abed4ca",
+    "confusion-bm01.csv": "sha256:10cdb38658caa93cd168b0a53782dbca51ae1cf58b03c5e3649ea34d28c06b82",
+    "coverage.csv": "sha256:311e878ce711a155ab33d72e9a29c39a498220ced6f68a386e3734e3752599d9",
+    "h1-accuracy-summary.json": "sha256:b34acb6e7b3e717ad26c8d97860c38059edf0a379c813312de31457fed6bc082",
+    "h1-verdict-accuracy.csv": "sha256:c935a46b3a4961d86862926ef87cd7829e5a6a573eaf2d02d370bd5ade028f9b",
+    "labels.csv": "sha256:98912bce6eb2fb090edb259c6e89bd6279a67ecd61df815dfcb9ef981565511f",
+    "latency-observations.csv": "sha256:2256ae8223d68216b7820958d2f994004f807f8177a769132a6932aa1138dc70",
+    "latency-summary.json": "sha256:092455aba28d95550e5988f35011eddc378b9c2af3a6d83550db2ceadc7cdc88",
+    "not-run.csv": "sha256:cc0ab1e4623c834717fe30cb6a400b8c87855ca07c6c520f674c71f446f67550",
+    "rater-agreement.json": "sha256:68163733cd428dc925509e35e3c1547c9ce847cd6f5392d42c68bfc810576ea7",
+    "reproducibility.csv": "sha256:a407820124e2d453b55c070af2406825b511f4edc4a8b00a1f5d96ca9bbe7e97",
+    "stability-bm14.csv": "sha256:016ca20679393a74a2f96ecf104e15634afdf01fb0466eaa130995076717bc0a"
+  }
+}

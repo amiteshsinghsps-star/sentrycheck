@@ -1,0 +1,40 @@
+CASE: runsc-entry-payload-spoofs-exit
+EVENTS: [TraceEvent { syscall: "bpf", arguments: "5", result: "-1 errno=38 (function not implemented) (1us)\", 61)", return_value: Some(-1), errno: Some("ENOSYS"), line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"bpf": 1}, errors: {"bpf:ENOSYS": 1}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: runsc-task-name-relabels-call
+EVENTS: [TraceEvent { syscall: "read", arguments: ") X bpf(5", result: "-1 errno=38 (function not implemented) (1us)", return_value: Some(-1), errno: Some("ENOSYS"), line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"read": 1}, errors: {"read:ENOSYS": 1}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: native-quoted-unfinished-marker
+EVENTS: []
+SUMMARY: TraceSummary { syscalls: {}, errors: {}, event_count: 0, unfinished_count: 1, unparsed_lines: 0, truncated: false }
+
+CASE: native-overwritten-pending-call
+EVENTS: [TraceEvent { syscall: "write", arguments: "1, \"a\", 1", result: "1", return_value: Some(1), errno: None, line: 3 }]
+SUMMARY: TraceSummary { syscalls: {"write": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: native-malformed-result-accepted
+EVENTS: [TraceEvent { syscall: "bpf", arguments: "5, 0x0, 0", result: "NOT_A_RETURN_VALUE", return_value: None, errno: None, line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"bpf": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: runsc-malformed-errno-accepted
+EVENTS: [TraceEvent { syscall: "bpf", arguments: "5", result: "-1 errno=garbage (1us)", return_value: Some(-1), errno: None, line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"bpf": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: runsc-unmatched-entry-disappears
+EVENTS: [TraceEvent { syscall: "write", arguments: "1, ..., 1", result: "1 (0x1) (1us)", return_value: Some(1), errno: None, line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"write": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: native-malformed-tail-counted-but-not-gated
+EVENTS: [TraceEvent { syscall: "write", arguments: "1, \"a\", 1", result: "1", return_value: Some(1), errno: None, line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"write": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 1, truncated: false }
+
+CASE: native-legitimate-restart-pseudo-result
+EVENTS: [TraceEvent { syscall: "read", arguments: "0, 0x7ffff72cf5cf, 1", result: "? ERESTARTSYS (To be restarted)", return_value: None, errno: None, line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"read": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+
+CASE: native-legitimate-nonreturning-exit
+EVENTS: [TraceEvent { syscall: "exit_group", arguments: "0", result: "?", return_value: None, errno: None, line: 1 }]
+SUMMARY: TraceSummary { syscalls: {"exit_group": 1}, errors: {}, event_count: 1, unfinished_count: 0, unparsed_lines: 0, truncated: false }
+

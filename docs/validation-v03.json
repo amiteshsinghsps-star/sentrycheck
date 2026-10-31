@@ -1,0 +1,213 @@
+{
+  "recorded_at": "2026-09-26T17:17:48.725412+00:00",
+  "scope": "Actual profile-bounded local observations. Raw debug-build timings are uncontrolled; no production precision/recall claim.",
+  "comparisons": [
+    {
+      "case": "baseline",
+      "report": "artifacts/review-v03/final-live/baseline.report.json",
+      "report_sha256": "sha256:4c80e5d3dc063878bfc092149f710df5336afcc4a47aae9917f1116ff1754165",
+      "scanned_at": "2026-09-26T17:13:12Z",
+      "analyzer_version": "0.3.0",
+      "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 25584,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "behavior",
+      "report": "artifacts/review-v03/final-live/behavior.report.json",
+      "report_sha256": "sha256:f83d3de9f455fb961f7faae71b50a2361efcefc660ade963e70c6c4ee48374a5",
+      "scanned_at": "2026-09-26T17:14:48Z",
+      "analyzer_version": "0.3.0",
+      "image_digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 23393,
+      "finding_severities": [
+        "performance-regression",
+        "silent-degradation"
+      ]
+    },
+    {
+      "case": "bpf_optional",
+      "report": "artifacts/review-v03/final-live/bpf_optional.report.json",
+      "report_sha256": "sha256:6444f912f72b630d3c2e51a23825a97ab1d46ba61dfe8d4ecdf3b797158b4e9b",
+      "scanned_at": "2026-09-26T17:14:25Z",
+      "analyzer_version": "0.3.0",
+      "image_digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 24096,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "io_uring",
+      "report": "artifacts/review-v03/final-live/io_uring.report.json",
+      "report_sha256": "sha256:7c571c9a59992a69cf15a923b807c66004cc67c056cf19a22a79b80789eb40a9",
+      "scanned_at": "2026-09-26T17:13:37Z",
+      "analyzer_version": "0.3.0",
+      "image_digest": "sha256:67f9d63fc82328555c9f47f2c79f3b8e367fcc5a77ea97c3272088932285cb9e",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        42,
+        42,
+        42
+      ],
+      "duration_ms": 25481,
+      "finding_severities": [
+        "compatibility-risk",
+        "hard-failure"
+      ]
+    },
+    {
+      "case": "io_uring_fallback",
+      "report": "artifacts/review-v03/final-live/io_uring_fallback.report.json",
+      "report_sha256": "sha256:a0ba3f19319f23f45c6f800f0da2902836ff9db5ecad3c5b4b9bb22508c95804",
+      "scanned_at": "2026-09-26T17:14:01Z",
+      "analyzer_version": "0.3.0",
+      "image_digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 24803,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    }
+  ],
+  "node_runtime": {
+    "status": "passed",
+    "finished_at": "2026-09-26T16:57:52.326144+00:00",
+    "scope": "Real CRI canaries and Go controller/probe against a disposable Kubernetes node; workload admissions use server dry-run.",
+    "states": {
+      "healthy": "canary-verified",
+      "mismatch": "isolation-mismatch",
+      "missing": "runtime-unavailable",
+      "recovered": "canary-verified"
+    },
+    "health_label_removed": true,
+    "strict_denial": true,
+    "warning_event": true,
+    "recovery_admitted": true
+  },
+  "trace_replay": {
+    "record": "artifacts/review-v03/trace-replay.json",
+    "record_sha256": "sha256:09d59e8b8a3b97eb51eb93cf0cf31e79c3569072e478b984b4444fd92e16da2f",
+    "scope": "Reparse existing trace bytes and compare event/errno counts; not new workload executions or refreshed attestations.",
+    "status": "passed",
+    "trace_count": 54,
+    "event_count": 136654,
+    "parser_sha256": "sha256:69c4d37257809a1c1732b4438fa8597d3a3325678fac31ae122090f16d3a9849"
+  },
+  "builds": {
+    "bin/sentrycheck.exe": {
+      "sha256": "9a1ee6492374c40840eb5b961865468c9c6788ccff1dfb366faed41353f3878e",
+      "bytes": 4872192
+    },
+    "bin/sentrycheck-linux": {
+      "sha256": "b6d251c0e66c0d2211fc22f2cb7266194bb3010652727bfe2f81b542090125dc",
+      "bytes": 7340384
+    },
+    "bin/sentrycheck-admission.exe": {
+      "sha256": "e9657d3f7625b6e4a7767de89bab4c92c2ada99863560e49b89fec0b0b152460",
+      "bytes": 10143232
+    },
+    "bin/sentrycheck-admission-linux": {
+      "sha256": "5d641f665b20d4693a9e0ef7112874eae061183170a92ddf78c6339f92cc0dad",
+      "bytes": 10022036
+    },
+    "bin/sentrycheck-node-probe.exe": {
+      "sha256": "6ba0979353faf7078b6df781d04b129ca8d4f9ba81f16df8e55c4e443a1d26bf",
+      "bytes": 9290240
+    },
+    "bin/sentrycheck-node-probe-linux": {
+      "sha256": "ece312eddf9d88ae52d2e539f9bbbc0ad8eb16dd207b6254e05457169942ccc0",
+      "bytes": 9133299
+    }
+  }
+}

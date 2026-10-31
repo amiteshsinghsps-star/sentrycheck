@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sentrycheck:runtime-comparison:1.1",
+  "title": "SENTRYCHECK separately collected runtime comparison",
+  "description": "Register schema/report.schema.json as urn:sentrycheck:report:1.0 when resolving this schema offline. CLI semantic validation additionally recomputes all summaries and digests.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "report_kind", "image_digest", "platform", "target_runtimes", "profile_sha256", "status", "assessment", "incomplete_reasons", "reports", "report_digests", "authenticated", "digest_encoding", "cross_runtime", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.1"},
+    "report_kind": {"const": "runtime-comparison"},
+    "image_digest": {"$ref": "#/$defs/digest"},
+    "platform": {"enum": ["linux/amd64", "linux/arm64", "linux/386"]},
+    "target_runtimes": {"type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [{"allOf": [{"$ref": "urn:sentrycheck:report:1.0#/$defs/target"}, {"properties": {"name": {"const": "gvisor"}}}]}, {"allOf": [{"$ref": "urn:sentrycheck:report:1.0#/$defs/target"}, {"properties": {"name": {"const": "kata"}}}]}]},
+    "profile_sha256": {"anyOf": [{"$ref": "#/$defs/digest"}, {"type": "null"}]},
+    "status": {"enum": ["complete", "incomplete"]},
+    "assessment": {"enum": ["incompatibility-observed", "performance-regression-observed", "no-incompatibility-observed-in-profile", "insufficient-evidence"]},
+    "incomplete_reasons": {"$ref": "#/$defs/strings"},
+    "reports": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "urn:sentrycheck:report:1.0"}},
+    "report_digests": {"type": "object", "additionalProperties": false, "required": ["gvisor", "kata"], "properties": {"gvisor": {"$ref": "#/$defs/digest"}, "kata": {"$ref": "#/$defs/digest"}}},
+    "authenticated": {"const": false},
+    "digest_encoding": {"type": "string"},
+    "cross_runtime": {
+      "type": "object", "additionalProperties": false,
+      "required": ["comparable", "comparison_limits", "baseline_relationship", "locally_collected_pair", "outcomes", "outcome_difference", "stdout_difference", "stderr_difference", "timing_samples_ms"],
+      "properties": {
+        "comparable": {"type": "boolean"},
+        "comparison_limits": {"$ref": "#/$defs/strings"},
+        "baseline_relationship": {"const": "separate-native-executions"},
+        "locally_collected_pair": {"type": "boolean"},
+        "outcomes": {"type": "object", "additionalProperties": false, "required": ["gvisor", "kata"], "properties": {"gvisor": {"$ref": "#/$defs/outcome"}, "kata": {"$ref": "#/$defs/outcome"}}},
+        "outcome_difference": {"type": ["boolean", "null"]},
+        "stdout_difference": {"type": ["boolean", "null"]},
+        "stderr_difference": {"type": ["boolean", "null"]},
+        "timing_samples_ms": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "object", "additionalProperties": false, "required": ["runtime", "native", "sandbox"], "properties": {"runtime": {"enum": ["gvisor", "kata"]}, "native": {"$ref": "#/$defs/timings"}, "sandbox": {"$ref": "#/$defs/timings"}}}}
+      }
+    },
+    "limitations": {"$ref": "#/$defs/strings"}
+  },
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "strings": {"type": "array", "items": {"type": "string"}},
+    "outcome": {"enum": ["success", "failure", "mixed", "unavailable"]},
+    "timings": {"anyOf": [{"type": "array", "maxItems": 20, "items": {"type": "integer", "minimum": 0}}, {"type": "null"}]}
+  }
+}

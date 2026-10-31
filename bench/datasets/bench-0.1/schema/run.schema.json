@@ -1,0 +1,615 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$"
+    },
+    "suite": {
+      "type": "string",
+      "enum": [
+        "BM-01",
+        "BM-02",
+        "BM-03",
+        "BM-04",
+        "BM-05",
+        "BM-06",
+        "BM-07",
+        "BM-08",
+        "BM-09",
+        "BM-10",
+        "BM-11",
+        "BM-12",
+        "BM-13",
+        "BM-14"
+      ]
+    },
+    "host_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "ended_at": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "order_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "order_pattern": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tool": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "git_commit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "binary_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "git_commit",
+        "binary_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "kb": {
+      "type": "object",
+      "properties": {
+        "snapshot_version": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "max_age_days": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "snapshot_version",
+        "sha256",
+        "max_age_days"
+      ],
+      "additionalProperties": false
+    },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "gvisor",
+            "kata",
+            "runc"
+          ]
+        },
+        "release": {
+          "type": "string"
+        },
+        "platform": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "binary_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "release",
+        "platform",
+        "binary_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "governor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "smt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cores": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "load_before": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "free_disk_mb": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "clock_synced": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "work_root": {
+          "type": "string"
+        },
+        "host_load_controlled": {
+          "type": "boolean"
+        },
+        "preflight": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "live_capable": {
+                  "type": "boolean"
+                },
+                "timing_capable": {
+                  "type": "boolean"
+                },
+                "failed": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "live_capable",
+                "timing_capable",
+                "failed"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "governor",
+        "smt",
+        "cores",
+        "load_before",
+        "free_disk_mb",
+        "clock_synced",
+        "work_root",
+        "host_load_controlled"
+      ],
+      "additionalProperties": false
+    },
+    "predicted": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string",
+              "enum": [
+                "hard-failure",
+                "silent-degradation",
+                "tolerated",
+                "compatible",
+                "performance-regression",
+                "indeterminate"
+              ]
+            },
+            "tier": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "static-only",
+                    "dynamic-native-only",
+                    "dynamic-runsc-diff",
+                    "dynamic-kata-diff"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "complete": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "complete",
+                "incomplete"
+              ]
+            },
+            "finding_severities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "incomplete_reason_codes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "class",
+            "tier",
+            "complete",
+            "status",
+            "finding_severities",
+            "incomplete_reason_codes"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "repetitions": {
+      "type": "object",
+      "properties": {
+        "native_exits": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "sandbox_exits": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "native_durations_ms": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "sandbox_durations_ms": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "required": [
+        "native_exits",
+        "sandbox_exits",
+        "native_durations_ms",
+        "sandbox_durations_ms"
+      ],
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "type": "object",
+      "properties": {
+        "report": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9._@/-]+$"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^sha256:[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "traces": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "native",
+                  "sandbox",
+                  "guest",
+                  "diagnostic"
+                ]
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._@/-]+$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "kind",
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stream": {
+                "type": "string",
+                "enum": [
+                  "stdout",
+                  "stderr"
+                ]
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._@/-]+$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "stream",
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "logs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._@/-]+$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "report",
+        "traces",
+        "outputs",
+        "logs"
+      ],
+      "additionalProperties": false
+    },
+    "timings_ms": {
+      "type": "object",
+      "properties": {
+        "scan": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "total": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "scan",
+        "total"
+      ],
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "peak_rss_mb": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "disk_mb": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "peak_rss_mb",
+        "disk_mb"
+      ],
+      "additionalProperties": false
+    },
+    "valid": {
+      "type": "boolean"
+    },
+    "invalid_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "case_id",
+    "suite",
+    "host_id",
+    "started_at",
+    "ended_at",
+    "seed",
+    "order_index",
+    "order_pattern",
+    "tool",
+    "kb",
+    "runtime",
+    "environment",
+    "predicted",
+    "repetitions",
+    "artifacts",
+    "timings_ms",
+    "resources",
+    "valid",
+    "invalid_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SENTRYCHECK benchmark run record",
+  "$id": "urn:sentrycheck:bench:run:1.0"
+}

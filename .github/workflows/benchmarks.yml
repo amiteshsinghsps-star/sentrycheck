@@ -1,0 +1,141 @@
+name: reproducible-manual-benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      repetitions:
+        description: 'Measured baseline/gate pairs (5-100; tail percentiles remain exploratory)'
+        default: '10'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+  security-events: write
+
+jobs:
+  own-dockerfile-ci-delta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BENCH_REPETITIONS: ${{ inputs.repetitions }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Provision explicit tools and build the measured scanner
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends skopeo
+          cargo build --locked --release -p sentrycheck-cli
+      - name: Prepare source-pinned image and inspectable paired commands
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, shutil
+          root = pathlib.Path.cwd()
+          repetitions = int(os.environ['BENCH_REPETITIONS'])
+          if not 5 <= repetitions <= 100:
+              raise SystemExit('repetitions must be in 5..100')
+          work = root / 'artifacts/ci-benchmark-work'
+          context = work / 'context'
+          context.mkdir(parents=True)
+          for name in ['Dockerfile', 'Cargo.toml', 'Cargo.lock']:
+              shutil.copy2(root / name, context / name)
+          for name in ['crates', 'kb']:
+              shutil.copytree(root / name, context / name)
+          (context / 'frontend').mkdir()
+          shutil.copy2(root / 'frontend/template.html', context / 'frontend/template.html')
+          (context / 'scripts').mkdir()
+          shutil.copy2(root / 'scripts/update_kb.py', context / 'scripts/update_kb.py')
+          source = {'repository': os.environ['GITHUB_REPOSITORY'], 'commit': os.environ['GITHUB_SHA'],
+                    'run_id': os.environ['GITHUB_RUN_ID'], 'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'],
+                    'scope': 'This repository Dockerfile; cached docker build versus the same build plus a static-only ci-gate and report validation.'}
+          (work / 'source.json').write_text(json.dumps(source, indent=2) + '\n')
+          pipeline = '''import pathlib, subprocess, sys
+          root = pathlib.Path(__file__).resolve().parents[2]
+          work = root / 'artifacts/ci-benchmark-work'
+          subprocess.run(['docker','build','-t','sentrycheck-ci-benchmark:local',str(work/'context')], check=True)
+          if sys.argv[1] == 'gate':
+              binary = root / 'target/release/sentrycheck'
+              report = work / 'latest.report.json'
+              command = [str(binary),'ci-gate',str(work/'image'),'--static-only','--no-cache','--cache',str(work/'scanner-cache'),'--format','json','--output',str(report)]
+              result = subprocess.run(command, stdout=subprocess.DEVNULL)
+              if result.returncode not in (0,1,2):
+                  raise SystemExit(result.returncode)
+              subprocess.run([str(binary),'report','validate',str(report),'--format','json'],check=True)
+              (work/'latest-gate-exit.txt').write_text(str(result.returncode))
+              raise SystemExit(result.returncode)
+          '''
+          # The helper above is retained with the artifacts; no shell interpolation
+          # or unreviewed external project is introduced by the paired experiment.
+          (work / 'pipeline.py').write_text(pipeline)
+          manifest = {'schema_version':'1.0', 'ci_pairs':[{
+              'name':'own-dockerfile-static-gate', 'baseline':['python',str(work/'pipeline.py'),'baseline'],
+              'gate':['python',str(work/'pipeline.py'),'gate'], 'environment':'github-actions',
+              'warmups':1, 'repetitions':repetitions, 'baseline_exit_codes':[0], 'gate_exit_codes':[0,1,2],
+              'runner_price_usd_per_minute':None, 'timeout_seconds':600}]}
+          (work / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+          PY
+          docker build -t sentrycheck-ci-benchmark:local artifacts/ci-benchmark-work/context
+          skopeo copy docker-daemon:sentrycheck-ci-benchmark:local oci:artifacts/ci-benchmark-work/image:bench
+      - name: Measure actual alternating-order pairs
+        run: |
+          python scripts/benchmark.py run --binary target/release/sentrycheck --manifest artifacts/ci-benchmark-work/manifest.json --cwd . --out artifacts/ci-benchmarks
+      - name: Export actual report to SARIF
+        if: always() && hashFiles('artifacts/ci-benchmark-work/latest.report.json') != ''
+        run: |
+          python - <<'PY'
+          import json, pathlib, subprocess
+          work = pathlib.Path('artifacts/ci-benchmark-work')
+          result = subprocess.run(['target/release/sentrycheck','report','sarif',str(work/'latest.report.json'),
+                                   '--output',str(work/'report.sarif'),'--source-file','Dockerfile','--source-line','1'],
+                                  stdout=subprocess.DEVNULL)
+          if result.returncode not in (0,1,2) or not (work/'report.sarif').is_file():
+              raise SystemExit('SARIF export failed')
+          data = json.loads((work/'report.sarif').read_text())
+          if data.get('version') != '2.1.0':
+              raise SystemExit('unexpected SARIF version')
+          print('SARIF report outcome code:', result.returncode)
+          PY
+      - name: Upload SARIF without overriding report outcome
+        if: always() && hashFiles('artifacts/ci-benchmark-work/report.sarif') != ''
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: artifacts/ci-benchmark-work/report.sarif
+          category: sentrycheck-static-benchmark
+      - name: Preserve raw measurements and inspectable pipeline
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentrycheck-benchmark-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          path: |
+            artifacts/ci-benchmarks/summary.json
+            artifacts/ci-benchmarks/samples.jsonl
+            artifacts/ci-benchmarks/BENCHMARKS.md
+            artifacts/ci-benchmarks/*.svg
+            artifacts/ci-benchmark-work/source.json
+            artifacts/ci-benchmark-work/manifest.json
+            artifacts/ci-benchmark-work/pipeline.py
+            artifacts/ci-benchmark-work/latest.report.json
+            artifacts/ci-benchmark-work/report.sarif
+            artifacts/ci-benchmark-work/latest-gate-exit.txt
+      - name: Preserve gate exit semantics (static-only normally returns 2)
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          path = pathlib.Path('artifacts/ci-benchmarks/summary.json')
+          if not path.is_file() or json.loads(path.read_text()).get('status') != 'complete':
+              raise SystemExit(2)
+          rows = [json.loads(line) for line in pathlib.Path('artifacts/ci-benchmarks/samples.jsonl').read_text().splitlines()]
+          codes = [row['gate']['exit_code'] for row in rows if row.get('kind') == 'ci-pair']
+          if not codes or any(code not in (0,1,2) for code in codes):
+              raise SystemExit(2)
+          code = 1 if 1 in codes else 2 if 2 in codes else 0
+          print('Aggregate gate outcome:', code, '(2 means incomplete static-only evidence, not a clean compatibility verdict)')
+          raise SystemExit(code)
+          PY

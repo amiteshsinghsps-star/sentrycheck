@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "scope": "Reference corpus; labels require independent validation at the resolved image digest and runtime version.",
+  "cases": [
+    {"name": "python", "image": "docker.io/library/python:3.12-slim", "profile": "profiles/python.toml", "category": "baseline", "expected": null},
+    {"name": "node", "image": "docker.io/library/node:22-alpine", "profile": "profiles/node.toml", "category": "baseline", "expected": null},
+    {"name": "go", "image": "artifacts/live-images/go", "profile": "profiles/go.toml", "category": "baseline", "expected": null},
+    {"name": "postgres18-io-uring", "image": "artifacts/live-images/postgres", "profile": "profiles/postgres-io-uring.toml", "category": "io_uring", "expected": null},
+    {"name": "required-io-uring", "image": "artifacts/live-images/io_uring", "profile": "profiles/synthetic.toml", "category": "io_uring", "expected": null},
+    {"name": "optional-io-uring", "image": "artifacts/live-images/io_uring_fallback", "profile": "profiles/synthetic.toml", "category": "io_uring", "expected": null},
+    {"name": "optional-bpf", "image": "artifacts/live-images/bpf_optional", "profile": "profiles/synthetic.toml", "category": "ebpf", "expected": null}
+  ]
+}

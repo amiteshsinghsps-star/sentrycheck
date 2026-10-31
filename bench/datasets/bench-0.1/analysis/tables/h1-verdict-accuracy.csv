@@ -1,0 +1,10 @@
+case_id,run_id,gold,gold_confidence,tool,b0_naive,b5_justrun,tool_correct,b0_correct,b5_correct,tier,report_sha256
+baseline-go,r-baseline-go-bm01-20261031T101657Z,tolerated,medium,compatible,hard-failure,compatible,no,no,no,dynamic-runsc-diff,sha256:0a5ffc04d0e7c2791e6fc458ef99db73bfbb07572c40ce94111e8d961aaf2fe3
+postgres-18-io-uring,r-postgres-18-io-uring-bm01-20261031T101809Z,hard-failure,high,hard-failure,hard-failure,hard-failure,yes,yes,yes,dynamic-runsc-diff,sha256:3b011106cc5190ea680c66b8d3e11c854217841dbd0ea0d761bc2d0b03c365fa
+registry-node,r-registry-node-bm01-20261031T101930Z,tolerated,medium,tolerated,hard-failure,compatible,yes,no,no,dynamic-runsc-diff,sha256:bae2269a3f146729b256579ec263f2961cb51c230bd11f1a8179cad734001cfb
+registry-python,r-registry-python-bm01-20261031T102027Z,tolerated,medium,tolerated,hard-failure,compatible,yes,no,no,dynamic-runsc-diff,sha256:99d3fb944cf0dfa182ced106f404f916f5299e08579a6458ec2aacc37d33a0e7
+synthetic-baseline,r-synthetic-baseline-bm01-20261031T102041Z,compatible,high,compatible,compatible,compatible,yes,yes,yes,dynamic-runsc-diff,sha256:2b6b24ecbaf5a3dbca17ddaf41ac585309748bebfa4ae11f4e488395f27c912c
+synthetic-behavior-divergence,r-synthetic-behavior-divergence-bm01-20261031T102052Z,silent-degradation,medium,silent-degradation,hard-failure,compatible,yes,no,no,dynamic-runsc-diff,sha256:c082d16657475a8f5f2f11a3d6b8e8a567f21c99c73896efdcca18ad2e802bcc
+synthetic-optional-bpf,r-synthetic-optional-bpf-bm01-20261031T102104Z,tolerated,high,tolerated,hard-failure,compatible,yes,no,no,dynamic-runsc-diff,sha256:451c85b0bcf4224057a47c4b0c5f162c98a8276b8ce4cf140a0d4235a3568074
+synthetic-optional-io-uring,r-synthetic-optional-io-uring-bm01-20261031T102116Z,tolerated,high,tolerated,hard-failure,compatible,yes,no,no,dynamic-runsc-diff,sha256:8f87a16f5dd8b0a21b552e72979196108bb9544b7de2a170db9c114d37924b05
+synthetic-required-io-uring,r-synthetic-required-io-uring-bm01-20261031T102130Z,hard-failure,high,hard-failure,hard-failure,hard-failure,yes,yes,yes,dynamic-runsc-diff,sha256:701fb7c63ffec9a1543a3c16bf86e3e1e37fc83887d9af9840fae6cc6935f31a

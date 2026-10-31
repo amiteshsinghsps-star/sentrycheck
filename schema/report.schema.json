@@ -1,0 +1,849 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "image": {
+      "type": "string"
+    },
+    "image_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "platform": {
+      "type": "string"
+    },
+    "scanned_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sentrycheck_version": {
+      "type": "string"
+    },
+    "kb_snapshot_version": {
+      "type": "string"
+    },
+    "kb_age_days": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "target_runtime": {
+      "$ref": "#/$defs/target"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "incomplete"
+      ]
+    },
+    "assessment": {
+      "type": "string",
+      "enum": [
+        "incompatibility-observed",
+        "performance-regression-observed",
+        "no-incompatibility-observed-in-profile",
+        "insufficient-evidence"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "candidate_gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate"
+      }
+    },
+    "capability_set": {
+      "$ref": "#/$defs/capabilitySet"
+    },
+    "capability_set_only": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capability"
+      }
+    },
+    "dynamic": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/dynamic"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "silent_fallback_check": {
+      "type": "object",
+      "properties": {
+        "performed": {
+          "type": "boolean"
+        },
+        "cluster_context_available": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "performed",
+        "cluster_context_available",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "incomplete_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duration_ms": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "image",
+    "image_digest",
+    "platform",
+    "scanned_at",
+    "sentrycheck_version",
+    "kb_snapshot_version",
+    "kb_age_days",
+    "target_runtime",
+    "status",
+    "assessment",
+    "findings",
+    "candidate_gaps",
+    "capability_set",
+    "capability_set_only",
+    "dynamic",
+    "silent_fallback_check",
+    "limitations",
+    "incomplete_reasons",
+    "duration_ms"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SENTRYCHECK evidence report 1.0",
+  "$defs": {
+    "target": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "gvisor",
+            "kata"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "architecture": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "architecture"
+      ],
+      "additionalProperties": false
+    },
+    "citation": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "source_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retrieved_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "url",
+        "source_revision",
+        "retrieved_at"
+      ],
+      "additionalProperties": false
+    },
+    "capability": {
+      "type": "object",
+      "properties": {
+        "syscall": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "syscall_number": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "subsystem": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "architecture": {
+          "type": "string"
+        },
+        "resolution_confidence": {
+          "type": "string",
+          "enum": [
+            "static-certain",
+            "static-probable",
+            "unresolvable"
+          ]
+        },
+        "source_binary": {
+          "type": "string"
+        },
+        "source_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "source_offset": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^0x[0-9a-f]+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "syscall",
+        "syscall_number",
+        "subsystem",
+        "architecture",
+        "resolution_confidence",
+        "source_binary",
+        "source_digest",
+        "source_offset",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "fingerprint": {
+      "type": "object",
+      "properties": {
+        "source_binary": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_binary",
+        "kind",
+        "value",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "capabilitySet": {
+      "type": "object",
+      "properties": {
+        "interpretation": {
+          "type": "string"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/capability"
+          }
+        },
+        "fingerprints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fingerprint"
+          }
+        },
+        "elf_files": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cache_hits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "interpretation",
+        "capabilities",
+        "fingerprints",
+        "elf_files",
+        "cache_hits",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": "object",
+      "properties": {
+        "gap_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "source_binary": {
+          "type": "string"
+        },
+        "syscall": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "version_match": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "citation": {
+          "$ref": "#/$defs/citation"
+        }
+      },
+      "required": [
+        "gap_id",
+        "category",
+        "source_binary",
+        "syscall",
+        "version_match",
+        "description",
+        "citation"
+      ],
+      "additionalProperties": false
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "command": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "env": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3600
+        },
+        "repetitions": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "expected_exit_code": {
+          "type": "integer"
+        },
+        "compare_stdout": {
+          "type": "boolean"
+        },
+        "compare_stderr": {
+          "type": "boolean"
+        },
+        "timing_ratio": {
+          "type": "number",
+          "exclusiveMinimum": 1
+        },
+        "timing_min_native_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage": {
+          "type": "string",
+          "enum": [
+            "smoke",
+            "representative"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "command",
+        "env",
+        "timeout_seconds",
+        "repetitions",
+        "expected_exit_code",
+        "compare_stdout",
+        "compare_stderr",
+        "timing_ratio",
+        "timing_min_native_ms",
+        "coverage"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "syscall": {
+          "type": "string"
+        },
+        "arguments": {
+          "type": "string"
+        },
+        "result": {
+          "type": "string"
+        },
+        "return_value": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "errno": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "syscall",
+        "arguments",
+        "result",
+        "return_value",
+        "errno",
+        "line"
+      ],
+      "additionalProperties": false
+    },
+    "traceSummary": {
+      "type": "object",
+      "properties": {
+        "syscalls": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "errors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "event_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unfinished_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unparsed_lines": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "truncated": {
+          "type": "boolean"
+        },
+        "discarded_guest_records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "diagnostic_lines": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "syscalls",
+        "errors",
+        "event_count",
+        "unfinished_count",
+        "unparsed_lines",
+        "truncated"
+      ],
+      "additionalProperties": false
+    },
+    "run": {
+      "type": "object",
+      "properties": {
+        "runtime": {
+          "type": "string"
+        },
+        "runtime_version": {
+          "type": "string"
+        },
+        "exit_code": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timed_out": {
+          "type": "boolean"
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stdout_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "stderr_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "stdout_ref": {
+          "type": "string"
+        },
+        "stderr_ref": {
+          "type": "string"
+        },
+        "trace_ref": {
+          "type": "string"
+        },
+        "trace_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "trace_kind": {
+          "type": "string",
+          "enum": [
+            "strace-guest",
+            "runsc-guest"
+          ]
+        },
+        "trace_summary": {
+          "$ref": "#/$defs/traceSummary"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        },
+        "infrastructure_error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "runtime",
+        "runtime_version",
+        "exit_code",
+        "timed_out",
+        "duration_ms",
+        "stdout_sha256",
+        "stderr_sha256",
+        "stdout_ref",
+        "stderr_ref",
+        "trace_ref",
+        "trace_sha256",
+        "trace_kind",
+        "trace_summary",
+        "events",
+        "infrastructure_error"
+      ],
+      "additionalProperties": false
+    },
+    "dynamic": {
+      "type": "object",
+      "properties": {
+        "evidence_tier": {
+          "type": "string",
+          "enum": [
+            "static-only",
+            "dynamic-native-only",
+            "dynamic-runsc-diff",
+            "dynamic-kata-diff"
+          ]
+        },
+        "provenance": {
+          "type": "string",
+          "enum": [
+            "locally-executed",
+            "imported-user-supplied"
+          ]
+        },
+        "profile": {
+          "$ref": "#/$defs/profile"
+        },
+        "profile_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "native": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/run"
+          }
+        },
+        "sandbox": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/run"
+          }
+        },
+        "exercised_syscalls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fallback_observations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "evidence_tier",
+        "provenance",
+        "profile",
+        "profile_sha256",
+        "native",
+        "sandbox",
+        "exercised_syscalls",
+        "fallback_observations",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "gap_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "failure_class": {
+          "type": "string",
+          "enum": [
+            "F1",
+            "F2",
+            "F3",
+            "unconfirmed"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "hard-failure",
+            "silent-degradation",
+            "performance-regression",
+            "compatibility-risk"
+          ]
+        },
+        "evidence_tier": {
+          "type": "string",
+          "enum": [
+            "static-only",
+            "dynamic-native-only",
+            "dynamic-runsc-diff",
+            "dynamic-kata-diff"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "source_binary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "static_evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/capability"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dynamic_evidence": {
+          "type": "object"
+        },
+        "kb_citation": {
+          "$ref": "#/$defs/citation"
+        },
+        "causality": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "gap_id",
+        "category",
+        "failure_class",
+        "severity",
+        "evidence_tier",
+        "description",
+        "source_binary",
+        "static_evidence",
+        "dynamic_evidence",
+        "kb_citation",
+        "causality"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "severity": {
+                "const": "hard-failure"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_tier": {
+                "type": "string",
+                "enum": [
+                  "dynamic-runsc-diff",
+                  "dynamic-kata-diff"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "detail": "NTP synchronization reported as on",
+      "id": "clock",
+      "status": "pass"
+    },
+    {
+      "detail": "971401 MiB free at /var/tmp/bench-work/stage-synthetic-behavior-divergence, minimum 4096 MiB",
+      "id": "free-disk",
+      "status": "pass"
+    },
+    {
+      "detail": "load1 0.477 across 12 cores is 0.040 per core, budget 0.35",
+      "id": "host-load",
+      "status": "pass"
+    },
+    {
+      "detail": "gvisor-bin/gvisor_sentry sha256:4405affdaf81, runsc sha256:2eb94b587692 match pinned release 20260921.0",
+      "id": "runtime-checksums",
+      "status": "pass"
+    },
+    {
+      "detail": "work root /var/tmp/bench-work/stage-synthetic-behavior-divergence is on ext4",
+      "id": "work-root",
+      "status": "pass"
+    }
+  ],
+  "failed": [],
+  "live_capable": true,
+  "max_load_per_core": 0.35,
+  "min_free_mb": 4096,
+  "ok": true,
+  "timing_capable": true
+}

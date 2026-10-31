@@ -1,0 +1,67 @@
+{
+  "incomplete_policy": "incomplete scans are predicted indeterminate unless a dynamic rule already fired, and are counted in coverage rather than dropped",
+  "inputs_read": [
+    "status",
+    "incomplete_reasons",
+    "findings[].severity",
+    "dynamic.evidence_tier",
+    "dynamic.fallback_observations"
+  ],
+  "label_classes": [
+    "hard-failure",
+    "silent-degradation",
+    "performance-regression",
+    "tolerated",
+    "compatible",
+    "indeterminate"
+  ],
+  "precedence": "first matching rule wins; R6 always matches last",
+  "reason_codes": {
+    "baseline-failed": "the native baseline did not satisfy",
+    "digest-mismatch": "digest mismatch",
+    "guest-trace-incomplete": "guest trace collection is missing",
+    "imported-provenance": "execution provenance is user-supplied",
+    "kb-no-coverage": "kb has no verified release coverage",
+    "kb-stale": "kb snapshot is",
+    "native-only-evidence": "native-only evidence cannot confirm",
+    "no-elf-files": "no elf binaries were found",
+    "no-image-digest": "input has no oci manifest digest",
+    "nondeterministic-output": "varied within the same runtime",
+    "smoke-coverage-only": "only smoke/startup coverage",
+    "static-only": "static-only scan"
+  },
+  "rules": [
+    {
+      "class": "hard-failure",
+      "id": "R1",
+      "when": "any finding with severity hard-failure (schema forces a dynamic runsc/kata tier)"
+    },
+    {
+      "class": "silent-degradation",
+      "id": "R2",
+      "when": "any finding with severity silent-degradation"
+    },
+    {
+      "class": "performance-regression",
+      "id": "R3",
+      "when": "any finding with severity performance-regression"
+    },
+    {
+      "class": "tolerated",
+      "id": "R4",
+      "when": "dynamic.fallback_observations is non-empty and no R1-R3 finding exists"
+    },
+    {
+      "class": "compatible",
+      "id": "R5",
+      "when": "status complete, dynamic tier is runsc/kata diff, no findings above compatibility-risk"
+    },
+    {
+      "class": "indeterminate",
+      "id": "R6",
+      "when": "none of the above, including every incomplete or static-only report"
+    }
+  ],
+  "schema_version": "1.0",
+  "title": "SENTRYCHECK report-to-predicted-class mapping (BT-01)"
+}

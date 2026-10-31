@@ -1,0 +1,80 @@
+{
+  "adjudicator": {
+    "confidence": "medium",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "one rater abstained; the other decides"
+  },
+  "case_id": "registry-python",
+  "class": "tolerated",
+  "confidence": "medium",
+  "evidence": [
+    "futex: support=partial gaps=['gap-gvisor-amd64-futex']",
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-registry-python-bm04-20261031T104027Z)",
+    "sandbox trace refused futex=errno11, openat=errno2, rseq=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/report.json",
+      "sha256": "sha256:32fdabe08068f3361bed110d4f17907e4c29f4dcd00fb57f435e1944bd1bb97c"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/traces/native-0-guest.trace",
+      "sha256": "sha256:571c2ebdcb62cc2200bfe9d369f2090d6099b7488075d43a408c2107add09661"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/traces/native-1-guest.trace",
+      "sha256": "sha256:6c5eb855783b431c933da2908d73831de7037b210d77ce30b1277e52db2d3083"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/traces/native-2-guest.trace",
+      "sha256": "sha256:bdec8c66bb829bbf2345447eb87e3ad39c6bb123d91ba2180c24a2631a01c8a8"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:2440ba0ee280908b5dc550eb57b5db0d52ede08377652e61260df0eb121ea0ce"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:f0801c0e00eaab3fbf545a12d6fa9b61c30a72e1cd0c4458a67500b35708a743"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T104027Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:83a809ba735ff5f7a87732ba78bbdef953999c23cf54bd2fc13c2a4486da96ed"
+    }
+  ],
+  "rater_a": {
+    "confidence": "low",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "indeterminate",
+    "rationale": "the knowledge base documents a shortfall for futex but nothing here says whether the workload can proceed"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "futex, openat, rseq was refused under the sandbox and not on native, yet the workload still exited 0, which is a handled fallback"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,57 @@
+{
+  "adjudication_rule": "agreement wins with confidence high; if one rater abstains the other decides with confidence medium; if both are definite but differ, a positive observation in recorded execution evidence outranks documentation, and documentation outranks an rater that observed nothing refuse",
+  "agreeing": 5,
+  "cases": 9,
+  "claims_ceiling": "L2: both raters are documented rules over independent evidence, not independent humans",
+  "disagreements": [
+    {
+      "case_id": "baseline-go",
+      "rater_a": "indeterminate",
+      "rater_b": "tolerated"
+    },
+    {
+      "case_id": "registry-node",
+      "rater_a": "compatible",
+      "rater_b": "tolerated"
+    },
+    {
+      "case_id": "registry-python",
+      "rater_a": "indeterminate",
+      "rater_b": "tolerated"
+    },
+    {
+      "case_id": "synthetic-behavior-divergence",
+      "rater_a": "compatible",
+      "rater_b": "silent-degradation"
+    }
+  ],
+  "gold_distribution": {
+    "compatible": 1,
+    "hard-failure": 2,
+    "silent-degradation": 1,
+    "tolerated": 5
+  },
+  "human_raters": 0,
+  "kappa": {
+    "classes": [
+      "compatible",
+      "hard-failure",
+      "indeterminate",
+      "silent-degradation",
+      "tolerated"
+    ],
+    "expected_agreement": 0.209877,
+    "interpretation": "moderate",
+    "kappa": 0.4375,
+    "n": 9,
+    "observed_agreement": 0.555556
+  },
+  "observed_pairs": {
+    "compatible|compatible": 1,
+    "compatible|silent-degradation": 1,
+    "compatible|tolerated": 1,
+    "hard-failure|hard-failure": 2,
+    "indeterminate|tolerated": 2,
+    "tolerated|tolerated": 2
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "arm": "B0_naive",
+  "case_id": "registry-node",
+  "class": "hard-failure",
+  "correct": false,
+  "gold": "tolerated",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "flagged": [
+      "arch_prctl",
+      "clone",
+      "futex",
+      "io_uring_enter",
+      "io_uring_setup",
+      "madvise",
+      "membarrier",
+      "prctl"
+    ],
+    "reached_syscalls": 51,
+    "runtime": "2026-09-26/gvisor-20260921.0"
+  },
+  "rule": "flag the workload if any reached syscall is not fully implemented",
+  "run_id": "r-registry-node-bm04-20261031T103530Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103530Z/report.json",
+  "source_sha256": "sha256:f033b7407e0b5bf1d0bd89f7a0c22494fbff864cf646c01cda2ff82f4e437d5e",
+  "suite": "BM-04",
+  "tool_prediction": "tolerated"
+}

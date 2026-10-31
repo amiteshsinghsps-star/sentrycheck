@@ -1,0 +1,8 @@
+name = "postgres18-explicit-io-uring"
+description = "Requires PostgreSQL 18 with --with-liburing and a non-root USER. Copies build-time /seed data when present; otherwise initializes a cluster. Measures server startup and verified table I/O, not build-time initialization."
+command = ["/bin/sh", "-ec", "d=$(mktemp -d /tmp/sentrycheck-pg.XXXXXX); if test -f /seed/PG_VERSION; then cp -R /seed/. \"$d\"; chmod 700 \"$d\"; else initdb -D \"$d\" -U sentrycheck -A trust >/tmp/initdb.log 2>&1 || { cat /tmp/initdb.log; exit 41; }; fi; trap 'pg_ctl -D \"$d\" -m immediate stop >/dev/null 2>&1 || true' EXIT; pg_ctl -D \"$d\" -o '-c io_method=io_uring -c listen_addresses= -c unix_socket_directories=/tmp' -w start >/tmp/start.log 2>&1 || { cat /tmp/start.log; exit 42; }; value=$(psql -h /tmp -d postgres -v ON_ERROR_STOP=1 -Atqc 'CREATE TABLE sentrycheck_t AS SELECT i, repeat(md5(i::text), 100) AS v FROM generate_series(1,10000) i; CHECKPOINT; SELECT sum(i) FROM sentrycheck_t;'); test \"$value\" = 50005000; printf '%s\\n' \"$value\""]
+env = ["PATH=/opt/pgsql/bin:/usr/bin:/bin", "LC_ALL=C", "PGUSER=sentrycheck"]
+timeout_seconds = 120
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

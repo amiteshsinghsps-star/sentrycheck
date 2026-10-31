@@ -1,0 +1,301 @@
+{
+  "recorded_at": "2026-09-26T16:35:46.774769+00:00",
+  "scope": "Actual profile-bounded local observations. Raw debug-build timings are uncontrolled; no production precision/recall claim.",
+  "comparisons": [
+    {
+      "case": "baseline",
+      "report": "artifacts/live-validation/baseline.report.json",
+      "report_sha256": "sha256:ccad86a89945cb1ede332db05591bb0c2625c1c3172db5577dd04a30f3167901",
+      "scanned_at": "2026-09-26T16:15:54Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 6583,
+      "finding_severities": []
+    },
+    {
+      "case": "behavior",
+      "report": "artifacts/live-validation/behavior.report.json",
+      "report_sha256": "sha256:02a552f581de098c1905fd42c5927980494d9dd25dbb39491c37ae5498ddbed0",
+      "scanned_at": "2026-09-26T16:16:25Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 7018,
+      "finding_severities": [
+        "performance-regression",
+        "silent-degradation"
+      ]
+    },
+    {
+      "case": "bpf_optional",
+      "report": "artifacts/live-validation/bpf_optional.report.json",
+      "report_sha256": "sha256:9bbf12bea30c522af5cfd5f68c4f83e39b9237522bb407ca4b9b047fedc93b7b",
+      "scanned_at": "2026-09-26T16:16:18Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 8781,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "io_uring",
+      "report": "artifacts/live-validation/io_uring.report.json",
+      "report_sha256": "sha256:a198ae7467a1a9d5c680301ba03ead23de3b09e8ae70bcbc22427942482d8d99",
+      "scanned_at": "2026-09-26T16:16:01Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:67f9d63fc82328555c9f47f2c79f3b8e367fcc5a77ea97c3272088932285cb9e",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        42,
+        42,
+        42
+      ],
+      "duration_ms": 7062,
+      "finding_severities": [
+        "compatibility-risk",
+        "hard-failure"
+      ]
+    },
+    {
+      "case": "io_uring_fallback",
+      "report": "artifacts/live-validation/io_uring_fallback.report.json",
+      "report_sha256": "sha256:f67bbad0cd837a7241c59c80723b780db404b309101985cfdd1eda0006f301b0",
+      "scanned_at": "2026-09-26T16:16:09Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 8515,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "go",
+      "report": "artifacts/live-baselines/go.report.json",
+      "report_sha256": "sha256:85699cdc5b575edb59ab74296e2359aae3d8fc3f2257f86fe1b9ff8578a92153",
+      "scanned_at": "2026-09-26T16:20:12Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:69f65f24b1faa90c21a3672683191babf95b7d902f76b38877db71d0caccc3a6",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:8e87d69b3eb9c4db5c8827c37c75b7fb6d8f7277d396dc09d322c00219b7117a",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 7430,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "node",
+      "report": "artifacts/live-baselines/node.report.json",
+      "report_sha256": "sha256:f0e490f6823597ae2a654ee75752b00ecc095cd67dbcd5c19e0c151f71434beb",
+      "scanned_at": "2026-09-26T16:20:05Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:402a4f7da4ee99bbfac8ad607e8777ebebe9990c4c2c9f50f72d6f35f6f2c79d",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 70377,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "python",
+      "report": "artifacts/live-baselines/python.report.json",
+      "report_sha256": "sha256:4628126e651f94b586007d4ee540b7aaa9792b17f8010ce73b020e0dcc0f1e89",
+      "scanned_at": "2026-09-26T16:18:56Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:44ff437bba879d4941b710a369a8f19266aea34b29002807f0c487fabc9eec9b",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:ee416a2323f488cf94c6a398e9b1c9759d2ef6d4f07b2d987e67a7cc2bff5c01",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        0,
+        0,
+        0
+      ],
+      "duration_ms": 115107,
+      "finding_severities": [
+        "performance-regression"
+      ]
+    },
+    {
+      "case": "postgres",
+      "report": "artifacts/live-postgres/postgres.report.json",
+      "report_sha256": "sha256:403568c3fa7abcff98dd565639fe331d034eb5a8fff2876726b4de06f7cda7f2",
+      "scanned_at": "2026-09-26T16:21:27Z",
+      "analyzer_version": "0.2.0",
+      "image_digest": "sha256:85f15ac1e4ab8f4fb0beaf9e3413505e68331a6d72ba5cf0d6bb1fe3fd4d7efb",
+      "target_runtime": {
+        "name": "gvisor",
+        "version": "20260921.0",
+        "architecture": "amd64"
+      },
+      "status": "complete",
+      "evidence_tier": "dynamic-runsc-diff",
+      "provenance": "locally-executed",
+      "profile_sha256": "sha256:9f4d17fd687ef0ed6ba0a0e89d6b80eb9eec63d0ca5b722269a06a87688696da",
+      "native_exits": [
+        0,
+        0,
+        0
+      ],
+      "sandbox_exits": [
+        42,
+        42,
+        42
+      ],
+      "duration_ms": 51431,
+      "finding_severities": [
+        "compatibility-risk",
+        "hard-failure"
+      ]
+    }
+  ],
+  "node_runtime": {
+    "status": "passed",
+    "finished_at": "2026-09-26T16:24:26.563034+00:00",
+    "scope": "Real CRI canaries and Go controller/probe against a disposable Kubernetes node; workload admissions use server dry-run.",
+    "states": {
+      "healthy": "canary-verified",
+      "mismatch": "isolation-mismatch",
+      "missing": "runtime-unavailable",
+      "recovered": "canary-verified"
+    },
+    "health_label_removed": true,
+    "strict_denial": true,
+    "warning_event": true,
+    "recovery_admitted": true
+  }
+}

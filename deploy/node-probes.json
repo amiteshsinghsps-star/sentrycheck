@@ -1,0 +1,134 @@
+{
+  "apiVersion": "v1",
+  "kind": "List",
+  "items": [
+    {
+      "apiVersion": "apps/v1",
+      "kind": "DaemonSet",
+      "metadata": {
+        "name": "sentrycheck-probe-sentrycheck-gvisor",
+        "namespace": "sentrycheck-system"
+      },
+      "spec": {
+        "selector": {
+          "matchLabels": {
+            "app": "sentrycheck-probe-sentrycheck-gvisor"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "sentrycheck-probe-sentrycheck-gvisor"
+            }
+          },
+          "spec": {
+            "serviceAccountName": "sentrycheck-node-probe",
+            "nodeSelector": {
+              "kubernetes.io/arch": "amd64"
+            },
+            "tolerations": [
+              {
+                "operator": "Exists"
+              }
+            ],
+            "containers": [
+              {
+                "name": "probe",
+                "image": "sentrycheck-integration:0.3.0",
+                "imagePullPolicy": "IfNotPresent",
+                "command": [
+                  "/sentrycheck-node-probe"
+                ],
+                "args": [
+                  "--publish",
+                  "--runtime",
+                  "gvisor",
+                  "--version",
+                  "20260921.0",
+                  "--architecture",
+                  "amd64",
+                  "--handler",
+                  "runsc",
+                  "--expected-runtime-type",
+                  "io.containerd.runsc.v1",
+                  "--binary",
+                  "/host/usr/local/bin/runsc",
+                  "--crictl",
+                  "/host/usr/local/bin/crictl"
+                ],
+                "env": [
+                  {
+                    "name": "NODE_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "fieldPath": "spec.nodeName"
+                      }
+                    }
+                  }
+                ],
+                "securityContext": {
+                  "runAsUser": 0,
+                  "allowPrivilegeEscalation": false,
+                  "readOnlyRootFilesystem": true,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  }
+                },
+                "resources": {
+                  "requests": {
+                    "cpu": "20m",
+                    "memory": "32Mi"
+                  },
+                  "limits": {
+                    "cpu": "250m",
+                    "memory": "128Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "host-bin",
+                    "mountPath": "/host/usr/local/bin",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "cri",
+                    "mountPath": "/run/containerd",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ]
+              }
+            ],
+            "volumes": [
+              {
+                "name": "host-bin",
+                "hostPath": {
+                  "path": "/usr/local/bin",
+                  "type": "Directory"
+                }
+              },
+              {
+                "name": "cri",
+                "hostPath": {
+                  "path": "/run/containerd",
+                  "type": "Directory"
+                }
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {
+                  "sizeLimit": "32Mi"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

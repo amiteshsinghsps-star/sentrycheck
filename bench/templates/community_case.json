@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "case_id": "community-example-app",
+  "group": "community",
+  "image": {
+    "reference": "docker.io/library/example:1.0",
+    "local_path": null,
+    "digest": "sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "source_url": "https://github.com/example/example-app",
+    "license": "Apache-2.0",
+    "architecture": "amd64",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "layer_digests": [
+      "sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    ]
+  },
+  "profile": {
+    "kind": "command",
+    "path": "profiles/example.toml",
+    "sha256": "sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "coverage_notes": "Exercises application startup and core request handling path"
+  },
+  "runtime": {
+    "name": "gvisor",
+    "release": "20260921.0",
+    "platform": "systrap",
+    "flags": []
+  },
+  "expected_interfaces": [
+    "epoll_pwait",
+    "accept4",
+    "write"
+  ],
+  "label": null,
+  "split": "development",
+  "suites": [
+    "BM-01",
+    "BM-04"
+  ],
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "tags": [
+    "community",
+    "web-server"
+  ],
+  "added_in": "bench-1.0",
+  "retired_in": null,
+  "notes": "Community contributed case demonstrating HTTP server startup and shutdown."
+}

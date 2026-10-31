@@ -1,0 +1,2 @@
+# Optional schema validation tooling; not needed by either product binary.
+jsonschema>=4.25,<5

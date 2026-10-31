@@ -1,0 +1,20 @@
+{
+  "apiVersion": "v1",
+  "kind": "List",
+  "items": [
+    {
+      "apiVersion": "node.k8s.io/v1",
+      "kind": "RuntimeClass",
+      "metadata": {
+        "name": "sentrycheck-gvisor"
+      },
+      "handler": "runsc",
+      "scheduling": {
+        "nodeSelector": {
+          "sentrycheck.io.node-restriction.kubernetes.io/runtime-709274ddd3a39792": "verified",
+          "kubernetes.io/arch": "amd64"
+        }
+      }
+    }
+  ]
+}

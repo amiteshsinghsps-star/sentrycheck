@@ -1,0 +1,6 @@
+waiting for server to start....2026-10-31 10:22:59.435 UTC [8] FATAL:  could not setup io_uring queue: Function not implemented
+2026-10-31 10:22:59.435 UTC [8] HINT:  The kernel does not support io_uring.
+2026-10-31 10:22:59.437 UTC [8] LOG:  database system is shut down
+ stopped waiting
+pg_ctl: could not start server
+Examine the log output.

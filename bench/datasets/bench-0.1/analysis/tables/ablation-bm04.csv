@@ -1,0 +1,10 @@
+case_id,gold,static_class,live_class,static_correct,live_correct,static_runs,live_runs
+baseline-go,tolerated,indeterminate,performance-regression,no,no,2,2
+postgres-18-io-uring,hard-failure,indeterminate,hard-failure,no,yes,2,2
+registry-node,tolerated,indeterminate,tolerated,no,yes,2,2
+registry-python,tolerated,indeterminate,tolerated,no,yes,2,2
+synthetic-baseline,compatible,indeterminate,compatible,no,yes,2,2
+synthetic-behavior-divergence,silent-degradation,indeterminate,silent-degradation,no,yes,2,2
+synthetic-optional-bpf,tolerated,indeterminate,tolerated,no,yes,2,2
+synthetic-optional-io-uring,tolerated,indeterminate,tolerated,no,yes,2,2
+synthetic-required-io-uring,hard-failure,indeterminate,hard-failure,no,yes,2,2

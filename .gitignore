@@ -1,0 +1,57 @@
+/.cache/
+/target/
+/artifacts/
+/bin/
+node_modules/
+dist/
+*.pem
+*.key
+.env
+controller-config.json
+__pycache__/
+*.pyc
+*.pdb
+/research/
+
+# Harness scratch, downloaded reference documents and fetched image layers are local evidence,
+# not redistributed dataset content (PRD section 7.7).
+.sentrycheck/
+bm13-wsl/
+bench/.tmp/
+bench/.cache/
+bench/images/*
+!bench/images/pins.json
+bench/sources/docs/
+bench/runs/*/case/_fixture
+# Raw execution traces and heavy stdout logs (>10MB) to prevent Git clone bloat.
+# Digests remain tracked in run.json and index.json.
+bench/runs/**/*.trace
+bench/runs/**/scanner-stdout.txt
+bench/runs/**/postgres-18-io-uring/**/report.json
+
+# Private
+paper/
+research/
+main.pdf
+
+# SENTRYCHECK-RULES
+# Private
+paper/
+research/
+main.pdf
+# Local, generated and scratch folders
+target/
+.cache/
+.pytest_cache/
+.sentrycheck/
+artifacts/
+bin/
+bm13-wsl/
+node_modules/
+# Raw traces and large logs (ship as Release assets)
+bench/runs/**/*.trace
+bench/runs/**/scanner-stdout.txt
+bench/runs/**/postgres-18-io-uring/**/report.json
+# Secrets
+*.pem
+controller-config.json

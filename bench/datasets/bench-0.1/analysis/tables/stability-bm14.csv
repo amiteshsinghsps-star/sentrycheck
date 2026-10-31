@@ -1,0 +1,8 @@
+case_id,attempts,stable,classes
+baseline-go,2,yes,"[""compatible""]"
+postgres-18-io-uring,2,yes,"[""hard-failure""]"
+synthetic-baseline,2,yes,"[""compatible""]"
+synthetic-behavior-divergence,2,yes,"[""silent-degradation""]"
+synthetic-optional-bpf,2,yes,"[""tolerated""]"
+synthetic-optional-io-uring,2,yes,"[""tolerated""]"
+synthetic-required-io-uring,2,yes,"[""hard-failure""]"

@@ -1,0 +1,182 @@
+{
+  "oci-revision": {
+    "url": "https://api.github.com/repos/opencontainers/image-spec/commits/v1.1.1",
+    "final_url": "https://api.github.com/repos/opencontainers/image-spec/commits/v1.1.1",
+    "retrieved_at": "2026-09-26T16:04:05.964801+00:00",
+    "sha256": "7465dbeb50f361349b09375fd9fe311469b561a1dd7c52cc1d407028143b7486",
+    "bytes": 14620
+  },
+  "kata-revision": {
+    "url": "https://api.github.com/repos/kata-containers/kata-containers/commits/main",
+    "final_url": "https://api.github.com/repos/kata-containers/kata-containers/commits/main",
+    "retrieved_at": "2026-09-26T16:04:06.617459+00:00",
+    "sha256": "1c26c4a33ba5dbed5eff6664392e2e3a7caf124a33c7f945c18b568e887a41da",
+    "bytes": 40739
+  },
+  "kubernetes-revision": {
+    "url": "https://api.github.com/repos/kubernetes/website/commits/main",
+    "final_url": "https://api.github.com/repos/kubernetes/website/commits/main",
+    "retrieved_at": "2026-09-26T16:04:07.254295+00:00",
+    "sha256": "a8e94d519c4c01d5c10c3fe6f60a137223fb06bb465426efd433169bcb1d60c8",
+    "bytes": 59353
+  },
+  "sarif-revision": {
+    "url": "https://api.github.com/repos/oasis-tcs/sarif-spec/commits/main",
+    "final_url": "https://api.github.com/repos/oasis-tcs/sarif-spec/commits/main",
+    "retrieved_at": "2026-09-26T16:04:07.886848+00:00",
+    "sha256": "8f49076702006edaac463192b7b5f7ada163ddc0403184b3b24108f4cbeaa971",
+    "bytes": 9009
+  },
+  "gvisor-platforms": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/platforms.md",
+    "final_url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/platforms.md",
+    "retrieved_at": "2026-09-26T16:04:08.544140+00:00",
+    "sha256": "81fb38e5fbe3f3f47d1e066b6df961141aa3785d7a93b437eb14dac0f7e8c1b7",
+    "bytes": 3823
+  },
+  "gvisor-debugging": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/debugging.md",
+    "final_url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/debugging.md",
+    "retrieved_at": "2026-09-26T16:04:08.511826+00:00",
+    "sha256": "482f9191df3b96f935cd0360f024482a8a7ad59a9797844ced0ced51fa8ee917",
+    "bytes": 7515
+  },
+  "gvisor-install": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/install.md",
+    "final_url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/install.md",
+    "retrieved_at": "2026-09-26T16:04:08.574952+00:00",
+    "sha256": "e26452e9517410fadc9b21669a8c394221542ffa1ae30e0d87c9ee68c5e044ca",
+    "bytes": 7925
+  },
+  "gvisor-sidecars": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/config/config.go",
+    "final_url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/config/config.go",
+    "retrieved_at": "2026-09-26T16:04:08.587562+00:00",
+    "sha256": "2b961953ab3e9b695afc7509d5cf4dc45cbc0fda5bae782bb82d9583ad9c56ac",
+    "bytes": 55007
+  },
+  "gvisor-oci": {
+    "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/quick_start/oci.md",
+    "final_url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/g3doc/user_guide/quick_start/oci.md",
+    "retrieved_at": "2026-09-26T16:04:08.516296+00:00",
+    "sha256": "be74d2880be90ea239a6aa5eb8b0feb73207745b53c0b0a16acef4a98f586c78",
+    "bytes": 1100
+  },
+  "github-sarif": {
+    "url": "https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning",
+    "final_url": "https://docs.github.com/en/code-security/reference/code-scanning/sarif-files/sarif-support",
+    "retrieved_at": "2026-09-26T16:04:10.559822+00:00",
+    "sha256": "3ce7afab67a8e2035c04d0d9c25e47f6b1c59f6d8e5537c766c0ab0e43027776",
+    "bytes": 1011859
+  },
+  "github-sarif-upload": {
+    "url": "https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github",
+    "final_url": "https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/integrate-with-existing-tools/upload-sarif-file",
+    "retrieved_at": "2026-09-26T16:04:10.202635+00:00",
+    "sha256": "888639ad07830577f5cbbf6fa800f9bac018c189d8c8ddc0ac77a5b4450327a7",
+    "bytes": 624638
+  },
+  "oci-descriptor": {
+    "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/descriptor.md",
+    "final_url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/descriptor.md",
+    "retrieved_at": "2026-09-26T16:04:09.099809+00:00",
+    "sha256": "89399b5ffabfeb9688b66de9afcf08b60691710d94d0f5b061cb30e6fbc75428",
+    "bytes": 12152
+  },
+  "oci-image-index": {
+    "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/image-index.md",
+    "final_url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/image-index.md",
+    "retrieved_at": "2026-09-26T16:04:09.117545+00:00",
+    "sha256": "abbd4ecefe1d85588ae98393600a20b618cc190d630bb534d596c9a642584bf9",
+    "bytes": 8289
+  },
+  "oci-config": {
+    "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/config.md",
+    "final_url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/config.md",
+    "retrieved_at": "2026-09-26T16:04:09.125123+00:00",
+    "sha256": "0504e056297a41dd14cf2ec276d53fab4321d2b08a3e7fd98b2f87792f3f0a57",
+    "bytes": 15479
+  },
+  "oci-layer": {
+    "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/layer.md",
+    "final_url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/layer.md",
+    "retrieved_at": "2026-09-26T16:04:09.600680+00:00",
+    "sha256": "5d65842c37a770fdd7e76993facea8c3e7256a0c0241ca38884dd52f67fb3e0f",
+    "bytes": 15214
+  },
+  "kata-install": {
+    "url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/install.md",
+    "retrieved_at": "2026-09-26T16:04:09.629964+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  "kata-hypervisors": {
+    "url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/hypervisors.md",
+    "final_url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/hypervisors.md",
+    "retrieved_at": "2026-09-26T16:04:09.655861+00:00",
+    "sha256": "bdc51950b28822cdcbe98525bfd5156482bed2b1b9be420c9e92a8964bf246bb",
+    "bytes": 2078
+  },
+  "kata-README": {
+    "url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/design/architecture/README.md",
+    "final_url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/design/architecture/README.md",
+    "retrieved_at": "2026-09-26T16:04:10.165459+00:00",
+    "sha256": "5a48c237fb00f97d4a1dbd327c9fcac4d6d350ced41c19d3c1072a105dce657b",
+    "bytes": 19776
+  },
+  "kubernetes-runtime-class": {
+    "url": "https://raw.githubusercontent.com/kubernetes/website/a746bbd76e9504ecdedafbda7f7abfdbdee5642e/content/en/docs/concepts/containers/runtime-class.md",
+    "final_url": "https://raw.githubusercontent.com/kubernetes/website/a746bbd76e9504ecdedafbda7f7abfdbdee5642e/content/en/docs/concepts/containers/runtime-class.md",
+    "retrieved_at": "2026-09-26T16:04:10.131497+00:00",
+    "sha256": "335872d09f4274459fcf5c5458974ea460930769215c9ab56cddd296be9191c7",
+    "bytes": 7278
+  },
+  "kubernetes-validating-admission-policy": {
+    "url": "https://raw.githubusercontent.com/kubernetes/website/a746bbd76e9504ecdedafbda7f7abfdbdee5642e/content/en/docs/reference/access-authn-authz/validating-admission-policy.md",
+    "final_url": "https://raw.githubusercontent.com/kubernetes/website/a746bbd76e9504ecdedafbda7f7abfdbdee5642e/content/en/docs/reference/access-authn-authz/validating-admission-policy.md",
+    "retrieved_at": "2026-09-26T16:04:10.241477+00:00",
+    "sha256": "044666a490b05e920947a1207cbf68a992fca38a3a9f12c8c82b447d6e921223",
+    "bytes": 32132
+  },
+  "kubernetes-mutating-admission-policy": {
+    "url": "https://raw.githubusercontent.com/kubernetes/website/a746bbd76e9504ecdedafbda7f7abfdbdee5642e/content/en/docs/reference/access-authn-authz/mutating-admission-policy.md",
+    "final_url": "https://raw.githubusercontent.com/kubernetes/website/a746bbd76e9504ecdedafbda7f7abfdbdee5642e/content/en/docs/reference/access-authn-authz/mutating-admission-policy.md",
+    "retrieved_at": "2026-09-26T16:04:10.643637+00:00",
+    "sha256": "87976a07b3580db684112be131eba04209739a58c3d036cd5e9897413df1982f",
+    "bytes": 13296
+  },
+  "sarif-sarif-schema-2.1.0": {
+    "url": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/adbb670c018335b0f384e6dd8819f4ea055d7ee1/sarif-2.1/schema/sarif-schema-2.1.0.json",
+    "final_url": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/adbb670c018335b0f384e6dd8819f4ea055d7ee1/sarif-2.1/schema/sarif-schema-2.1.0.json",
+    "retrieved_at": "2026-09-26T16:04:11.325672+00:00",
+    "sha256": "c3b4bb2d6093897483348925aaa73af03b3e3f4bd4ca38cef26dcb4212a2682e",
+    "bytes": 112768
+  },
+  "kata-tree": {
+    "url": "https://api.github.com/repos/kata-containers/kata-containers/git/trees/8a2c6acfa662dc579b69a296275337d803b4f5ab?recursive=1",
+    "final_url": "https://api.github.com/repos/kata-containers/kata-containers/git/trees/8a2c6acfa662dc579b69a296275337d803b4f5ab?recursive=1",
+    "retrieved_at": "2026-09-26T16:04:23.126675+00:00",
+    "sha256": "689f362e09dd2fecb8364f4af4b26a63b5146b8c4fac3220ffc4eb27f22cb647",
+    "bytes": 923680
+  },
+  "kata-installation": {
+    "url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/installation.md",
+    "final_url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/installation.md",
+    "retrieved_at": "2026-09-26T16:05:03.378424+00:00",
+    "sha256": "ca8d0d97fd8ab43d5e929e81fcd79e80683208a7c30b615677cb3944318f7d9b",
+    "bytes": 11861
+  },
+  "kata-install-guide": {
+    "url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/install/README.md",
+    "final_url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/install/README.md",
+    "retrieved_at": "2026-09-26T16:05:03.940574+00:00",
+    "sha256": "74bed17c49e55c101394cc5fa2ebe8d704cb2ec78f98c968cb1d27f0cbc46f1d",
+    "bytes": 768
+  },
+  "kata-virtualization": {
+    "url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/design/virtualization.md",
+    "final_url": "https://raw.githubusercontent.com/kata-containers/kata-containers/8a2c6acfa662dc579b69a296275337d803b4f5ab/docs/design/virtualization.md",
+    "retrieved_at": "2026-09-26T16:05:04.499711+00:00",
+    "sha256": "38433d4c9196800418ca40b764f5f0b9a7eb0cb5fdc7f8632c47a1886d572e41",
+    "bytes": 12695
+  }
+}

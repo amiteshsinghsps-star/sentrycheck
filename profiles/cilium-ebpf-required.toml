@@ -1,0 +1,6 @@
+name = "cilium-ebpf-required-program-load"
+description = "Require BPF_PROG_LOAD through cilium/ebpf. Under the portable scanner's empty capability set the native baseline may fail; such a result must remain incomplete and cannot establish sandbox incompatibility."
+command = ["/workload", "--require-load"]
+timeout_seconds = 30
+repetitions = 3
+coverage = "representative"

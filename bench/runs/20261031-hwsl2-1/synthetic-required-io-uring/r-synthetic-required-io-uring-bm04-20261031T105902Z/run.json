@@ -1,0 +1,126 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/preflight.json",
+        "sha256": "sha256:eab8498b5d3946321c5db6653959207371339caf4b8e58ba84fa02ec7e017a52"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:8a4b3cf432d93d6079f8254f1e5fc836b247a125f98ae14a2881911dd1017ef1"
+      }
+    ],
+    "outputs": [],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105902Z/report.json",
+      "sha256": "sha256:bca234179ac8fe1041bb45eee7569de65f88de3881294ffa705335fe63d1dc03"
+    },
+    "traces": []
+  },
+  "case_id": "synthetic-required-io-uring",
+  "ended_at": "2026-10-31T10:59:02Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "repo:bench/.tmp"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; static-only scan; exit=2; max_kb_age_days=400; order=abba-block8; report_status=incomplete",
+  "order_index": 3,
+  "order_pattern": "abba-block8",
+  "predicted": {
+    "class": "indeterminate",
+    "complete": false,
+    "finding_severities": [],
+    "incomplete_reason_codes": [
+      "static-only"
+    ],
+    "status": "incomplete",
+    "tier": "static-only"
+  },
+  "repetitions": {
+    "native_durations_ms": [],
+    "native_exits": [],
+    "sandbox_durations_ms": [],
+    "sandbox_exits": []
+  },
+  "resources": {
+    "disk_mb": 0.245598,
+    "peak_rss_mb": null
+  },
+  "run_id": "r-synthetic-required-io-uring-bm04-20261031T105902Z",
+  "runtime": {
+    "binary_sha256": null,
+    "name": "gvisor",
+    "platform": null,
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:59:01Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 747,
+    "total": 747
+  },
+  "tool": {
+    "binary_sha256": "sha256:407337980e8cf119441bd33b7ffbac4e1624b0e7f34aafe81d625b3944005775",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "0.5.0"
+  },
+  "valid": true
+}

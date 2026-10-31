@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "image": "C:\\Users\\vijay\\OneDrive\\Desktop\\game\\artifacts\\live-images\\fixtures\\baseline",
+  "image_digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+  "platform": "linux/amd64",
+  "scanned_at": "2026-10-31T10:41:38Z",
+  "sentrycheck_version": "0.5.0",
+  "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+  "kb_age_days": 34,
+  "target_runtime": {
+    "name": "gvisor",
+    "version": "20260921.0",
+    "architecture": "amd64"
+  },
+  "status": "incomplete",
+  "assessment": "insufficient-evidence",
+  "findings": [],
+  "candidate_gaps": [],
+  "capability_set": {
+    "interpretation": "Upper-bound capability candidates for analyzed code only. This is not an exhaustive syscall set or a compatibility verdict; indirect/dynamic dispatch and untested paths remain unknown.",
+    "capabilities": [
+      {
+        "syscall": "exit",
+        "syscall_number": 60,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:349896c91a95f6bf60f49d14dd4ecf684cb75f4ba3e5f2baf3011b853eac1a33",
+        "source_offset": "0x107",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      }
+    ],
+    "fingerprints": [],
+    "elf_files": 1,
+    "cache_hits": 0,
+    "warnings": [
+      "/workload: no section table; executable-segment sweep may miss code before the entry point or embedded data boundaries"
+    ]
+  },
+  "capability_set_only": [
+    {
+      "syscall": "exit",
+      "syscall_number": 60,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:349896c91a95f6bf60f49d14dd4ecf684cb75f4ba3e5f2baf3011b853eac1a33",
+      "source_offset": "0x107",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    }
+  ],
+  "dynamic": null,
+  "silent_fallback_check": {
+    "performed": false,
+    "cluster_context_available": false,
+    "note": "An image scan cannot establish node runtime identity. Use the node probe and admission controller; binary presence alone is not isolation attestation."
+  },
+  "limitations": [
+    "Results cover only the declared profile and environment; absence of a finding is not proof of compatibility.",
+    "Static resolution does not establish reachability, syscall arguments, or a complete capability upper bound for dynamically generated code.",
+    "Output comparisons require deterministic profile assertions; unobserved filesystem, cgroup, and networking semantics remain unknown.",
+    "Elapsed-time comparisons include unequal tracer/runtime startup overhead and do not establish a netstack/gofer root cause."
+  ],
+  "incomplete_reasons": [
+    "Static-only scan: capability candidates are unconfirmed."
+  ],
+  "duration_ms": 30
+}

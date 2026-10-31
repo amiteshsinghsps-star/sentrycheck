@@ -1,0 +1,11 @@
+suite,reason,runbook
+BM-02,"no driver executed on this host",bench/specs/BM-02.md
+BM-03,"no driver executed on this host",bench/specs/BM-03.md
+BM-05,"a full 200-rule KB audit needs reviewer time beyond this session",bench/specs/NOT-RUN.md
+BM-06,"cross-tool comparison needs second-party tools that are not installed here",bench/specs/NOT-RUN.md
+BM-07,"no driver executed on this host",bench/specs/BM-07.md
+BM-08,"no driver executed on this host",bench/specs/BM-08.md
+BM-09,"no bare-metal host and no KVM-controlled timing lab on this machine",bench/specs/NOT-RUN.md
+BM-10,"no Kubernetes 1.35/1.36 cluster reachable from this host",bench/specs/NOT-RUN.md
+BM-11,"accessibility review needs a rendered product surface, not this repository",bench/specs/NOT-RUN.md
+BM-12,"human-subject study: no participants were recruited (IRB would be required)",bench/specs/NOT-RUN.md

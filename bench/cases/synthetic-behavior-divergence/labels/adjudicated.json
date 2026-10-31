@@ -1,0 +1,82 @@
+{
+  "adjudicator": {
+    "confidence": "medium",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "silent-degradation",
+    "rationale": "raters disagree; a positive observation in the recorded execution evidence outranks documentation"
+  },
+  "case_id": "synthetic-behavior-divergence",
+  "class": "silent-degradation",
+  "confidence": "medium",
+  "evidence": [
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-synthetic-behavior-divergence-bm04-20261031T104340Z)",
+    "repetition 0 stdout differs: native sha256:cc2010e7ead2 versus sandbox sha256:f66bc1837683",
+    "repetition 1 stdout differs: native sha256:cc2010e7ead2 versus sandbox sha256:f66bc1837683",
+    "repetition 2 stdout differs: native sha256:cc2010e7ead2 versus sandbox sha256:f66bc1837683",
+    "sandbox trace refused rseq=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/report.json",
+      "sha256": "sha256:c99ef608ea69054c33de5aeffc3d98a8e95b326a1f9e70a2ee8ff57fa9f3d18a"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/traces/native-0-guest.trace",
+      "sha256": "sha256:cab0511aa5c39d56966e98b8578577c1afee03b1884fe9b94aeed37e4b71e101"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/traces/native-1-guest.trace",
+      "sha256": "sha256:b728d46145aa5a4595eb773401a675edb81631aad0d3bde3faf6deae1382e0a0"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/traces/native-2-guest.trace",
+      "sha256": "sha256:306923b09394b9317a6c0c3a1fc2f10331a741d9475ec39aea916da3349c25f2"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:1940fe3e8891f2bace112515d114c9c84b04269e4f39af048975a47644e71ac6"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:7194e512329c00d5f78ef3c38810620807a272d14cbe6d195687a3e399eafa65"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104340Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:b1a02ec76c7a41d58e55ab78fe441e0758097cc4a1ed43bf25a97fee28de9a72"
+    }
+  ],
+  "rater_a": {
+    "confidence": "high",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "compatible",
+    "rationale": "no expected interface uname, getrandom is documented as partial or unimplemented for gvisor/amd64"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "silent-degradation",
+    "rationale": "both runtimes exited 0 but the workload printed different bytes under the sandbox"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

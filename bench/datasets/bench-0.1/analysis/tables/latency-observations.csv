@@ -1,0 +1,10 @@
+case_id,runs,native_median_ms,sandbox_median_ms,sandbox_over_native
+baseline-go,5,129,228,1.526685
+postgres-18-io-uring,5,3508,3049,0.89655
+registry-node,3,652,911,1.410046
+registry-python,3,883,1113,1.297905
+synthetic-baseline,5,77,152,1.702079
+synthetic-behavior-divergence,5,77,102,1.411494
+synthetic-optional-bpf,5,101,152,1.668845
+synthetic-optional-io-uring,5,101,127,1.384783
+synthetic-required-io-uring,5,102,179,1.839479

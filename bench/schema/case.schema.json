@@ -1,0 +1,518 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$"
+    },
+    "group": {
+      "type": "string"
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "local_path": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9._@/-]+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "digest": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "architecture": {
+          "type": "string",
+          "enum": [
+            "amd64",
+            "arm64"
+          ]
+        },
+        "media_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "layer_digests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      "required": [
+        "reference",
+        "local_path",
+        "digest",
+        "source_url",
+        "license",
+        "architecture",
+        "media_type",
+        "layer_digests"
+      ],
+      "additionalProperties": false
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "oci-layout",
+            "oci-ref",
+            "fixture-binary",
+            "command"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._@/-]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "coverage_notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "path",
+        "sha256",
+        "coverage_notes"
+      ],
+      "additionalProperties": false
+    },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "gvisor",
+            "kata",
+            "runc"
+          ]
+        },
+        "release": {
+          "type": "string"
+        },
+        "platform": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "release",
+        "platform",
+        "flags"
+      ],
+      "additionalProperties": false
+    },
+    "suites": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BM-01",
+          "BM-02",
+          "BM-03",
+          "BM-04",
+          "BM-05",
+          "BM-06",
+          "BM-07",
+          "BM-08",
+          "BM-09",
+          "BM-10",
+          "BM-11",
+          "BM-12",
+          "BM-13",
+          "BM-14"
+        ]
+      }
+    },
+    "host_classes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_interfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "label": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string",
+              "enum": [
+                "hard-failure",
+                "silent-degradation",
+                "tolerated",
+                "compatible",
+                "performance-regression",
+                "indeterminate"
+              ]
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "label_source": {
+              "type": "string",
+              "enum": [
+                "independent-raters",
+                "rule-adjudicator",
+                "author-upstream"
+              ]
+            },
+            "rater_a": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "human",
+                        "rule-adjudicator"
+                      ]
+                    },
+                    "label_class": {
+                      "type": "string",
+                      "enum": [
+                        "hard-failure",
+                        "silent-degradation",
+                        "tolerated",
+                        "compatible",
+                        "performance-regression",
+                        "indeterminate"
+                      ]
+                    },
+                    "confidence": {
+                      "type": "string",
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "rationale": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "kind",
+                    "label_class",
+                    "confidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "rater_b": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "human",
+                        "rule-adjudicator"
+                      ]
+                    },
+                    "label_class": {
+                      "type": "string",
+                      "enum": [
+                        "hard-failure",
+                        "silent-degradation",
+                        "tolerated",
+                        "compatible",
+                        "performance-regression",
+                        "indeterminate"
+                      ]
+                    },
+                    "confidence": {
+                      "type": "string",
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "rationale": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "kind",
+                    "label_class",
+                    "confidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "adjudicator": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "human",
+                        "rule-adjudicator"
+                      ]
+                    },
+                    "label_class": {
+                      "type": "string",
+                      "enum": [
+                        "hard-failure",
+                        "silent-degradation",
+                        "tolerated",
+                        "compatible",
+                        "performance-regression",
+                        "indeterminate"
+                      ]
+                    },
+                    "confidence": {
+                      "type": "string",
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "rationale": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "kind",
+                    "label_class",
+                    "confidence",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "linked_evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "log",
+                      "trace",
+                      "url",
+                      "file",
+                      "run"
+                    ]
+                  },
+                  "ref": {
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^sha256:[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "note": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "kind",
+                  "ref",
+                  "sha256",
+                  "note"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "class",
+            "confidence",
+            "label_source",
+            "rater_a",
+            "rater_b",
+            "adjudicator",
+            "evidence",
+            "linked_evidence"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "development",
+        "validation",
+        "test",
+        "reserve"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "added_in": {
+      "type": "string"
+    },
+    "retired_in": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "group",
+    "image",
+    "profile",
+    "runtime",
+    "suites",
+    "host_classes",
+    "expected_interfaces",
+    "label",
+    "split",
+    "tags",
+    "added_in",
+    "retired_in",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SENTRYCHECK benchmark case contract",
+  "$id": "urn:sentrycheck:bench:case:1.0"
+}

@@ -1,0 +1,126 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/preflight.json",
+        "sha256": "sha256:6368c37fc8d35b8b52603685fb8c5d18eb3c1533405bf5886ba163143e8f667f"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:55ee5a3189af9a30a54ad32abf6d0c343526e38442e5c48b7eef39384c499a5c"
+      }
+    ],
+    "outputs": [],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104245Z/report.json",
+      "sha256": "sha256:c29f723ebc56cde1bf4cd7c83bd321b3c9dc3fe25afa84ec88f8e00d65a3ebcb"
+    },
+    "traces": []
+  },
+  "case_id": "synthetic-baseline",
+  "ended_at": "2026-10-31T10:42:45Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "repo:bench/.tmp"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; static-only scan; exit=2; max_kb_age_days=400; order=abba-block4; report_status=incomplete",
+  "order_index": 3,
+  "order_pattern": "abba-block4",
+  "predicted": {
+    "class": "indeterminate",
+    "complete": false,
+    "finding_severities": [],
+    "incomplete_reason_codes": [
+      "static-only"
+    ],
+    "status": "incomplete",
+    "tier": "static-only"
+  },
+  "repetitions": {
+    "native_durations_ms": [],
+    "native_exits": [],
+    "sandbox_durations_ms": [],
+    "sandbox_exits": []
+  },
+  "resources": {
+    "disk_mb": 0.006773,
+    "peak_rss_mb": null
+  },
+  "run_id": "r-synthetic-baseline-bm04-20261031T104245Z",
+  "runtime": {
+    "binary_sha256": null,
+    "name": "gvisor",
+    "platform": null,
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:42:45Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 77,
+    "total": 77
+  },
+  "tool": {
+    "binary_sha256": "sha256:407337980e8cf119441bd33b7ffbac4e1624b0e7f34aafe81d625b3944005775",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "0.5.0"
+  },
+  "valid": true
+}

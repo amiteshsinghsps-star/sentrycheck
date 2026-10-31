@@ -1,0 +1,30 @@
+{
+  "retrieved_at": "2026-09-26T17:05:06.838969+00:00",
+  "scope": "Read-only review of forced-deletion and state-listing semantics; no runtime execution.",
+  "sources": [
+    {
+      "file": "gvisor-runtime-delete.go.txt",
+      "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/cmd/delete.go",
+      "bytes": 3264,
+      "sha256": "1d6bd93fd1118af0c9d6b49f36f9fd68f13086b8a84addbcbc743eb68f703454"
+    },
+    {
+      "file": "gvisor-runtime-list.go.txt",
+      "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/cmd/list.go",
+      "bytes": 3764,
+      "sha256": "6f463d03f982bb88669f4c723775f01d33ba46d9e7fad301491dc4b9d74e3a0d"
+    },
+    {
+      "file": "gvisor-runtime-state-file.go.txt",
+      "url": "https://raw.githubusercontent.com/google/gvisor/26f3455a4cb9a377354c33aeac049080a077c79c/runsc/container/state_file.go",
+      "bytes": 13005,
+      "sha256": "2101930583e109eaae931fec145146b238399b92f5ae133fa5bb032824fbd9f2"
+    },
+    {
+      "file": "runc-runtime-delete-v1.3.4.go.txt",
+      "url": "https://raw.githubusercontent.com/opencontainers/runc/v1.3.4/delete.go",
+      "bytes": 2510,
+      "sha256": "48f24a393d5cc846d31504c492708d0c72ccea1f5e60f89b92c003f49412ff41"
+    }
+  ]
+}

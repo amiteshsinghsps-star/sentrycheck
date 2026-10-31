@@ -1,0 +1,7 @@
+name = "single-mechanism-regression"
+description = "Complete invocation of a small deterministic synthetic workload; not representative of a full application."
+command = ["/workload"]
+timeout_seconds = 10
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

@@ -1,0 +1,603 @@
+{
+  "entries": [
+    {
+      "harness_version": "0.1.0",
+      "kind": "harness",
+      "license": "same terms as the SENTRYCHECK repository this bundle lives in"
+    },
+    {
+      "content_sha256": "sha256:d6edf0f0a7be16d0623c0376a76f9601e156aadab7ab59d9feb1fae97979336b",
+      "final_url": "https://arxiv.org/pdf/2307.03958",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://arxiv.org/pdf/2307.03958"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://blog.acolyer.org/2017/11/06/statistically-rigorous-java-performance-evaluation/",
+      "http_status": 403,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://blog.acolyer.org/2017/11/06/statistically-rigorous-java-performance-evaluation/"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://buildkite.com/gvisor/pipeline/builds/35298",
+      "http_status": 403,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://buildkite.com/gvisor/pipeline/builds/35298"
+    },
+    {
+      "content_sha256": "sha256:12fb00e6a67f92f70cfd214df7db46f8395db8ef5aeb98184229f120441b4ce9",
+      "final_url": "https://cloud-atlas.readthedocs.io/zh-cn/latest/performance/performance_tools/sysbench.html",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://cloud-atlas.readthedocs.io/zh-cn/latest/performance/performance_tools/sysbench.html"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://commons.datacite.org/doi.org/10.5281/zenodo.7602499",
+      "http_status": 429,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://commons.datacite.org/doi.org/10.5281/zenodo.7602499"
+    },
+    {
+      "content_sha256": "sha256:e87b0dc8032004f09ecd9ee176abfec0fe334234d5f9b36324e0decc9144383a",
+      "final_url": "https://discuss.kubernetes.io/t/not-able-to-disable-caching-during-fio-i-o-test-gvisor-vs-runc/19886",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://discuss.kubernetes.io/t/not-able-to-disable-caching-during-fio-i-o-test-gvisor-vs-runc/19886"
+    },
+    {
+      "content_sha256": "sha256:3b52f2a4b25d2fdc72f103711de77e30d3badde190df322105c784389ac0e4fa",
+      "final_url": "https://docker-docs.uclv.cu/docker-hub/official_images/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://docker-docs.uclv.cu/docker-hub/official_images/"
+    },
+    {
+      "content_sha256": "sha256:0d5485ca73942b01a2e9d7d80c1cd34e8b786627cc465341d4b796772a9edf48",
+      "final_url": "https://docs.dragonos.org.cn/locales/en/kernel/ktest/gvisor_syscall_test.html",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://docs.dragonos.org.cn/locales/en/kernel/ktest/gvisor_syscall_test.html"
+    },
+    {
+      "content_sha256": "sha256:3b8c18d3fc1e30502772a7303300d3961f13a3fadd25aa5fa3986456ec528726",
+      "final_url": "https://dri.es/files/oopsla07-georges.pdf",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://dri.es/files/oopsla07-georges.pdf"
+    },
+    {
+      "content_sha256": "sha256:09e6618e423245236c13b99333065e07b339c3d43e4d4992d00cb544062ec1b1",
+      "final_url": "https://dri.es/files/oopsla08-georges.pdf",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://dri.es/files/oopsla08-georges.pdf"
+    },
+    {
+      "content_sha256": "sha256:7cf88e8055bc0c7ee9cafbf14dda850f9032fd91d17f70b68cc8a1a3a698f680",
+      "final_url": "https://edera.dev/stories/faster-than-runc-benchmarking-edera-on-amazon-eks",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://edera.dev/stories/faster-than-runc-benchmarking-edera-on-amazon-eks"
+    },
+    {
+      "content_sha256": "sha256:67acad6bc70f6716144eda45cc147651aa9d3b658e898ed0d1b3f682c1b8a8e4",
+      "final_url": "https://evaluate.inf.usi.ch/biblio/tg/S7a9e.html",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://evaluate.inf.usi.ch/biblio/tg/S7a9e.html"
+    },
+    {
+      "content_sha256": "sha256:2681ca2c4b62a05acd5527aadd28f99cff3e5ecc9c6879f525f6b720f5da86cd",
+      "final_url": "https://evaluate.inf.usi.ch/biblio/tg/Sf33f.html",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://evaluate.inf.usi.ch/biblio/tg/Sf33f.html"
+    },
+    {
+      "content_sha256": "sha256:dd9f3599929f926ebb8b539d8ace88f9a0b8460e56e55d96bbebfaa2daa0b671",
+      "final_url": "https://fio.readthedocs.io/en/latest/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://fio.readthedocs.io/"
+    },
+    {
+      "content_sha256": "sha256:0faec9af64ca0b7fb1b36c7a3d9fb08646c2c0c6e2378ad945261f75afdfed66",
+      "final_url": "https://fuchsia.googlesource.com/fuchsia/+/main/third_party/gvisor_syscall_tests/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://fuchsia.googlesource.com/fuchsia/+/main/third_party/gvisor_syscall_tests/"
+    },
+    {
+      "content_sha256": "sha256:31282579ef951960126649e5efe6219fac42771085373043f80aa1c57f0853f3",
+      "final_url": "https://github.com/akopytov/sysbench",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/akopytov/sysbench"
+    },
+    {
+      "content_sha256": "sha256:5c9af4800a7e45b84bf8c3cf303e3193b69e355d6ff8df1e90cf4b783dec94c2",
+      "final_url": "https://github.com/axboe/fio",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/axboe/fio"
+    },
+    {
+      "content_sha256": "sha256:ff53de31313dae9eafaa929a5b1191a2f58384f95f3d9cd658d031b0db204de8",
+      "final_url": "https://github.com/docker-library",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/docker-library"
+    },
+    {
+      "content_sha256": "sha256:178ba03f0c6f0601f91119dc18236e3bf2052f964b0bd5d658a80c66e55784f7",
+      "final_url": "https://github.com/docker-library/official-images",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/docker-library/official-images"
+    },
+    {
+      "content_sha256": "sha256:c1f1f499781d7a237b2bb7d531e98d70e1ed008bbc3eec6daeee5605f63cf0bf",
+      "final_url": "https://github.com/ethangyoung/gvisor_analysis",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/ethangyoung/gvisor_analysis"
+    },
+    {
+      "content_sha256": "sha256:afdb14c7a0703692f3b8b04fab4af2852c1a9d2cfb230cd1c0aff7ca662b050a",
+      "final_url": "https://github.com/google/gvisor",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/google/gvisor"
+    },
+    {
+      "content_sha256": "sha256:2ae111753c0a4389e36bf85632f6a55256a4feab34e31897f1a20f581b270f04",
+      "final_url": "https://github.com/google/gvisor/pull/7989",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/google/gvisor/pull/7989"
+    },
+    {
+      "content_sha256": "sha256:8650d0a411bcf1f110fe3329528738624ae612fe7c6f9d3836c9bfd639bb0720",
+      "final_url": "https://github.com/google/gvisor/tree/master/test/syscalls/linux",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/google/gvisor/tree/master/test/syscalls/linux"
+    },
+    {
+      "content_sha256": "sha256:990e26d38059591097a8c5defdecedc43226ff643336faf52f91cd0cfda39057",
+      "final_url": "https://github.com/kata-containers/kata-containers/tree/c64b07f981444e12f499a0ddf002be7c39cfe479/docs/design/architecture",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/kata-containers/kata-containers/blob/c64b07f98144/docs/design/architecture"
+    },
+    {
+      "content_sha256": "sha256:3429fc71fb987815b648708be3e86ce06fa8048cf02811f91d44683e3fc4da80",
+      "final_url": "https://github.com/kata-containers/kata-containers/blob/c64b07f98144/docs/hypervisors.md",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/kata-containers/kata-containers/blob/c64b07f98144/docs/hypervisors.md"
+    },
+    {
+      "content_sha256": "sha256:2e120ee58aa46d3d5aaadd6d8ce0b506ef23e8ab1b779e8cb98fb78d5ae8f3ca",
+      "final_url": "https://github.com/linux-test-project/ltp",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/linux-test-project/ltp"
+    },
+    {
+      "content_sha256": "sha256:4441b2ed0ca9eadb252b924662ced28a0ae0b8c09eb9fbf265c3ff9be1f26d88",
+      "final_url": "https://github.com/michaelvl/sigstore-in-toto-workshop",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/michaelvl/sigstore-in-toto-workshop"
+    },
+    {
+      "content_sha256": "sha256:d0aceadacc2c2950a25743c3599d62639bb6b1884e44c98f6e026d72b2370c69",
+      "final_url": "https://github.com/opencontainers/image-spec/blob/main/spec.md",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/opencontainers/image-spec/blob/main/spec.md"
+    },
+    {
+      "content_sha256": "sha256:01b1c632ef6b59c57cb5edaec35258fa3716807373fc025fbb34f8adb4207e27",
+      "final_url": "https://github.com/opencontainers/image-spec/blob/v1.0.1/image-layout.md",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/opencontainers/image-spec/blob/v1.0.1/image-layout.md"
+    },
+    {
+      "content_sha256": "sha256:a6f15b8559507f0c2356cef53530396806c5b1d20fac199caa797e61f38b1d8d",
+      "final_url": "https://github.com/opencontainers/image-spec/blob/v1.0.1/spec.md",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/opencontainers/image-spec/blob/v1.0.1/spec.md"
+    },
+    {
+      "content_sha256": "sha256:35f6ec60ea43e152558fd1913b82812b2e9e8e83ddd861e3421b9f1c73851838",
+      "final_url": "https://github.com/shamedgh/confine",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://github.com/shamedgh/confine"
+    },
+    {
+      "content_sha256": "sha256:a3af1343ba111b72eeabd79cf8cc2385361d88e4734fc6975f4e33778b7fe22c",
+      "final_url": "https://google.github.io/oss-fuzz/getting-started/new-project-guide/rust-lang/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://google.github.io/oss-fuzz/getting-started/new-project-guide/rust-lang"
+    },
+    {
+      "content_sha256": "sha256:b5b0e855d1c05ed8b426f657b1a59a76ba93223e6b127c342a3a4222910ee648",
+      "final_url": "https://groups.google.com/g/gvisor-users/c/CHJOPOb7kCk",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://groups.google.com/g/gvisor-users/c/CHJOPOb7kCk"
+    },
+    {
+      "content_sha256": "sha256:e98fea21b013ab81c7003ecf0900ebaaa096506a5a4d8e9e7727b7467564dfb9",
+      "final_url": "https://guptadeepak.com/guides/verified-builds-slsa-sigstore/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://guptadeepak.com/guides/verified-builds-slsa-sigstore/"
+    },
+    {
+      "content_sha256": "sha256:d2267530480a34956cb459ea571343d9a63fc2c93e561c920a7993ffe4c8c558",
+      "final_url": "https://gvisor.dev/docs/architecture_guide/performance/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://gvisor.dev/docs/architecture_guide/performance/"
+    },
+    {
+      "content_sha256": "sha256:3887a5006273f8b0fddc1cba3301aadacf15b375fa7c2f66ea08174eefbe55a7",
+      "final_url": "https://gvisor.dev/docs/user_guide/compatibility/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://gvisor.dev/docs/user_guide/compatibility/"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://intel.com/content/www/us/en/developer/articles/technical/evaluate-performance-for-storage-performance-development-kit-spdk-based-nvme-ssd.html",
+      "http_status": null,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://intel.com/content/www/us/en/developer/articles/technical/evaluate-performance-for-storage-performance-development-kit-spdk-based-nvme-ssd.html"
+    },
+    {
+      "content_sha256": "sha256:d86fd1884f795fdb993965f320275b1cb22a7ab05bfc1ab8501845319a4468ab",
+      "final_url": "https://kubernetes.io/docs/reference/kubernetes-api/admissionregistration/validating-admission-policy-v1/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://kubernetes.io/docs/reference/kubernetes-api/admissionregistration/validating-admission-policy-v1/"
+    },
+    {
+      "content_sha256": "sha256:b498626b49dd1480aade16db904bf91704ffdd1feb57295239ecc9c200d97add",
+      "final_url": "https://lore.kernel.org/ltp/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://lore.kernel.org/ltp/"
+    },
+    {
+      "content_sha256": "sha256:c64a60c7ae445d659fdf1108cd9636ced7afd0ce05303fac1cc254f26534481c",
+      "final_url": "https://novalug.org/presentation_materials/IO_Loadtesting_with_Fio--2024-04-20/fio.pdf",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://novalug.org/presentation_materials/IO_Loadtesting_with_Fio--2024-04-20/fio.pdf"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://pacs.eecs.yorku.ca/pubs/pdf/lin2020docker.pdf",
+      "http_status": 404,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://pacs.eecs.yorku.ca/pubs/pdf/lin2020docker.pdf"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://par.nsf.gov//servlets/purl/10219922",
+      "http_status": null,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://par.nsf.gov//servlets/purl/10219922"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://par.nsf.gov/servlets/purl/10167826",
+      "http_status": null,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://par.nsf.gov/servlets/purl/10167826"
+    },
+    {
+      "content_sha256": "sha256:e6d1e669618f1575eb35ab5a6ec2ddb6bc6214cead6b0f3372fdaf575d6d1efc",
+      "final_url": "https://research.spec.org/icpe_proceedings/2017/companion/p185.pdf",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://research.spec.org/icpe_proceedings/2017/companion/p185.pdf"
+    },
+    {
+      "content_sha256": "sha256:62fef57af1b4f0b8b77bc6a55cd05e9a8df6514c9f2428723dea692eef0c5f5d",
+      "final_url": "https://rust-fuzz.github.io/book/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://rust-fuzz.github.io/book/"
+    },
+    {
+      "content_sha256": "sha256:0228fa7bd1a07b3c8d84233269b432783d93650abc1ce8600b8888b55469f7e3",
+      "final_url": "https://rust-fuzz.github.io/book/print.html",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://rust-fuzz.github.io/book/print.html"
+    },
+    {
+      "content_sha256": "sha256:46edf628a901c268261cf8b72a1b478926ae9b2db050fa21194c914e7417e3ae",
+      "final_url": "https://slsa.dev/spec/v1.2/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://slsa.dev/spec/"
+    },
+    {
+      "content_sha256": "sha256:e419a99cab563e8e0592750141f93217f9ddabddce29e03cc289b6e31766ab03",
+      "final_url": "https://slsa.dev/spec/v1.0/requirements",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://slsa.dev/spec/v1.0/requirements"
+    },
+    {
+      "content_sha256": "sha256:205e3c5341c380e2d24eb453a13f52bed8542eb9862cd533c0b9d1342f0fac7e",
+      "final_url": "https://slsa.dev/spec/v1.1/levels",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://slsa.dev/spec/v1.1/levels"
+    },
+    {
+      "content_sha256": "sha256:4b9fa9d4160916c4ef904405c8c45a91aa35fbb6d9ef139169b682b0068d67a4",
+      "final_url": "https://sources.debian.org/src/fio/3.41-2/README.rst",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://sources.debian.org/src/fio/3.41-2/README.rst"
+    },
+    {
+      "content_sha256": "sha256:06be8fd95332c9f585464198f5f8436ed2346aa2d048e649b98e097a3fce8e14",
+      "final_url": "https://www.usenix.org/conference/raid2020/presentation/ghavanmnia",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://usenix.org/conference/raid2020/presentation/ghavanmnia"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://v1-30.docs.kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy",
+      "http_status": null,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://v1-30.docs.kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy"
+    },
+    {
+      "content_sha256": "sha256:c0d3635c94c41a4908958e928b0f69c80ab6e7aa174f22812b112c03ee09f9e8",
+      "final_url": "https://v1-35.docs.kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://v1-35.docs.kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/"
+    },
+    {
+      "content_sha256": "sha256:302bb83b986a4f715e0151efb68d42ba9e8278d14a6c0add995af282c99c462a",
+      "final_url": "https://v1-36.docs.kubernetes.io/docs/tutorials/cluster-management/admission-policies/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://v1-36.docs.kubernetes.io/docs/tutorials/cluster-management/admission-policies/"
+    },
+    {
+      "content_sha256": "sha256:d2fc7896d29bc5b8e8009545f97138b1552009ba676b4cdaedad7cc0923381c2",
+      "final_url": "https://www-users.cse.umn.edu/~kjlu/papers/docker.pdf",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www-users.cse.umn.edu/~kjlu/papers/docker.pdf"
+    },
+    {
+      "content_sha256": null,
+      "final_url": "https://www.cs.stonybrook.edu/node/877701",
+      "http_status": 404,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www.cs.stonybrook.edu/node/877701"
+    },
+    {
+      "content_sha256": "sha256:bb86273b59e24765da07884b1c8266b95d6e8b5db8891824ce5befd25262659d",
+      "final_url": "https://katacontainers.io/software/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www.katacontainers.io/software/"
+    },
+    {
+      "content_sha256": "sha256:9f3d3f2687f5ad80549f95bbd40ecf3598e76c22559ad78a210c57e10486f739",
+      "final_url": "https://www.redhat.com/es/blog/linux-test-project-ltp",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www.redhat.com/es/blog/linux-test-project-ltp"
+    },
+    {
+      "content_sha256": "sha256:20ffbe66f4a266d45a4174e4b67c82f8318e8835bb3e0055f9ce14a8541f3871",
+      "final_url": "https://www.unix.com/man-page/debian/1/sysbench/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www.unix.com/man-page/debian/1/sysbench/"
+    },
+    {
+      "content_sha256": "sha256:68fee7c8b5d14210b74cb737fe958e07c8563f1f7fee1dea54e2870c5730a41e",
+      "final_url": "https://www3.cs.stonybrook.edu/~mikepo/papers/confine.cose23.pdf",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www3.cs.stonybrook.edu/~mikepo/papers/confine.cose23.pdf"
+    },
+    {
+      "content_sha256": "sha256:7e32c81f24efbd60962d7ea79527ed7274548b8254abd2f6dd6ca95dea93b818",
+      "final_url": "https://www3.cs.stonybrook.edu/~sghavamnia/confine/",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://www3.cs.stonybrook.edu/~sghavamnia/confine"
+    },
+    {
+      "content_sha256": "sha256:ced0fe88a22288da1e6b47268bec981466b9449b8600ff22371a64d9c9f160b2",
+      "final_url": "https://zenodo.org/records/4075044",
+      "http_status": 200,
+      "kind": "reference-document",
+      "license": "publisher terms; cited and digest-pinned, not re-licensed by us",
+      "url": "https://zenodo.org/records/4075044"
+    },
+    {
+      "case_id": "baseline-go",
+      "digest": "sha256:69f65f24b1faa90c21a3672683191babf95b7d902f76b38877db71d0caccc3a6",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:9de4bea00cd798ab8591301f911db6b4148f879e524075de38ce1086099a3b0f"
+      ],
+      "license": "Apache-2.0 (workload source in corpus/go; Go runtime is BSD-3-Clause)",
+      "source_url": null
+    },
+    {
+      "case_id": "postgres-18-io-uring",
+      "digest": "sha256:85f15ac1e4ab8f4fb0beaf9e3413505e68331a6d72ba5cf0d6bb1fe3fd4d7efb",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:ea9f80b2e231687727915baecffe90b5f4f57433b9b5bd86127fc5a452b0354e"
+      ],
+      "license": "PostgreSQL License (image built from source on this host; not redistributed)",
+      "source_url": null
+    },
+    {
+      "case_id": "registry-node",
+      "digest": "sha256:025b8e975a61d94e33abeafaad1255ef44e4898cf1a1b6446860009c72e6d284",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:7b229517ed222597277036d94892173207d01a731ab3a88eeb1de2e963a2c788",
+        "sha256:8776aa3d2ba7247a375d06dcec03856b99dbb0e16e904a5672d3bf08c852d4f1",
+        "sha256:7246d4c6a55dd0f8dd00d2e63aece3a68d91e6a5d04c4e748fc2706897d96312",
+        "sha256:304511616d6a6d472222f696b9045e20dc90e8043b2a8ba2acb61746595781f3"
+      ],
+      "license": "see bench/datasets/*/license-manifest.json; not redistributed",
+      "source_url": "https://hub.docker.com/r/library/node"
+    },
+    {
+      "case_id": "registry-python",
+      "digest": "sha256:1148dbb014615300fa7e713b2f94f550c0d1c69780c0805f84f093ceee34dd0b",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5",
+        "sha256:3eb77115150676568f88e2957181b8f7e3014e797f1ce8cd640086dfbed45e35",
+        "sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3",
+        "sha256:acca7542dfc736e9ce20cbefc58b2d09822276d15d4a0c531531a6f1b057928e"
+      ],
+      "license": "see bench/datasets/*/license-manifest.json; not redistributed",
+      "source_url": "https://hub.docker.com/r/library/python"
+    },
+    {
+      "case_id": "synthetic-baseline",
+      "digest": "sha256:72dff9aa42a53fa7bc4dd001c005d2b08180d11b680f5ab86c9e13205d7d54c5",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:b4e6ccf30cdb13129dce99c0b7e6675afde28ceeadfe0193548098938b33ac77"
+      ],
+      "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+      "source_url": null
+    },
+    {
+      "case_id": "synthetic-behavior-divergence",
+      "digest": "sha256:906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:213acff0726d95ba5a422ce544d9239ad6aaf7a6967f9c0b5e03b3ce08bdeb76"
+      ],
+      "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+      "source_url": null
+    },
+    {
+      "case_id": "synthetic-optional-bpf",
+      "digest": "sha256:b00f4d1034354389fbe55ea90fe547d551b56d0847350f36998d9fbc98e7ce55",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:8849ebdf0461719d99979a6ef381296be761074ae53d8852d5cac7dfdfeb29bc"
+      ],
+      "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+      "source_url": null
+    },
+    {
+      "case_id": "synthetic-optional-io-uring",
+      "digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:f6e23b168bf5fb4ceebf39df6cefa51189fb9fec9591e17d7f682fc306b635eb"
+      ],
+      "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+      "source_url": null
+    },
+    {
+      "case_id": "synthetic-required-io-uring",
+      "digest": "sha256:67f9d63fc82328555c9f47f2c79f3b8e367fcc5a77ea97c3272088932285cb9e",
+      "kind": "workload",
+      "layer_digests": [
+        "sha256:05770e562cc6f8f28b11e1a986dcf98f3caa429bb66542069ab4044381acb28f"
+      ],
+      "license": "Apache-2.0 (workload source authored in this repository; statically linked C)",
+      "source_url": null
+    }
+  ],
+  "note": "workload layer blobs are pinned by digest and not redistributed",
+  "schema_version": "1.0"
+}

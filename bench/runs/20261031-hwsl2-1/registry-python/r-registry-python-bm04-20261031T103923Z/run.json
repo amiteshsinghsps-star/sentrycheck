@@ -1,0 +1,280 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/native-0-config.json",
+        "sha256": "sha256:26b9fe2211f773585810b029e815e2e6bd8fa3aab7c14cef75641d1b1797d155"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/native-1-config.json",
+        "sha256": "sha256:26b9fe2211f773585810b029e815e2e6bd8fa3aab7c14cef75641d1b1797d155"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/native-2-config.json",
+        "sha256": "sha256:26b9fe2211f773585810b029e815e2e6bd8fa3aab7c14cef75641d1b1797d155"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/preflight.json",
+        "sha256": "sha256:2a11aa82ab790771b9d382c0aecb021225525d9e18a563feb27064e4aa0f8204"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:d9513c39672b40e82cca07ac4a45bf9b0cb426c423510428131bd4a4c6ee116a"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:d9513c39672b40e82cca07ac4a45bf9b0cb426c423510428131bd4a4c6ee116a"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:d9513c39672b40e82cca07ac4a45bf9b0cb426c423510428131bd4a4c6ee116a"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:894de5d42f4d71be6a32718dbc9dbe0a09b535603004bb384f825f870f8d42f0"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:0e50359750d8ad7fe342d1e2e0da18e1a58174342e9ed541349fda81ca5d7d58",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:0e50359750d8ad7fe342d1e2e0da18e1a58174342e9ed541349fda81ca5d7d58",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:0e50359750d8ad7fe342d1e2e0da18e1a58174342e9ed541349fda81ca5d7d58",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:0e50359750d8ad7fe342d1e2e0da18e1a58174342e9ed541349fda81ca5d7d58",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:0e50359750d8ad7fe342d1e2e0da18e1a58174342e9ed541349fda81ca5d7d58",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:0e50359750d8ad7fe342d1e2e0da18e1a58174342e9ed541349fda81ca5d7d58",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/report.json",
+      "sha256": "sha256:2556aca0b676f7bcfb43e78605a22b5579514bb6b4b4589633018e7af435881c"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/traces/native-0-guest.trace",
+        "sha256": "sha256:e29f7b929746d6fa6c0d5f7626f5347ae7a0ea7f0b82d4bd587d01f7efad17f4"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/traces/native-1-guest.trace",
+        "sha256": "sha256:e789597f0711378faee1392fbca7d30f5ae488c496ea789e67486688c930ccef"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/traces/native-2-guest.trace",
+        "sha256": "sha256:1e59cdf638a6a70602a03c4a8cbcdab4ed0687fb42762fd1ceadcdec66b012c9"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:83faadb6f25fff0a74a4c3e8cfc0c6d43628a40eb76edd508d0b3301bf699b0b"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:ed2ed02d415c96487d061a28d4d0bcca235c1bc9d939c3d550e33234a2aad6ef"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/registry-python/r-registry-python-bm04-20261031T103923Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:069d46101f08d61773ac50402cb6b4ef2ff89b6734d89beaffd7207838f3fdaa"
+      }
+    ]
+  },
+  "case_id": "registry-python",
+  "ended_at": "2026-10-31T10:39:23Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=abba-block3; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 1,
+  "order_pattern": "abba-block3",
+  "predicted": {
+    "class": "tolerated",
+    "complete": true,
+    "finding_severities": [],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      883,
+      883,
+      1075
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      1113,
+      1068,
+      1235
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 18.826564,
+    "peak_rss_mb": 204.511719
+  },
+  "run_id": "r-registry-python-bm04-20261031T103923Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:38:11Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 44839,
+    "total": 71647
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

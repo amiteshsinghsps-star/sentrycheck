@@ -1,0 +1,55 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "postgres-18-io-uring",
+  "expected_interfaces": [
+    "io_uring_setup",
+    "io_uring_enter",
+    "epoll_pwait"
+  ],
+  "group": "application",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:85f15ac1e4ab8f4fb0beaf9e3413505e68331a6d72ba5cf0d6bb1fe3fd4d7efb",
+    "layer_digests": [
+      "sha256:ea9f80b2e231687727915baecffe90b5f4f57433b9b5bd86127fc5a452b0354e"
+    ],
+    "license": "PostgreSQL License (image built from source on this host; not redistributed)",
+    "local_path": "artifacts/live-images/postgres",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": null,
+    "source_url": null
+  },
+  "label": null,
+  "notes": "PostgreSQL 18 built with liburing; io_method=io_uring is mandatory in the profile command.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout artifacts/live-images/postgres (index artifacts/live-images/postgres/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/postgres-io-uring.toml",
+    "sha256": "sha256:6dceebacd09fe54ca900920ed8ade6ec8149c98a86f7268106c7536c0769f888"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "test",
+  "suites": [
+    "BM-01",
+    "BM-04",
+    "BM-08",
+    "BM-14"
+  ],
+  "tags": [
+    "postgres",
+    "io_uring",
+    "privileged-user",
+    "large-rootfs"
+  ]
+}

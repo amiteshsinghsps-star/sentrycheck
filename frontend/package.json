@@ -1,0 +1,17 @@
+{
+  "name": "sentrycheck-report-viewer",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "node --check src/viewer.js && astro build && node scripts/pack.mjs",
+    "preview": "astro preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "astro": "7.3.5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

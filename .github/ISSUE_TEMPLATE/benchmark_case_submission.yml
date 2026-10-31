@@ -1,0 +1,90 @@
+name: Benchmark Case Submission (BH-13)
+description: Submit a new community workload or fixture to the SENTRYCHECK benchmark corpus
+title: "[Case]: "
+labels: ["benchmark-case", "community-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing a case to the SENTRYCHECK benchmark program!
+        Please review PRD v2 Section 7 (Dataset construction pipeline) and Section 13 (Governance)
+        before submitting. All cases must run deterministically offline and have independent ground truth.
+  - type: input
+    id: case_id
+    attributes:
+      label: Case ID
+      description: Unique lowercase alphanumeric identifier with hyphens (e.g., redis-7-epoll-001)
+      placeholder: myapp-feature-001
+    validations:
+      required: true
+  - type: dropdown
+    id: workload_group
+    attributes:
+      label: Workload Group
+      options:
+        - application
+        - registry
+        - synthetic
+        - security
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: image_reference
+    attributes:
+      label: Image Reference & Pinned Digest
+      description: Digest-pinned public registry reference (e.g. docker.io/library/redis@sha256:...)
+      placeholder: docker.io/library/alpine@sha256:...
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: Workload redistribution / execution license (e.g. MIT, Apache-2.0, BSD-3-Clause)
+      placeholder: Apache-2.0
+    validations:
+      required: true
+  - type: textarea
+    id: expected_interfaces
+    attributes:
+      label: Expected Interfaces / Syscalls
+      description: Comma-separated or newline-separated syscalls expected to be exercised (e.g. epoll_create1, io_uring_setup)
+      placeholder: |
+        epoll_create1
+        socket
+        clone
+    validations:
+      required: true
+  - type: dropdown
+    id: candidate_label
+    attributes:
+      label: Observed Outcome (Candidate Label)
+      description: Observed behavior under gVisor vs native baseline
+      options:
+        - compatible
+        - tolerated
+        - hard-failure
+        - silent-degradation
+        - performance-regression
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Independent Ground-Truth Evidence
+      description: Raw exit codes, error messages, upstream issues, or log diffs
+      placeholder: |
+        - Native baseline exits 0
+        - Sandbox exit code: 1
+        - runsc log: "unimplemented syscall: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes & Determinism Checklist
+      description: How is the profile bounded? How is nondeterminism prevented?
+    validations:
+      required: true
+

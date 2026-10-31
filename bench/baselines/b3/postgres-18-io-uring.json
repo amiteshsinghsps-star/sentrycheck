@@ -1,0 +1,22 @@
+{
+  "arm": "B3_confine_style",
+  "case_id": "postgres-18-io-uring",
+  "class": "hard-failure",
+  "correct": true,
+  "gold": "hard-failure",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "extracted_syscalls": 190,
+    "flagged": [
+      "fspick",
+      "io_uring_register"
+    ],
+    "runtime": "2026-09-26/gvisor-20260921.0"
+  },
+  "rule": "flag workload if any statically extracted syscall is unsupported by runtime",
+  "run_id": "r-postgres-18-io-uring-bm04-20261031T103036Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/postgres-18-io-uring/r-postgres-18-io-uring-bm04-20261031T103036Z/report.json",
+  "source_sha256": "sha256:aa4bf43ea3978ab7ec87455c79fecf135f84e0475da83988bf95d7be4ba88614",
+  "suite": "BM-04",
+  "tool_prediction": "hard-failure"
+}

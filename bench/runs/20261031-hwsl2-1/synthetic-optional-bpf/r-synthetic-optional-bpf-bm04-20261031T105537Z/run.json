@@ -1,0 +1,280 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/native-0-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/native-1-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/native-2-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/preflight.json",
+        "sha256": "sha256:7e146116404fd62fdd6d9cade9c7ea8a8b244194c8a8a91f5e1321c28e29b380"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:823fdf2eb3366d69b2d3ed24c1a686dc660950d006993c521df830bad134b581"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:5f5fbc5b0c2726adf8af66e873c89db313656048985f4732142d1568bb17c423",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:5f5fbc5b0c2726adf8af66e873c89db313656048985f4732142d1568bb17c423",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:5f5fbc5b0c2726adf8af66e873c89db313656048985f4732142d1568bb17c423",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:5f5fbc5b0c2726adf8af66e873c89db313656048985f4732142d1568bb17c423",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:5f5fbc5b0c2726adf8af66e873c89db313656048985f4732142d1568bb17c423",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:5f5fbc5b0c2726adf8af66e873c89db313656048985f4732142d1568bb17c423",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/report.json",
+      "sha256": "sha256:849f955ec1538c98ae1f5c7b90b45e9af8a7068b8b188852945bd35ecf6d7dcd"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/native-0-guest.trace",
+        "sha256": "sha256:ba677088bd9a0fb1ae80b5f0ac0e8f92ed63fdf423c02cc77775970fa195315b"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/native-1-guest.trace",
+        "sha256": "sha256:867c0396bace76ff0bc909451f179b04a0450eb3ee8b439ba53240bd21a35ce9"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/native-2-guest.trace",
+        "sha256": "sha256:934d6a788597ef71d9ad3c47797503e4ebe18eb981169cac221733efd218de44"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:d07b365e8ff9a47087f4b4aec9922644451f02f2b52b8fec3d1e61170c4bcc9a"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:258f744975fecf007ae5f0f2c375cfb847a485784189857c5a00ee49b4a56a5d"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:d4600b79e6d97fb0b8c6e6432868e806bff75fa957a182e2844fd8d791f6e96e"
+      }
+    ]
+  },
+  "case_id": "synthetic-optional-bpf",
+  "ended_at": "2026-10-31T10:55:37Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=abba-block6; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 2,
+  "order_pattern": "abba-block6",
+  "predicted": {
+    "class": "tolerated",
+    "complete": true,
+    "finding_severities": [],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      76,
+      101,
+      102
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      152,
+      101,
+      178
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 0.407699,
+    "peak_rss_mb": 34.277344
+  },
+  "run_id": "r-synthetic-optional-bpf-bm04-20261031T105537Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:55:10Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 1760,
+    "total": 26389
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

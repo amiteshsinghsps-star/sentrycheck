@@ -1,0 +1,7 @@
+name = "go-filesystem-goroutines"
+description = "Exercise the corpus Go binary's file I/O, hashing, and goroutines."
+command = ["/workload"]
+timeout_seconds = 15
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

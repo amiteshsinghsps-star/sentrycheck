@@ -1,0 +1,20 @@
+name: admission-api-tests
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'deploy/**'
+      - 'integration/**'
+      - 'scripts/render_deploy.py'
+      - 'scripts/test-admission-cel.sh'
+permissions:
+  contents: read
+jobs:
+  cel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: helm/kind-action@v1
+        with:
+          cluster_name: sentrycheck-policy-test
+      - run: bash scripts/test-admission-cel.sh

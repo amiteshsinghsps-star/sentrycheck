@@ -1,0 +1,268 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-0-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-1-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-2-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/preflight.json",
+        "sha256": "sha256:458c66c48ecab30208eb4be5bf0ac7107792cc30db7669404a398b82fd23231c"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:ce981cfd3fd89993696e4f8d0968c47aa1f87ff23b5949410e4f598ee5c699d5"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:ee6519ff99833018dd581be6a6328312ba322800dac93e8b7e31f9b3f2e95fec",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:ee6519ff99833018dd581be6a6328312ba322800dac93e8b7e31f9b3f2e95fec",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:ee6519ff99833018dd581be6a6328312ba322800dac93e8b7e31f9b3f2e95fec",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:ee6519ff99833018dd581be6a6328312ba322800dac93e8b7e31f9b3f2e95fec",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:ee6519ff99833018dd581be6a6328312ba322800dac93e8b7e31f9b3f2e95fec",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:ee6519ff99833018dd581be6a6328312ba322800dac93e8b7e31f9b3f2e95fec",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/report.json",
+      "sha256": "sha256:0a5ffc04d0e7c2791e6fc458ef99db73bfbb07572c40ce94111e8d961aaf2fe3"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/traces/native-0-guest.trace",
+        "sha256": "sha256:cadf4f2fc96911d58c8f40f05194e508bbf17fe8dc93e10618a08551aaaca355"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/traces/native-1-guest.trace",
+        "sha256": "sha256:d70071c30b9382a4c53223969dfc90e19f6dc63d2e4effd948b66ea72413c36b"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/traces/native-2-guest.trace",
+        "sha256": "sha256:678275dbdac671898463ba02d787b7a4e2d88050de355d656593c5c77fe97491"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:46faf7d7cac3ac4b21ab3f305b8d01986c732e59d09e760cf60ba18a475a682f"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:28e800432998aabb0d7e1da8535f18ccc33b0de5e03819da8ef6be9343f30fb5"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:aae3759c21cc476170cddb89bf4b1255a2a5d07b6f241306249b69aba0d9d435"
+      }
+    ]
+  },
+  "case_id": "baseline-go",
+  "ended_at": "2026-10-31T10:16:57Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=ab-block0; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 0,
+  "order_pattern": "ab-block0",
+  "predicted": {
+    "class": "compatible",
+    "complete": true,
+    "finding_severities": [],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      151,
+      127,
+      101
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      126,
+      152,
+      126
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 1.904709,
+    "peak_rss_mb": 36.304688
+  },
+  "run_id": "r-baseline-go-bm01-20261031T101657Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:16:37Z",
+  "suite": "BM-01",
+  "timings_ms": {
+    "scan": 2433,
+    "total": 19876
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

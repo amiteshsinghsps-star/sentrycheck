@@ -1,0 +1,5 @@
+case_id,size_mb,cold_scan_ms,warm_scan_ms,speedup
+synthetic-baseline,0.0,51,31,1.65
+postgres-18-io-uring,47.42,12417,4458,2.79
+registry-node,58.5,60041,60090,1.0
+registry-python,41.27,60055,36516,1.64

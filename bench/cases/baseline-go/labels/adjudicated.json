@@ -1,0 +1,80 @@
+{
+  "adjudicator": {
+    "confidence": "medium",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "one rater abstained; the other decides"
+  },
+  "case_id": "baseline-go",
+  "class": "tolerated",
+  "confidence": "medium",
+  "evidence": [
+    "futex: support=partial gaps=['gap-gvisor-amd64-futex']",
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-baseline-go-bm04-20261031T102739Z)",
+    "sandbox trace refused futex=errno11, futex=errno512, openat=errno2"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/report.json",
+      "sha256": "sha256:3f83740263e5a952d9e42315650618e0a1944c50f546f05cfb603573e5e9b9b4"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/traces/native-0-guest.trace",
+      "sha256": "sha256:f144ada214302e9c666fd8ec397a9d1cfff6e5437038e78d285952de939293c2"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/traces/native-1-guest.trace",
+      "sha256": "sha256:5d8606efe0334b47540e9f98d34ee03f2d70f2407e1513936e2cbab4f3d40ba7"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/traces/native-2-guest.trace",
+      "sha256": "sha256:af4effe245da1f8845c4bf680acfa83b862535e1134521cbc14430946933dc79"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:9d64c84a9b1fe4c3d580c619f3043abecb4dd3210497318d2fb1d9674369f935"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:501ad4383919073b3f41019372c9dc506f6ff74ea17899ed1c7961f3256d5e2d"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm04-20261031T102739Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:9c774c77a36cb52a8988ec28727ade3e564f7565d826a9a4a5425ba2d96d06cb"
+    }
+  ],
+  "rater_a": {
+    "confidence": "low",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "indeterminate",
+    "rationale": "the knowledge base documents a shortfall for futex but nothing here says whether the workload can proceed"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "futex, openat was refused under the sandbox and not on native, yet the workload still exited 0, which is a handled fallback"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

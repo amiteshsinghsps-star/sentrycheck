@@ -1,0 +1,80 @@
+{
+  "adjudicator": {
+    "confidence": "high",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "both raters agree independently"
+  },
+  "case_id": "synthetic-optional-bpf",
+  "class": "tolerated",
+  "confidence": "high",
+  "evidence": [
+    "bpf: support=partial gaps=['gap-gvisor-amd64-bpf']",
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-synthetic-optional-bpf-bm04-20261031T105537Z)",
+    "sandbox trace refused bpf=errno1, rseq=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/report.json",
+      "sha256": "sha256:849f955ec1538c98ae1f5c7b90b45e9af8a7068b8b188852945bd35ecf6d7dcd"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/native-0-guest.trace",
+      "sha256": "sha256:ba677088bd9a0fb1ae80b5f0ac0e8f92ed63fdf423c02cc77775970fa195315b"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/native-1-guest.trace",
+      "sha256": "sha256:867c0396bace76ff0bc909451f179b04a0450eb3ee8b439ba53240bd21a35ce9"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/native-2-guest.trace",
+      "sha256": "sha256:934d6a788597ef71d9ad3c47797503e4ebe18eb981169cac221733efd218de44"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:d07b365e8ff9a47087f4b4aec9922644451f02f2b52b8fec3d1e61170c4bcc9a"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:258f744975fecf007ae5f0f2c375cfb847a485784189857c5a00ee49b4a56a5d"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-optional-bpf/r-synthetic-optional-bpf-bm04-20261031T105537Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:d4600b79e6d97fb0b8c6e6432868e806bff75fa957a182e2844fd8d791f6e96e"
+    }
+  ],
+  "rater_a": {
+    "confidence": "medium",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "the workload declares a fallback for the unsupported interface, so degraded paths are expected to complete"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "tolerated",
+    "rationale": "bpf, rseq was refused under the sandbox and not on native, yet the workload still exited 0, which is a handled fallback"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

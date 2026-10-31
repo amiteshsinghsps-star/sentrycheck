@@ -1,0 +1,116 @@
+{
+  "card": "DATASET_CARD.md",
+  "checksum_file": "checksums.txt",
+  "counts": {
+    "cases": 9,
+    "files": 1938,
+    "labels": 9,
+    "runs": 59,
+    "suites": 3,
+    "valid_runs": 59
+  },
+  "dataset_version": "bench-0.1",
+  "evidence_tiers": [
+    "dynamic-runsc-diff",
+    "static-only"
+  ],
+  "groups": {
+    "analysis": {
+      "copied": true,
+      "files": 22,
+      "sample_paths": [
+        "../../analysis/DEVIATIONS.md",
+        "../../analysis/analysis-manifest.json",
+        "../../analysis/figures/latency-ratio.svg"
+      ],
+      "truncated_listing": 19
+    },
+    "baselines": {
+      "copied": true,
+      "files": 18,
+      "sample_paths": [
+        "../../baselines/b0/baseline-go.json",
+        "../../baselines/b0/postgres-18-io-uring.json",
+        "../../baselines/b0/registry-node.json"
+      ],
+      "truncated_listing": 15
+    },
+    "cases": {
+      "copied": true,
+      "files": 9,
+      "sample_paths": [
+        "../../cases/baseline-go/case.json",
+        "../../cases/postgres-18-io-uring/case.json",
+        "../../cases/registry-node/case.json"
+      ],
+      "truncated_listing": 6
+    },
+    "hosts": {
+      "copied": true,
+      "files": 2,
+      "sample_paths": [
+        "../../hosts/windows-1.json",
+        "../../hosts/wsl2-1.json"
+      ],
+      "truncated_listing": 0
+    },
+    "labels": {
+      "copied": true,
+      "files": 9,
+      "sample_paths": [
+        "../../cases/baseline-go/labels/adjudicated.json",
+        "../../cases/postgres-18-io-uring/labels/adjudicated.json",
+        "../../cases/registry-node/labels/adjudicated.json"
+      ],
+      "truncated_listing": 6
+    },
+    "runs": {
+      "copied": false,
+      "files": 1830,
+      "sample_paths": [
+        "../../runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-0-config.json",
+        "../../runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-0-runtime.log",
+        "../../runs/20261031-hwsl2-1/baseline-go/r-baseline-go-bm01-20261031T101657Z/logs/native-1-config.json"
+      ],
+      "truncated_listing": 1827
+    },
+    "schemas": {
+      "copied": true,
+      "files": 4,
+      "sample_paths": [
+        "../../schema/case.schema.json",
+        "../../schema/host.schema.json",
+        "../../schema/label.schema.json"
+      ],
+      "truncated_listing": 1
+    },
+    "sources": {
+      "copied": false,
+      "files": 1,
+      "sample_paths": [
+        "../../sources/manifest.json"
+      ],
+      "truncated_listing": 0
+    },
+    "workloads": {
+      "copied": false,
+      "files": 43,
+      "sample_paths": [
+        "../../../artifacts/live-images/behavior/blobs/sha256/749c9177f19ae145e38d5c7d0f28bba693ae36d34a3c06bb87c087ed2c5adbc5",
+        "../../../artifacts/live-images/behavior/blobs/sha256/906fc3ed0fc85df402b771317d1460b9483a3b11fdc1be5574e2bfcfa0817f06",
+        "../../../artifacts/live-images/behavior/index.json"
+      ],
+      "truncated_listing": 40
+    }
+  },
+  "harness_version": "0.1.0",
+  "label_classes": [
+    "compatible",
+    "hard-failure",
+    "silent-degradation",
+    "tolerated"
+  ],
+  "license_manifest": "license-manifest.json",
+  "schema_version": "1.0",
+  "title": "SENTRYCHECK runtime-compatibility benchmark dataset"
+}

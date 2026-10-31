@@ -1,0 +1,21 @@
+{
+  "arm": "B5_justrun",
+  "case_id": "synthetic-baseline",
+  "class": "compatible",
+  "correct": true,
+  "gold": "compatible",
+  "harness_note": "derived from recorded bytes; no new execution",
+  "inputs": {
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "rule": "run once and read the exit code",
+  "run_id": "r-synthetic-baseline-bm04-20261031T104239Z",
+  "source_report": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/report.json",
+  "source_sha256": "sha256:1f6d0529895d67a69b3f4696da91a01431a48caf23a2150ac748b04c6c283daa",
+  "suite": "BM-04",
+  "tool_prediction": "compatible"
+}

@@ -1,0 +1,225 @@
+{
+  "apiVersion": "v1",
+  "kind": "List",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "ServiceAccount",
+      "metadata": {
+        "name": "sentrycheck-controller",
+        "namespace": "sentrycheck-system"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "ServiceAccount",
+      "metadata": {
+        "name": "sentrycheck-node-probe",
+        "namespace": "sentrycheck-system"
+      }
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "ClusterRole",
+      "metadata": {
+        "name": "sentrycheck-controller"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "nodes"
+          ],
+          "verbs": [
+            "get",
+            "list",
+            "patch"
+          ]
+        },
+        {
+          "apiGroups": [
+            "node.k8s.io"
+          ],
+          "resources": [
+            "runtimeclasses"
+          ],
+          "verbs": [
+            "get",
+            "list",
+            "patch"
+          ]
+        },
+        {
+          "apiGroups": [
+            "sentrycheck.io"
+          ],
+          "resources": [
+            "sandboxpolicysnapshots"
+          ],
+          "verbs": [
+            "get",
+            "create",
+            "update"
+          ]
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "ClusterRoleBinding",
+      "metadata": {
+        "name": "sentrycheck-controller"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "ClusterRole",
+        "name": "sentrycheck-controller"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "sentrycheck-controller",
+          "namespace": "sentrycheck-system"
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "ClusterRole",
+      "metadata": {
+        "name": "sentrycheck-snapshot-reader"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            "sentrycheck.io"
+          ],
+          "resources": [
+            "sandboxpolicysnapshots"
+          ],
+          "verbs": [
+            "get",
+            "list"
+          ]
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "ClusterRoleBinding",
+      "metadata": {
+        "name": "sentrycheck-snapshot-reader"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "ClusterRole",
+        "name": "sentrycheck-snapshot-reader"
+      },
+      "subjects": [
+        {
+          "kind": "Group",
+          "name": "system:authenticated",
+          "apiGroup": "rbac.authorization.k8s.io"
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "Role",
+      "metadata": {
+        "name": "sentrycheck-controller",
+        "namespace": "sentrycheck-system"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ],
+          "verbs": [
+            "get",
+            "list"
+          ]
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "RoleBinding",
+      "metadata": {
+        "name": "sentrycheck-controller",
+        "namespace": "sentrycheck-system"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Role",
+        "name": "sentrycheck-controller"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "sentrycheck-controller",
+          "namespace": "sentrycheck-system"
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "Role",
+      "metadata": {
+        "name": "sentrycheck-node-probe",
+        "namespace": "sentrycheck-system"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ],
+          "verbs": [
+            "get",
+            "create",
+            "update"
+          ]
+        },
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "events"
+          ],
+          "verbs": [
+            "create"
+          ]
+        }
+      ]
+    },
+    {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "RoleBinding",
+      "metadata": {
+        "name": "sentrycheck-node-probe",
+        "namespace": "sentrycheck-system"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Role",
+        "name": "sentrycheck-node-probe"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "sentrycheck-node-probe",
+          "namespace": "sentrycheck-system"
+        }
+      ]
+    }
+  ]
+}

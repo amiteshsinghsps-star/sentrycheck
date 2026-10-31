@@ -1,0 +1,3876 @@
+{
+  "schema_version": "1.0",
+  "image": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/image",
+  "image_digest": "sha256:36f19d6130eeab13e03e00a2ae7627ec6f887502fb0842cc1852ea1a65ffb70d",
+  "platform": "linux/amd64",
+  "scanned_at": "2026-10-31T10:57:18Z",
+  "sentrycheck_version": "0.4.0",
+  "kb_snapshot_version": "2026-09-26/gvisor-20260921.0",
+  "kb_age_days": 34,
+  "target_runtime": {
+    "name": "gvisor",
+    "version": "20260921.0",
+    "architecture": "amd64"
+  },
+  "status": "complete",
+  "assessment": "no-incompatibility-observed-in-profile",
+  "findings": [],
+  "candidate_gaps": [
+    {
+      "gap_id": "gap-gvisor-amd64-arch-prctl",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": "arch_prctl",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. arch_prctl: Options ARCH_GET_GS, ARCH_SET_GS not supported. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L193",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-futex",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": "futex",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. futex: Robust futexes not supported. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L237",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sched-getaffinity",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": "sched_getaffinity",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sched_getaffinity: Stub implementation. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L239",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-madvise",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": "madvise",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. madvise: Options MADV_DONTNEED, MADV_DONTFORK are supported. Other advice is ignored. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L63",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-prctl",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": "prctl",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. prctl: Not all options are supported. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L192",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sysinfo",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": null,
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sysinfo: Fields loads, sharedram, bufferram, totalswap, freeswap, totalhigh, freehigh not supported. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L134",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-rseq",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": "rseq",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. rseq: Not supported on all platforms. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L372",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sched-getparam",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": null,
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sched_getparam: Stub implementation. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L178",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sched-getscheduler",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": null,
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sched_getscheduler: Stub implementation. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L180",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sched-get-priority-max",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": null,
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sched_get_priority_max: Stub implementation. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L181",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sched-get-priority-min",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": null,
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sched_get_priority_min: Stub implementation. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L182",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-sched-setscheduler",
+      "category": "syscall",
+      "source_binary": "/workload",
+      "syscall": null,
+      "version_match": true,
+      "description": "Unconfirmed static candidate. sched_setscheduler: Stub implementation. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L179",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-io-uring-setup",
+      "category": "io_uring",
+      "source_binary": "/workload",
+      "syscall": "io_uring_fallback.c",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. io_uring_setup: Not all flags and functionality supported. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L376",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-io-uring-enter",
+      "category": "io_uring",
+      "source_binary": "/workload",
+      "syscall": "io_uring_fallback.c",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. io_uring_enter: Not all flags and functionality supported. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L377",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    },
+    {
+      "gap_id": "gap-gvisor-amd64-io-uring-register",
+      "category": "io_uring",
+      "source_binary": "/workload",
+      "syscall": "io_uring_fallback.c",
+      "version_match": true,
+      "description": "Unconfirmed static candidate. io_uring_register: Returns ENOSYS. Arguments and runtime configuration matter; a reference alone is not an incompatibility.",
+      "citation": {
+        "title": "gVisor release-20260921.0 syscall table",
+        "url": "https://github.com/google/gvisor/blob/26f3455a4cb9a377354c33aeac049080a077c79c/pkg/sentry/syscalls/linux/linux64.go#L378",
+        "source_revision": "26f3455a4cb9a377354c33aeac049080a077c79c",
+        "retrieved_at": "2026-09-26T16:50:19Z"
+      }
+    }
+  ],
+  "capability_set": {
+    "interpretation": "Upper-bound capability candidates for analyzed code only. This is not an exhaustive syscall set or a compatibility verdict; indirect/dynamic dispatch and untested paths remain unknown.",
+    "capabilities": [
+      {
+        "syscall": "rt_sigprocmask",
+        "syscall_number": 14,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1227",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1e6c",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "arch_prctl",
+        "syscall_number": 158,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x3eda",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "arch_prctl",
+        "syscall_number": 158,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x43c5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "write",
+        "syscall_number": 1,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x43e1",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "exit_group",
+        "syscall_number": 231,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x43ed",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "write",
+        "syscall_number": 1,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x44b6",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "exit_group",
+        "syscall_number": 231,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x44c2",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x4ecf",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x4fe9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x504e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5096",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x50b5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "getrandom",
+        "syscall_number": 318,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x65f7",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "clock_gettime",
+        "syscall_number": 228,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x112e5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1134b",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "close",
+        "syscall_number": 3,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11372",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "close",
+        "syscall_number": 3,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1139a",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "fstat",
+        "syscall_number": 5,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x113f9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "write",
+        "syscall_number": 1,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11432",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "write",
+        "syscall_number": 1,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1146b",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "close",
+        "syscall_number": 3,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x114c9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "fcntl",
+        "syscall_number": 72,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11530",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "fcntl",
+        "syscall_number": 72,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1155e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "fcntl",
+        "syscall_number": 72,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x115b5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "fcntl",
+        "syscall_number": 72,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x115de",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "openat",
+        "syscall_number": 257,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11652",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "read",
+        "syscall_number": 0,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x116b6",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "brk",
+        "syscall_number": 12,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x116e9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "sched_getaffinity",
+        "syscall_number": 204,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11956",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "madvise",
+        "syscall_number": 28,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11d79",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "mmap",
+        "syscall_number": 9,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11dca",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "mmap",
+        "syscall_number": 9,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11e26",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "mprotect",
+        "syscall_number": 10,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11e69",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "munmap",
+        "syscall_number": 11,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11e99",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11f6b",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "mremap",
+        "syscall_number": 25,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x11fbf",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "prctl",
+        "syscall_number": 157,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1209d",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": 99,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x120c9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "readlinkat",
+        "syscall_number": 267,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x174ee",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "writev",
+        "syscall_number": 20,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x17737",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "set_tid_address",
+        "syscall_number": 218,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x18f80",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "set_robust_list",
+        "syscall_number": 273,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x18fdc",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rseq",
+        "syscall_number": 334,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1904c",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "arch_prctl",
+        "syscall_number": 158,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1a39e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "arch_prctl",
+        "syscall_number": 158,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1a3fc",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1a44e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "brk",
+        "syscall_number": 12,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1a4a9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1a4b4",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "mmap",
+        "syscall_number": 9,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x1a4d9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x28b2e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x28fff",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x291dc",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x293f9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x299a3",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x29bf5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x29c21",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigprocmask",
+        "syscall_number": 14,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x29ed6",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "getdents64",
+        "syscall_number": 217,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x385c5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "getpid",
+        "syscall_number": 39,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x385f9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": 143,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x38649",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": 145,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x38679",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": 146,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x386a9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": 147,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x386d9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": 144,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x38709",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "getcwd",
+        "syscall_number": 79,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x387b9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "lseek",
+        "syscall_number": 8,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x38f69",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "openat",
+        "syscall_number": 257,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x39003",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "openat",
+        "syscall_number": 257,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x39073",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "openat",
+        "syscall_number": 257,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x39110",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "openat",
+        "syscall_number": 257,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x39185",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "read",
+        "syscall_number": 0,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x391ef",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "read",
+        "syscall_number": 0,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x39228",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "pread64",
+        "syscall_number": 17,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x392ac",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "write",
+        "syscall_number": 1,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x392e9",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "prlimit64",
+        "syscall_number": 302,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x39322",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x3c949",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x3fa12",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": null,
+        "syscall_number": null,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "unresolvable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x3fab2",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigreturn",
+        "syscall_number": 15,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x53777",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigaction",
+        "syscall_number": 13,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x53858",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5da15",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5dac1",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5db4f",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5dba3",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigprocmask",
+        "syscall_number": 14,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5dec2",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigprocmask",
+        "syscall_number": 14,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5df0d",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "tgkill",
+        "syscall_number": 234,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5df4f",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "gettid",
+        "syscall_number": 186,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5df65",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "tgkill",
+        "syscall_number": 234,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5df7a",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigprocmask",
+        "syscall_number": 14,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e022",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "rt_sigprocmask",
+        "syscall_number": 14,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e06e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "tgkill",
+        "syscall_number": 234,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e0af",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "gettid",
+        "syscall_number": 186,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e0c5",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "tgkill",
+        "syscall_number": 234,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e0da",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e197",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e238",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e2cc",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e46a",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e5c0",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e613",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e69a",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e700",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5e9de",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5ea09",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x5eaad",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "newfstatat",
+        "syscall_number": 262,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x6703c",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "openat",
+        "syscall_number": 257,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x670f7",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "ioctl",
+        "syscall_number": 16,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x6717c",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x6746e",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x76c29",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "futex",
+        "syscall_number": 202,
+        "subsystem": null,
+        "architecture": "amd64",
+        "resolution_confidence": "static-certain",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0x76e63",
+        "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+      },
+      {
+        "syscall": "io_uring_fallback.c",
+        "syscall_number": null,
+        "subsystem": "io_uring",
+        "architecture": "amd64",
+        "resolution_confidence": "static-probable",
+        "source_binary": "/workload",
+        "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+        "source_offset": "0xacc80",
+        "note": "ELF symbol/library reference \"io_uring_fallback.c\"; execution and fallback are unknown."
+      }
+    ],
+    "fingerprints": [
+      {
+        "source_binary": "/workload",
+        "kind": "glibc-symbol-version",
+        "value": "GLIBC_TUNABLES",
+        "note": "String metadata, not proof of runtime behavior or a fallback guarantee."
+      },
+      {
+        "source_binary": "/workload",
+        "kind": "glibc-symbol-version",
+        "value": "GLIBC_PRIVATE",
+        "note": "String metadata, not proof of runtime behavior or a fallback guarantee."
+      },
+      {
+        "source_binary": "/workload",
+        "kind": "glibc-symbol-version",
+        "value": "GLIBC_ABI_DT_RELR",
+        "note": "String metadata, not proof of runtime behavior or a fallback guarantee."
+      }
+    ],
+    "elf_files": 1,
+    "cache_hits": 0,
+    "warnings": []
+  },
+  "capability_set_only": [
+    {
+      "syscall": "rt_sigprocmask",
+      "syscall_number": 14,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1227",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1e6c",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "arch_prctl",
+      "syscall_number": 158,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x3eda",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "arch_prctl",
+      "syscall_number": 158,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x43c5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "write",
+      "syscall_number": 1,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x43e1",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "exit_group",
+      "syscall_number": 231,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x43ed",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "write",
+      "syscall_number": 1,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x44b6",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "exit_group",
+      "syscall_number": 231,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x44c2",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x4ecf",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x4fe9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x504e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5096",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x50b5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "getrandom",
+      "syscall_number": 318,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x65f7",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "clock_gettime",
+      "syscall_number": 228,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x112e5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1134b",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "close",
+      "syscall_number": 3,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11372",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "close",
+      "syscall_number": 3,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1139a",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "fstat",
+      "syscall_number": 5,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x113f9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "write",
+      "syscall_number": 1,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11432",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "write",
+      "syscall_number": 1,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1146b",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "close",
+      "syscall_number": 3,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x114c9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "fcntl",
+      "syscall_number": 72,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11530",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "fcntl",
+      "syscall_number": 72,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1155e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "fcntl",
+      "syscall_number": 72,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x115b5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "fcntl",
+      "syscall_number": 72,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x115de",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "openat",
+      "syscall_number": 257,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11652",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "read",
+      "syscall_number": 0,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x116b6",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "brk",
+      "syscall_number": 12,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x116e9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "sched_getaffinity",
+      "syscall_number": 204,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11956",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "madvise",
+      "syscall_number": 28,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11d79",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "mmap",
+      "syscall_number": 9,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11dca",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "mmap",
+      "syscall_number": 9,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11e26",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "mprotect",
+      "syscall_number": 10,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11e69",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "munmap",
+      "syscall_number": 11,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11e99",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11f6b",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "mremap",
+      "syscall_number": 25,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x11fbf",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "prctl",
+      "syscall_number": 157,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1209d",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": 99,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x120c9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "readlinkat",
+      "syscall_number": 267,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x174ee",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "writev",
+      "syscall_number": 20,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x17737",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "set_tid_address",
+      "syscall_number": 218,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x18f80",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "set_robust_list",
+      "syscall_number": 273,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x18fdc",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rseq",
+      "syscall_number": 334,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1904c",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "arch_prctl",
+      "syscall_number": 158,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1a39e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "arch_prctl",
+      "syscall_number": 158,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1a3fc",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1a44e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "brk",
+      "syscall_number": 12,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1a4a9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1a4b4",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "mmap",
+      "syscall_number": 9,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x1a4d9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x28b2e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x28fff",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x291dc",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x293f9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x299a3",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x29bf5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x29c21",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigprocmask",
+      "syscall_number": 14,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x29ed6",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "getdents64",
+      "syscall_number": 217,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x385c5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "getpid",
+      "syscall_number": 39,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x385f9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": 143,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x38649",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": 145,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x38679",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": 146,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x386a9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": 147,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x386d9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": 144,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x38709",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "getcwd",
+      "syscall_number": 79,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x387b9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "lseek",
+      "syscall_number": 8,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x38f69",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "openat",
+      "syscall_number": 257,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x39003",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "openat",
+      "syscall_number": 257,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x39073",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "openat",
+      "syscall_number": 257,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x39110",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "openat",
+      "syscall_number": 257,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x39185",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "read",
+      "syscall_number": 0,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x391ef",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "read",
+      "syscall_number": 0,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x39228",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "pread64",
+      "syscall_number": 17,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x392ac",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "write",
+      "syscall_number": 1,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x392e9",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "prlimit64",
+      "syscall_number": 302,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x39322",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x3c949",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x3fa12",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": null,
+      "syscall_number": null,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "unresolvable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x3fab2",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigreturn",
+      "syscall_number": 15,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x53777",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigaction",
+      "syscall_number": 13,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x53858",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5da15",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5dac1",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5db4f",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5dba3",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigprocmask",
+      "syscall_number": 14,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5dec2",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigprocmask",
+      "syscall_number": 14,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5df0d",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "tgkill",
+      "syscall_number": 234,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5df4f",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "gettid",
+      "syscall_number": 186,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5df65",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "tgkill",
+      "syscall_number": 234,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5df7a",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigprocmask",
+      "syscall_number": 14,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e022",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "rt_sigprocmask",
+      "syscall_number": 14,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e06e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "tgkill",
+      "syscall_number": 234,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e0af",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "gettid",
+      "syscall_number": 186,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e0c5",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "tgkill",
+      "syscall_number": 234,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e0da",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e197",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e238",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e2cc",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e46a",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e5c0",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e613",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e69a",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e700",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5e9de",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5ea09",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x5eaad",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "newfstatat",
+      "syscall_number": 262,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x6703c",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "openat",
+      "syscall_number": 257,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x670f7",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "ioctl",
+      "syscall_number": 16,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x6717c",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x6746e",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x76c29",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "futex",
+      "syscall_number": 202,
+      "subsystem": null,
+      "architecture": "amd64",
+      "resolution_confidence": "static-certain",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0x76e63",
+      "note": "Number resolved only within a decoded straight-line block; reachability, arguments, and fallback behavior are not established."
+    },
+    {
+      "syscall": "io_uring_fallback.c",
+      "syscall_number": null,
+      "subsystem": "io_uring",
+      "architecture": "amd64",
+      "resolution_confidence": "static-probable",
+      "source_binary": "/workload",
+      "source_digest": "sha256:21b1fda19a497feb7b61b05ab77898b10671987728b36e4f4d35f5b23d418eff",
+      "source_offset": "0xacc80",
+      "note": "ELF symbol/library reference \"io_uring_fallback.c\"; execution and fallback are unknown."
+    }
+  ],
+  "dynamic": {
+    "evidence_tier": "dynamic-runsc-diff",
+    "provenance": "locally-executed",
+    "profile": {
+      "name": "single-mechanism-regression",
+      "description": "Complete invocation of a small deterministic synthetic workload; not representative of a full application.",
+      "command": [
+        "/workload"
+      ],
+      "env": [],
+      "timeout_seconds": 10,
+      "repetitions": 3,
+      "expected_exit_code": 0,
+      "compare_stdout": true,
+      "compare_stderr": false,
+      "timing_ratio": 2.0,
+      "timing_min_native_ms": 100,
+      "coverage": "representative"
+    },
+    "profile_sha256": "sha256:33b198d88b9d5edaecb587ea467a29ab6d75002e28e6074b2c58bad32b2114f3",
+    "native": [
+      {
+        "runtime": "runc",
+        "runtime_version": "runc version 1.3.4-0ubuntu1~24.04.1",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 76,
+        "stdout_sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-0/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-0/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-0/guest.trace",
+        "trace_sha256": "sha256:c868bedd7074475daa466b5e375c3096eda2e655cda7f15fc4e4f058c3b089ef",
+        "trace_kind": "strace-guest",
+        "trace_summary": {
+          "syscalls": {
+            "arch_prctl": 1,
+            "brk": 5,
+            "close": 1,
+            "execve": 1,
+            "exit_group": 1,
+            "getrandom": 1,
+            "io_uring_setup": 1,
+            "mprotect": 1,
+            "prlimit64": 1,
+            "readlinkat": 1,
+            "rseq": 1,
+            "set_robust_list": 1,
+            "set_tid_address": 1,
+            "write": 1
+          },
+          "errors": {},
+          "event_count": 18,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 0,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "execve",
+            "arguments": "\"/workload\", [\"/workload\"], 0x7ffce31b0c98 /* 2 vars */",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 1
+          },
+          {
+            "syscall": "brk",
+            "arguments": "NULL",
+            "result": "0xeef000",
+            "return_value": 15659008,
+            "errno": null,
+            "line": 2
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0xeefd00",
+            "result": "0xeefd00",
+            "return_value": 15662336,
+            "errno": null,
+            "line": 3
+          },
+          {
+            "syscall": "arch_prctl",
+            "arguments": "ARCH_SET_FS, 0xeef380",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 4
+          },
+          {
+            "syscall": "set_tid_address",
+            "arguments": "0xeef650",
+            "result": "9",
+            "return_value": 9,
+            "errno": null,
+            "line": 5
+          },
+          {
+            "syscall": "set_robust_list",
+            "arguments": "0xeef660, 24",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 6
+          },
+          {
+            "syscall": "rseq",
+            "arguments": "0xeefca0, 0x20, 0, 0x53053053",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 7
+          },
+          {
+            "syscall": "prlimit64",
+            "arguments": "0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 8
+          },
+          {
+            "syscall": "readlinkat",
+            "arguments": "AT_FDCWD, \"/proc/self/exe\", \"/workload\", 4096",
+            "result": "9",
+            "return_value": 9,
+            "errno": null,
+            "line": 9
+          },
+          {
+            "syscall": "getrandom",
+            "arguments": "\"\\x1f\\xa8\\x6d\\x02\\x03\\x66\\x20\\x81\", 8, GRND_NONBLOCK",
+            "result": "8",
+            "return_value": 8,
+            "errno": null,
+            "line": 10
+          },
+          {
+            "syscall": "brk",
+            "arguments": "NULL",
+            "result": "0xeefd00",
+            "return_value": 15662336,
+            "errno": null,
+            "line": 11
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0xf10d00",
+            "result": "0xf10d00",
+            "return_value": 15797504,
+            "errno": null,
+            "line": 12
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0xf11000",
+            "result": "0xf11000",
+            "return_value": 15798272,
+            "errno": null,
+            "line": 13
+          },
+          {
+            "syscall": "mprotect",
+            "arguments": "0x4a5000, 20480, PROT_READ",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 14
+          },
+          {
+            "syscall": "io_uring_setup",
+            "arguments": "8, {flags=0, sq_thread_cpu=0, sq_thread_idle=0, sq_entries=8, cq_entries=16, features=IORING_FEAT_SINGLE_MMAP|IORING_FEAT_NODROP|IORING_FEAT_SUBMIT_STABLE|IORING_FEAT_RW_CUR_POS|IORING_FEAT_CUR_PERSONALITY|IORING_FEAT_FAST_POLL|IORING_FEAT_POLL_32BITS|IORING_FEAT_SQPOLL_NONFIXED|IORING_FEAT_EXT_ARG|IORING_FEAT_NATIVE_WORKERS|IORING_FEAT_RSRC_TAGS|IORING_FEAT_CQE_SKIP|IORING_FEAT_LINKED_FILE|IORING_FEAT_REG_REG_RING|0x3c000, sq_off={head=0, tail=4, ring_mask=16, ring_entries=24, flags=36, dropped=32, array=320, user_addr=0}, cq_off={head=8, tail=12, ring_mask=20, ring_entries=28, overflow=44, cqes=64, flags=40, user_addr=0}}",
+            "result": "3",
+            "return_value": 3,
+            "errno": null,
+            "line": 15
+          },
+          {
+            "syscall": "close",
+            "arguments": "3",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 16
+          },
+          {
+            "syscall": "write",
+            "arguments": "1, \"classic-io-ok\\n\", 14",
+            "result": "14",
+            "return_value": 14,
+            "errno": null,
+            "line": 17
+          },
+          {
+            "syscall": "exit_group",
+            "arguments": "0",
+            "result": "?",
+            "return_value": null,
+            "errno": null,
+            "line": 18
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "runc",
+        "runtime_version": "runc version 1.3.4-0ubuntu1~24.04.1",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 77,
+        "stdout_sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-1/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-1/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-1/guest.trace",
+        "trace_sha256": "sha256:ddaaf9616b386531bde1c60b373d1252210a9586732e85ff7db24d670c9cd3d4",
+        "trace_kind": "strace-guest",
+        "trace_summary": {
+          "syscalls": {
+            "arch_prctl": 1,
+            "brk": 5,
+            "close": 1,
+            "execve": 1,
+            "exit_group": 1,
+            "getrandom": 1,
+            "io_uring_setup": 1,
+            "mprotect": 1,
+            "prlimit64": 1,
+            "readlinkat": 1,
+            "rseq": 1,
+            "set_robust_list": 1,
+            "set_tid_address": 1,
+            "write": 1
+          },
+          "errors": {},
+          "event_count": 18,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 0,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "execve",
+            "arguments": "\"/workload\", [\"/workload\"], 0x7ffde91c9b48 /* 2 vars */",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 1
+          },
+          {
+            "syscall": "brk",
+            "arguments": "NULL",
+            "result": "0x2015c000",
+            "return_value": 538296320,
+            "errno": null,
+            "line": 2
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x2015cd00",
+            "result": "0x2015cd00",
+            "return_value": 538299648,
+            "errno": null,
+            "line": 3
+          },
+          {
+            "syscall": "arch_prctl",
+            "arguments": "ARCH_SET_FS, 0x2015c380",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 4
+          },
+          {
+            "syscall": "set_tid_address",
+            "arguments": "0x2015c650",
+            "result": "10",
+            "return_value": 10,
+            "errno": null,
+            "line": 5
+          },
+          {
+            "syscall": "set_robust_list",
+            "arguments": "0x2015c660, 24",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 6
+          },
+          {
+            "syscall": "rseq",
+            "arguments": "0x2015cca0, 0x20, 0, 0x53053053",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 7
+          },
+          {
+            "syscall": "prlimit64",
+            "arguments": "0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 8
+          },
+          {
+            "syscall": "readlinkat",
+            "arguments": "AT_FDCWD, \"/proc/self/exe\", \"/workload\", 4096",
+            "result": "9",
+            "return_value": 9,
+            "errno": null,
+            "line": 9
+          },
+          {
+            "syscall": "getrandom",
+            "arguments": "\"\\xed\\xca\\x9d\\x9e\\x15\\x20\\x4c\\x5f\", 8, GRND_NONBLOCK",
+            "result": "8",
+            "return_value": 8,
+            "errno": null,
+            "line": 10
+          },
+          {
+            "syscall": "brk",
+            "arguments": "NULL",
+            "result": "0x2015cd00",
+            "return_value": 538299648,
+            "errno": null,
+            "line": 11
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x2017dd00",
+            "result": "0x2017dd00",
+            "return_value": 538434816,
+            "errno": null,
+            "line": 12
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x2017e000",
+            "result": "0x2017e000",
+            "return_value": 538435584,
+            "errno": null,
+            "line": 13
+          },
+          {
+            "syscall": "mprotect",
+            "arguments": "0x4a5000, 20480, PROT_READ",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 14
+          },
+          {
+            "syscall": "io_uring_setup",
+            "arguments": "8, {flags=0, sq_thread_cpu=0, sq_thread_idle=0, sq_entries=8, cq_entries=16, features=IORING_FEAT_SINGLE_MMAP|IORING_FEAT_NODROP|IORING_FEAT_SUBMIT_STABLE|IORING_FEAT_RW_CUR_POS|IORING_FEAT_CUR_PERSONALITY|IORING_FEAT_FAST_POLL|IORING_FEAT_POLL_32BITS|IORING_FEAT_SQPOLL_NONFIXED|IORING_FEAT_EXT_ARG|IORING_FEAT_NATIVE_WORKERS|IORING_FEAT_RSRC_TAGS|IORING_FEAT_CQE_SKIP|IORING_FEAT_LINKED_FILE|IORING_FEAT_REG_REG_RING|0x3c000, sq_off={head=0, tail=4, ring_mask=16, ring_entries=24, flags=36, dropped=32, array=320, user_addr=0}, cq_off={head=8, tail=12, ring_mask=20, ring_entries=28, overflow=44, cqes=64, flags=40, user_addr=0}}",
+            "result": "3",
+            "return_value": 3,
+            "errno": null,
+            "line": 15
+          },
+          {
+            "syscall": "close",
+            "arguments": "3",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 16
+          },
+          {
+            "syscall": "write",
+            "arguments": "1, \"classic-io-ok\\n\", 14",
+            "result": "14",
+            "return_value": 14,
+            "errno": null,
+            "line": 17
+          },
+          {
+            "syscall": "exit_group",
+            "arguments": "0",
+            "result": "?",
+            "return_value": null,
+            "errno": null,
+            "line": 18
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "runc",
+        "runtime_version": "runc version 1.3.4-0ubuntu1~24.04.1",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 102,
+        "stdout_sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-2/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-2/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/native-2/guest.trace",
+        "trace_sha256": "sha256:1f847f58b9531376ac380e6c1cf1fc3849c0f45c534a4375b0a2044a5fea6059",
+        "trace_kind": "strace-guest",
+        "trace_summary": {
+          "syscalls": {
+            "arch_prctl": 1,
+            "brk": 5,
+            "close": 1,
+            "execve": 1,
+            "exit_group": 1,
+            "getrandom": 1,
+            "io_uring_setup": 1,
+            "mprotect": 1,
+            "prlimit64": 1,
+            "readlinkat": 1,
+            "rseq": 1,
+            "set_robust_list": 1,
+            "set_tid_address": 1,
+            "write": 1
+          },
+          "errors": {},
+          "event_count": 18,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 0,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "execve",
+            "arguments": "\"/workload\", [\"/workload\"], 0x7ffe71663558 /* 2 vars */",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 1
+          },
+          {
+            "syscall": "brk",
+            "arguments": "NULL",
+            "result": "0x2539b000",
+            "return_value": 624537600,
+            "errno": null,
+            "line": 2
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x2539bd00",
+            "result": "0x2539bd00",
+            "return_value": 624540928,
+            "errno": null,
+            "line": 3
+          },
+          {
+            "syscall": "arch_prctl",
+            "arguments": "ARCH_SET_FS, 0x2539b380",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 4
+          },
+          {
+            "syscall": "set_tid_address",
+            "arguments": "0x2539b650",
+            "result": "9",
+            "return_value": 9,
+            "errno": null,
+            "line": 5
+          },
+          {
+            "syscall": "set_robust_list",
+            "arguments": "0x2539b660, 24",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 6
+          },
+          {
+            "syscall": "rseq",
+            "arguments": "0x2539bca0, 0x20, 0, 0x53053053",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 7
+          },
+          {
+            "syscall": "prlimit64",
+            "arguments": "0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 8
+          },
+          {
+            "syscall": "readlinkat",
+            "arguments": "AT_FDCWD, \"/proc/self/exe\", \"/workload\", 4096",
+            "result": "9",
+            "return_value": 9,
+            "errno": null,
+            "line": 9
+          },
+          {
+            "syscall": "getrandom",
+            "arguments": "\"\\x34\\xf6\\x5b\\xb6\\x4e\\x01\\x47\\x4d\", 8, GRND_NONBLOCK",
+            "result": "8",
+            "return_value": 8,
+            "errno": null,
+            "line": 10
+          },
+          {
+            "syscall": "brk",
+            "arguments": "NULL",
+            "result": "0x2539bd00",
+            "return_value": 624540928,
+            "errno": null,
+            "line": 11
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x253bcd00",
+            "result": "0x253bcd00",
+            "return_value": 624676096,
+            "errno": null,
+            "line": 12
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x253bd000",
+            "result": "0x253bd000",
+            "return_value": 624676864,
+            "errno": null,
+            "line": 13
+          },
+          {
+            "syscall": "mprotect",
+            "arguments": "0x4a5000, 20480, PROT_READ",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 14
+          },
+          {
+            "syscall": "io_uring_setup",
+            "arguments": "8, {flags=0, sq_thread_cpu=0, sq_thread_idle=0, sq_entries=8, cq_entries=16, features=IORING_FEAT_SINGLE_MMAP|IORING_FEAT_NODROP|IORING_FEAT_SUBMIT_STABLE|IORING_FEAT_RW_CUR_POS|IORING_FEAT_CUR_PERSONALITY|IORING_FEAT_FAST_POLL|IORING_FEAT_POLL_32BITS|IORING_FEAT_SQPOLL_NONFIXED|IORING_FEAT_EXT_ARG|IORING_FEAT_NATIVE_WORKERS|IORING_FEAT_RSRC_TAGS|IORING_FEAT_CQE_SKIP|IORING_FEAT_LINKED_FILE|IORING_FEAT_REG_REG_RING|0x3c000, sq_off={head=0, tail=4, ring_mask=16, ring_entries=24, flags=36, dropped=32, array=320, user_addr=0}, cq_off={head=8, tail=12, ring_mask=20, ring_entries=28, overflow=44, cqes=64, flags=40, user_addr=0}}",
+            "result": "3",
+            "return_value": 3,
+            "errno": null,
+            "line": 15
+          },
+          {
+            "syscall": "close",
+            "arguments": "3",
+            "result": "0",
+            "return_value": 0,
+            "errno": null,
+            "line": 16
+          },
+          {
+            "syscall": "write",
+            "arguments": "1, \"classic-io-ok\\n\", 14",
+            "result": "14",
+            "return_value": 14,
+            "errno": null,
+            "line": 17
+          },
+          {
+            "syscall": "exit_group",
+            "arguments": "0",
+            "result": "?",
+            "return_value": null,
+            "errno": null,
+            "line": 18
+          }
+        ],
+        "infrastructure_error": null
+      }
+    ],
+    "sandbox": [
+      {
+        "runtime": "gvisor",
+        "runtime_version": "20260921.0",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 156,
+        "stdout_sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-0/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-0/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-0/guest.trace",
+        "trace_sha256": "sha256:cdca3714b22f4cbb2a79e78a31a0e90d12d1f1704a148c2ca9ff5e739d5197cf",
+        "trace_kind": "runsc-guest",
+        "trace_summary": {
+          "syscalls": {
+            "arch_prctl": 1,
+            "brk": 5,
+            "exit_group": 1,
+            "getrandom": 1,
+            "io_uring_setup": 1,
+            "mprotect": 1,
+            "prlimit64": 1,
+            "readlinkat": 1,
+            "rseq": 1,
+            "set_robust_list": 1,
+            "set_tid_address": 1,
+            "write": 1
+          },
+          "errors": {
+            "io_uring_setup:ENOSYS": 1,
+            "rseq:ENOSYS": 1
+          },
+          "event_count": 16,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 201,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "brk",
+            "arguments": "0x0",
+            "result": "4923392 (0x4b2000) (39.307µs)",
+            "return_value": 4923392,
+            "errno": null,
+            "line": 194
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4b2d00",
+            "result": "4926720 (0x4b2d00) (16.304µs)",
+            "return_value": 4926720,
+            "errno": null,
+            "line": 196
+          },
+          {
+            "syscall": "arch_prctl",
+            "arguments": "0x1002, 0x4b2380",
+            "result": "0 (0x0) (3.226µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 198
+          },
+          {
+            "syscall": "set_tid_address",
+            "arguments": "0x4b2650",
+            "result": "1 (0x1) (3.641µs)",
+            "return_value": 1,
+            "errno": null,
+            "line": 200
+          },
+          {
+            "syscall": "set_robust_list",
+            "arguments": "0x4b2660, 0x18",
+            "result": "0 (0x0) (2.729µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 202
+          },
+          {
+            "syscall": "rseq",
+            "arguments": "0x4b2ca0, 0x20, 0x0, 0x53053053",
+            "result": "-1 errno=38 (invalid system call number) (81.418µs)",
+            "return_value": -1,
+            "errno": "ENOSYS",
+            "line": 205
+          },
+          {
+            "syscall": "prlimit64",
+            "arguments": "0x0, 0x3, 0x0, 0x7ed564605da0",
+            "result": "0 (0x0) (8.463µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 207
+          },
+          {
+            "syscall": "readlinkat",
+            "arguments": "AT_FDCWD /, 0x47fad5 /proc/self/exe, 0x7ed564604d00 \"/workload\", 0x1000",
+            "result": "9 (0x9) (830.16µs)",
+            "return_value": 9,
+            "errno": null,
+            "line": 209
+          },
+          {
+            "syscall": "getrandom",
+            "arguments": "0x4b0830, 0x8, 0x1",
+            "result": "8 (0x8) (10.675µs)",
+            "return_value": 8,
+            "errno": null,
+            "line": 211
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x0",
+            "result": "4926720 (0x4b2d00) (2.143µs)",
+            "return_value": 4926720,
+            "errno": null,
+            "line": 213
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4d3d00",
+            "result": "5061888 (0x4d3d00) (7.327µs)",
+            "return_value": 5061888,
+            "errno": null,
+            "line": 215
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4d4000",
+            "result": "5062656 (0x4d4000) (4.286µs)",
+            "return_value": 5062656,
+            "errno": null,
+            "line": 217
+          },
+          {
+            "syscall": "mprotect",
+            "arguments": "0x4a5000, 0x5000, 0x1",
+            "result": "0 (0x0) (70.01µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 219
+          },
+          {
+            "syscall": "io_uring_setup",
+            "arguments": "0x8, 0x7ed564605ca0",
+            "result": "-1 errno=38 (invalid system call number) (2.933µs)",
+            "return_value": -1,
+            "errno": "ENOSYS",
+            "line": 221
+          },
+          {
+            "syscall": "write",
+            "arguments": "0x1 host:[2], ..., 0xe",
+            "result": "14 (0xe) (36.235µs)",
+            "return_value": 14,
+            "errno": null,
+            "line": 223
+          },
+          {
+            "syscall": "exit_group",
+            "arguments": "0x0",
+            "result": "0 (0x0) (3.209µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 225
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "gvisor",
+        "runtime_version": "20260921.0",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 154,
+        "stdout_sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-1/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-1/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-1/guest.trace",
+        "trace_sha256": "sha256:96131267902ed89baae9f90b69a666ca615c8e3b8b81c0722157a9486c054d4b",
+        "trace_kind": "runsc-guest",
+        "trace_summary": {
+          "syscalls": {
+            "arch_prctl": 1,
+            "brk": 5,
+            "exit_group": 1,
+            "getrandom": 1,
+            "io_uring_setup": 1,
+            "mprotect": 1,
+            "prlimit64": 1,
+            "readlinkat": 1,
+            "rseq": 1,
+            "set_robust_list": 1,
+            "set_tid_address": 1,
+            "write": 1
+          },
+          "errors": {
+            "io_uring_setup:ENOSYS": 1,
+            "rseq:ENOSYS": 1
+          },
+          "event_count": 16,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 201,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "brk",
+            "arguments": "0x0",
+            "result": "4923392 (0x4b2000) (14.083µs)",
+            "return_value": 4923392,
+            "errno": null,
+            "line": 194
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4b2d00",
+            "result": "4926720 (0x4b2d00) (8.103µs)",
+            "return_value": 4926720,
+            "errno": null,
+            "line": 196
+          },
+          {
+            "syscall": "arch_prctl",
+            "arguments": "0x1002, 0x4b2380",
+            "result": "0 (0x0) (2.252µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 198
+          },
+          {
+            "syscall": "set_tid_address",
+            "arguments": "0x4b2650",
+            "result": "1 (0x1) (2.007µs)",
+            "return_value": 1,
+            "errno": null,
+            "line": 200
+          },
+          {
+            "syscall": "set_robust_list",
+            "arguments": "0x4b2660, 0x18",
+            "result": "0 (0x0) (2.363µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 202
+          },
+          {
+            "syscall": "rseq",
+            "arguments": "0x4b2ca0, 0x20, 0x0, 0x53053053",
+            "result": "-1 errno=38 (invalid system call number) (135.719µs)",
+            "return_value": -1,
+            "errno": "ENOSYS",
+            "line": 205
+          },
+          {
+            "syscall": "prlimit64",
+            "arguments": "0x0, 0x3, 0x0, 0x7ea490901da0",
+            "result": "0 (0x0) (6.315µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 207
+          },
+          {
+            "syscall": "readlinkat",
+            "arguments": "AT_FDCWD /, 0x47fad5 /proc/self/exe, 0x7ea490900d00 \"/workload\", 0x1000",
+            "result": "9 (0x9) (730.375µs)",
+            "return_value": 9,
+            "errno": null,
+            "line": 209
+          },
+          {
+            "syscall": "getrandom",
+            "arguments": "0x4b0830, 0x8, 0x1",
+            "result": "8 (0x8) (23.987µs)",
+            "return_value": 8,
+            "errno": null,
+            "line": 211
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x0",
+            "result": "4926720 (0x4b2d00) (2.114µs)",
+            "return_value": 4926720,
+            "errno": null,
+            "line": 213
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4d3d00",
+            "result": "5061888 (0x4d3d00) (7.495µs)",
+            "return_value": 5061888,
+            "errno": null,
+            "line": 215
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4d4000",
+            "result": "5062656 (0x4d4000) (5µs)",
+            "return_value": 5062656,
+            "errno": null,
+            "line": 217
+          },
+          {
+            "syscall": "mprotect",
+            "arguments": "0x4a5000, 0x5000, 0x1",
+            "result": "0 (0x0) (69.134µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 219
+          },
+          {
+            "syscall": "io_uring_setup",
+            "arguments": "0x8, 0x7ea490901ca0",
+            "result": "-1 errno=38 (invalid system call number) (2.469µs)",
+            "return_value": -1,
+            "errno": "ENOSYS",
+            "line": 221
+          },
+          {
+            "syscall": "write",
+            "arguments": "0x1 host:[2], ..., 0xe",
+            "result": "14 (0xe) (31.53µs)",
+            "return_value": 14,
+            "errno": null,
+            "line": 223
+          },
+          {
+            "syscall": "exit_group",
+            "arguments": "0x0",
+            "result": "0 (0x0) (1.971µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 225
+          }
+        ],
+        "infrastructure_error": null
+      },
+      {
+        "runtime": "gvisor",
+        "runtime_version": "20260921.0",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_ms": 102,
+        "stdout_sha256": "sha256:e24ae83db919f02bce58d3c74d9f459026846f717b1324626bba8f0205dd0c39",
+        "stderr_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-2/stdout.txt",
+        "stderr_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-2/stderr.txt",
+        "trace_ref": "/var/tmp/bench-work/stage-synthetic-optional-io-uring/artifacts/scan-1793444237-435/sandbox-2/guest.trace",
+        "trace_sha256": "sha256:4cc1a29270f58fb7e737b75cc86945c6ee6a5ca2a9e8e08711ee0c88e095293a",
+        "trace_kind": "runsc-guest",
+        "trace_summary": {
+          "syscalls": {
+            "arch_prctl": 1,
+            "brk": 5,
+            "exit_group": 1,
+            "getrandom": 1,
+            "io_uring_setup": 1,
+            "mprotect": 1,
+            "prlimit64": 1,
+            "readlinkat": 1,
+            "rseq": 1,
+            "set_robust_list": 1,
+            "set_tid_address": 1,
+            "write": 1
+          },
+          "errors": {
+            "io_uring_setup:ENOSYS": 1,
+            "rseq:ENOSYS": 1
+          },
+          "event_count": 16,
+          "unfinished_count": 0,
+          "unparsed_lines": 0,
+          "discarded_guest_records": 0,
+          "diagnostic_lines": 201,
+          "truncated": false
+        },
+        "events": [
+          {
+            "syscall": "brk",
+            "arguments": "0x0",
+            "result": "4923392 (0x4b2000) (35.695µs)",
+            "return_value": 4923392,
+            "errno": null,
+            "line": 194
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4b2d00",
+            "result": "4926720 (0x4b2d00) (7.252µs)",
+            "return_value": 4926720,
+            "errno": null,
+            "line": 196
+          },
+          {
+            "syscall": "arch_prctl",
+            "arguments": "0x1002, 0x4b2380",
+            "result": "0 (0x0) (1.476µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 198
+          },
+          {
+            "syscall": "set_tid_address",
+            "arguments": "0x4b2650",
+            "result": "1 (0x1) (2.224µs)",
+            "return_value": 1,
+            "errno": null,
+            "line": 200
+          },
+          {
+            "syscall": "set_robust_list",
+            "arguments": "0x4b2660, 0x18",
+            "result": "0 (0x0) (1.73µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 202
+          },
+          {
+            "syscall": "rseq",
+            "arguments": "0x4b2ca0, 0x20, 0x0, 0x53053053",
+            "result": "-1 errno=38 (invalid system call number) (35.511µs)",
+            "return_value": -1,
+            "errno": "ENOSYS",
+            "line": 205
+          },
+          {
+            "syscall": "prlimit64",
+            "arguments": "0x0, 0x3, 0x0, 0x7edd05b41da0",
+            "result": "0 (0x0) (70.709µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 207
+          },
+          {
+            "syscall": "readlinkat",
+            "arguments": "AT_FDCWD /, 0x47fad5 /proc/self/exe, 0x7edd05b40d00 \"/workload\", 0x1000",
+            "result": "9 (0x9) (568.381µs)",
+            "return_value": 9,
+            "errno": null,
+            "line": 209
+          },
+          {
+            "syscall": "getrandom",
+            "arguments": "0x4b0830, 0x8, 0x1",
+            "result": "8 (0x8) (22.801µs)",
+            "return_value": 8,
+            "errno": null,
+            "line": 211
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x0",
+            "result": "4926720 (0x4b2d00) (1.63µs)",
+            "return_value": 4926720,
+            "errno": null,
+            "line": 213
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4d3d00",
+            "result": "5061888 (0x4d3d00) (4.749µs)",
+            "return_value": 5061888,
+            "errno": null,
+            "line": 215
+          },
+          {
+            "syscall": "brk",
+            "arguments": "0x4d4000",
+            "result": "5062656 (0x4d4000) (2.783µs)",
+            "return_value": 5062656,
+            "errno": null,
+            "line": 217
+          },
+          {
+            "syscall": "mprotect",
+            "arguments": "0x4a5000, 0x5000, 0x1",
+            "result": "0 (0x0) (52.786µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 219
+          },
+          {
+            "syscall": "io_uring_setup",
+            "arguments": "0x8, 0x7edd05b41ca0",
+            "result": "-1 errno=38 (invalid system call number) (1.815µs)",
+            "return_value": -1,
+            "errno": "ENOSYS",
+            "line": 221
+          },
+          {
+            "syscall": "write",
+            "arguments": "0x1 host:[2], ..., 0xe",
+            "result": "14 (0xe) (55.54µs)",
+            "return_value": 14,
+            "errno": null,
+            "line": 223
+          },
+          {
+            "syscall": "exit_group",
+            "arguments": "0x0",
+            "result": "0 (0x0) (2.454µs)",
+            "return_value": 0,
+            "errno": null,
+            "line": 225
+          }
+        ],
+        "infrastructure_error": null
+      }
+    ],
+    "exercised_syscalls": [
+      "arch_prctl",
+      "brk",
+      "close",
+      "execve",
+      "exit_group",
+      "getrandom",
+      "io_uring_setup",
+      "mprotect",
+      "prlimit64",
+      "readlinkat",
+      "rseq",
+      "set_robust_list",
+      "set_tid_address",
+      "write"
+    ],
+    "fallback_observations": [
+      "Sandbox returned an unsupported-operation error for io_uring_setup, but the profile returned its expected exit code. An error was tolerated; inspect declared output assertions before inferring a successful fallback.",
+      "Sandbox returned an unsupported-operation error for rseq, but the profile returned its expected exit code. An error was tolerated; inspect declared output assertions before inferring a successful fallback."
+    ],
+    "warnings": []
+  },
+  "silent_fallback_check": {
+    "performed": false,
+    "cluster_context_available": false,
+    "note": "An image scan cannot establish node runtime identity. Use the node probe and admission controller; binary presence alone is not isolation attestation."
+  },
+  "limitations": [
+    "Results cover only the declared profile and environment; absence of a finding is not proof of compatibility.",
+    "Static resolution does not establish reachability, syscall arguments, or a complete capability upper bound for dynamically generated code.",
+    "Output comparisons require deterministic profile assertions; unobserved filesystem, cgroup, and networking semantics remain unknown.",
+    "Elapsed-time comparisons include unequal tracer/runtime startup overhead and do not establish a netstack/gofer root cause."
+  ],
+  "incomplete_reasons": [],
+  "duration_ms": 1728
+}

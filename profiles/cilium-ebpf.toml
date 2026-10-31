@@ -1,0 +1,7 @@
+name = "cilium-ebpf-optional-program-load"
+description = "Attempt a real cilium/ebpf socket-filter load, tolerate unavailable permission/support, and assert orderly completion. The scanner grants no capabilities; this is probe/fallback coverage, not a privileged BPF compatibility proof."
+command = ["/workload"]
+timeout_seconds = 30
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

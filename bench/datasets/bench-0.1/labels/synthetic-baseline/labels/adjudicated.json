@@ -1,0 +1,78 @@
+{
+  "adjudicator": {
+    "confidence": "high",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "compatible",
+    "rationale": "both raters agree independently"
+  },
+  "case_id": "synthetic-baseline",
+  "class": "compatible",
+  "confidence": "high",
+  "evidence": [
+    "native exits [0, 0, 0], sandbox exits [0, 0, 0] (run r-synthetic-baseline-bm04-20261031T104239Z)"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/report.json",
+      "sha256": "sha256:1f6d0529895d67a69b3f4696da91a01431a48caf23a2150ac748b04c6c283daa"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/traces/native-0-guest.trace",
+      "sha256": "sha256:d7943391fac233f9f32c765fd261a293e9ac6fc1602c83a0402bb86baf2a1d9c"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/traces/native-1-guest.trace",
+      "sha256": "sha256:16b687f3317bed677cdb32204a105c906a715f0450e244da006efd34db1fed67"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/traces/native-2-guest.trace",
+      "sha256": "sha256:1a9b8ed0fc92666fe2a4e2ebd7282f0269da92bfe59b525ac5771ead3ef3c6b0"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:8057a00e1cc9831d6f0458663dcf05dc1e42864e8ec6ec2954aa1586f2b60af1"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:d164ad6188af438f16d767847d2f786e652d746334a0880e45257dc8a9aec64a"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-baseline/r-synthetic-baseline-bm04-20261031T104239Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:9aa3dd47320e0e3ce5f4847e4653ecbf13120a615e3ea33e0fe0147a997eaf81"
+    }
+  ],
+  "rater_a": {
+    "confidence": "high",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "compatible",
+    "rationale": "no expected interface read, write, exit_group is documented as partial or unimplemented for gvisor/amd64"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "compatible",
+    "rationale": "every paired repetition exited 0 in both runtimes with byte-identical stdout and no refusal under the sandbox that native did not also produce"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

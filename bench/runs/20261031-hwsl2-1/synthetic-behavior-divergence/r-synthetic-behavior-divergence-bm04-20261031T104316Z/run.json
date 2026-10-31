@@ -1,0 +1,282 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/native-0-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/native-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/native-1-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/native-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/native-2-config.json",
+        "sha256": "sha256:5ed3acb9494251caf6453b87de9d5c69885a9fcf8fad93e84ab3e26dbfeb90a4"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/native-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/preflight.json",
+        "sha256": "sha256:69137a4f720685f506e81649ce2cca944c390121dac6c244e8a5aeda7212c92f"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-0-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-0-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-1-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-1-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-2-config.json",
+        "sha256": "sha256:441e063f410597598717c5b71b3439e729b16bc6ae941dd144a54bb0cb1d92f2"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-2-runtime.log",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:fb032fed082bee43f5385a9aca4294f536f497a49378ff0440fa83563865f8fa"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/native-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/native-0-stdout.txt",
+        "sha256": "sha256:cc2010e7ead2b1c235c4e9452068a6f201f0c3afe749f5bbdef0b9719747f41c",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/native-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/native-1-stdout.txt",
+        "sha256": "sha256:cc2010e7ead2b1c235c4e9452068a6f201f0c3afe749f5bbdef0b9719747f41c",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/native-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/native-2-stdout.txt",
+        "sha256": "sha256:cc2010e7ead2b1c235c4e9452068a6f201f0c3afe749f5bbdef0b9719747f41c",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/sandbox-0-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/sandbox-0-stdout.txt",
+        "sha256": "sha256:f66bc1837683e0c0b8cc5c60bc14cedb22f9a537904edd022279f255b5774ce2",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/sandbox-1-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/sandbox-1-stdout.txt",
+        "sha256": "sha256:f66bc1837683e0c0b8cc5c60bc14cedb22f9a537904edd022279f255b5774ce2",
+        "stream": "stdout"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/sandbox-2-stderr.txt",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stream": "stderr"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/outputs/sandbox-2-stdout.txt",
+        "sha256": "sha256:f66bc1837683e0c0b8cc5c60bc14cedb22f9a537904edd022279f255b5774ce2",
+        "stream": "stdout"
+      }
+    ],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/report.json",
+      "sha256": "sha256:6f8d805f0c2b191e43051eb1d88465f3e9e612be3faff58009601fb3af6fd81d"
+    },
+    "traces": [
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/traces/native-0-guest.trace",
+        "sha256": "sha256:3ff0f9171d1018072345ddd07cf121297deefaae7bf1e15852df09c2d2e1efcf"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/traces/native-1-guest.trace",
+        "sha256": "sha256:11e1d2c8b71d6d81a5a616b784d7a622d02eddecd25c52ec8a7249a02043e335"
+      },
+      {
+        "kind": "native",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/traces/native-2-guest.trace",
+        "sha256": "sha256:35f3def94455a98a0449680b6e388ee69a8d7a45f2554266943dea3eeb01031e"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/traces/sandbox-0-guest.trace",
+        "sha256": "sha256:e5f3fb8067b2790ebb79e67a1f77ffe0eee68daa392503e56e5c82af18febe53"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/traces/sandbox-1-guest.trace",
+        "sha256": "sha256:a956a90a0fbdf3aaf7cf49b951668246253a174eb6658a038b2d950f721d7271"
+      },
+      {
+        "kind": "sandbox",
+        "path": "bench/runs/20261031-hwsl2-1/synthetic-behavior-divergence/r-synthetic-behavior-divergence-bm04-20261031T104316Z/traces/sandbox-2-guest.trace",
+        "sha256": "sha256:c12c3a6b08b16ba2d6f7790cb8a6484c462b8eeb03e83f3d15f1d5bdb52dc333"
+      }
+    ]
+  },
+  "case_id": "synthetic-behavior-divergence",
+  "ended_at": "2026-10-31T10:43:16Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "linux:/var/tmp/bench-work"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; live scan; exit=0; max_kb_age_days=400; order=abba-block5; report_status=complete; executed as 0 root 6.18.54.1-microsoft-standard-WSL2",
+  "order_index": 1,
+  "order_pattern": "abba-block5",
+  "predicted": {
+    "class": "silent-degradation",
+    "complete": true,
+    "finding_severities": [
+      "silent-degradation"
+    ],
+    "incomplete_reason_codes": [],
+    "status": "complete",
+    "tier": "dynamic-runsc-diff"
+  },
+  "repetitions": {
+    "native_durations_ms": [
+      76,
+      51,
+      102
+    ],
+    "native_exits": [
+      0,
+      0,
+      0
+    ],
+    "sandbox_durations_ms": [
+      182,
+      153,
+      153
+    ],
+    "sandbox_exits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "resources": {
+    "disk_mb": 0.410794,
+    "peak_rss_mb": 34.21875
+  },
+  "run_id": "r-synthetic-behavior-divergence-bm04-20261031T104316Z",
+  "runtime": {
+    "binary_sha256": "sha256:2eb94b58769293ce5041beecf4cbc14b173604371bfaac7cb3f3a84a28e44248",
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:42:58Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 1762,
+    "total": 18077
+  },
+  "tool": {
+    "binary_sha256": "sha256:4cf7525d60328a81171da9957924e9e1a8a48388fdd5c4ad17bfbb7d7de2a959",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "unknown"
+  },
+  "valid": true
+}

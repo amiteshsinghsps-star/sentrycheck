@@ -1,0 +1,84 @@
+{
+  "adjudicator": {
+    "confidence": "high",
+    "id": "documented-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "hard-failure",
+    "rationale": "both raters agree independently"
+  },
+  "case_id": "synthetic-required-io-uring",
+  "class": "hard-failure",
+  "confidence": "high",
+  "evidence": [
+    "io_uring_enter: support=partial gaps=['gap-gvisor-amd64-io-uring-enter']",
+    "io_uring_setup: support=partial gaps=['gap-gvisor-amd64-io-uring-setup']",
+    "native exits [0, 0, 0], sandbox exits [42, 42, 42] (run r-synthetic-required-io-uring-bm04-20261031T105853Z)",
+    "repetition 0 stdout differs: native sha256:061c86242c8c versus sandbox sha256:e3b0c44298fc",
+    "repetition 1 stdout differs: native sha256:061c86242c8c versus sandbox sha256:e3b0c44298fc",
+    "repetition 2 stdout differs: native sha256:061c86242c8c versus sandbox sha256:e3b0c44298fc",
+    "sandbox trace refused io_uring_setup=errno38, rseq=errno38"
+  ],
+  "label_source": "rule-adjudicator",
+  "labeled_at": "2026-10-31T11:00:31Z",
+  "linked_evidence": [
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/report.json",
+      "sha256": "sha256:74f5d6f068c32dd6d878e840e22f5f3af1926fe9a6d108380429f50eff66afd4"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/traces/native-0-guest.trace",
+      "sha256": "sha256:f11f8309bdc014b44901fd62af5d7be089cff6ab2d762923586eaf49a415ce07"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/traces/native-1-guest.trace",
+      "sha256": "sha256:2bd42982778595980a6f51f105159b3a05942879cd93f3a9ad1b6ed7aba23d0b"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/traces/native-2-guest.trace",
+      "sha256": "sha256:121b78b4be3049d18b8c4c4c8a1ff2c0bf806013f9442a1d6bab2d00c68d332a"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/traces/sandbox-0-guest.trace",
+      "sha256": "sha256:ee15796ce3b05cd7f246f1a607b04f0cefd5e7f7f0500e03368b41d69635248a"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/traces/sandbox-1-guest.trace",
+      "sha256": "sha256:a95ec7f5a9e2f813930d50cadfd5c3d52c94b70685083349697f03e657d317b6"
+    },
+    {
+      "kind": "file",
+      "note": "raw execution evidence reviewed by rater B",
+      "ref": "bench/runs/20261031-hwsl2-1/synthetic-required-io-uring/r-synthetic-required-io-uring-bm04-20261031T105853Z/traces/sandbox-2-guest.trace",
+      "sha256": "sha256:b1f0e213627397394d71d2cf61e797266a811f5eb5d642abb94b733e29346b6c"
+    }
+  ],
+  "rater_a": {
+    "confidence": "high",
+    "id": "kb-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "hard-failure",
+    "rationale": "io_uring_enter, io_uring_setup is required by the declared command and documented as a hard failure for this runtime"
+  },
+  "rater_a_source": "kb/snapshot.json entries and syscall_support, read without the scanner",
+  "rater_b": {
+    "confidence": "high",
+    "id": "exit-and-output-rule",
+    "kind": "rule-adjudicator",
+    "label_class": "hard-failure",
+    "rationale": "the sandbox exited [42, 42, 42] while native exited [0]"
+  },
+  "rater_b_source": "exit codes and stdout digests of a recorded live run",
+  "schema_version": "1.0"
+}

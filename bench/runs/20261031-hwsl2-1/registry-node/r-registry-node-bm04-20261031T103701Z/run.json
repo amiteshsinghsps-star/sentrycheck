@@ -1,0 +1,126 @@
+{
+  "artifacts": {
+    "logs": [
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/preflight.json",
+        "sha256": "sha256:5ef89cc6aae4191d38ac11e0a1c65a69e302e74840e6686831d12ed41393d2c1"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/sandbox-0-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/sandbox-0-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/sandbox-1-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/sandbox-1-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/sandbox-2-null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/sandbox-2-state/null-netns",
+        "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/logs/scanner-stdout.txt",
+        "sha256": "sha256:bea68dc5150dd22e7b982a660449f045a96779aa807e12add1b7869f7bc364d9"
+      }
+    ],
+    "outputs": [],
+    "report": {
+      "path": "bench/runs/20261031-hwsl2-1/registry-node/r-registry-node-bm04-20261031T103701Z/report.json",
+      "sha256": "sha256:90739271fca50d983eeb2191d94db8bf274b54b696bd551b5b5e1a317b675a73"
+    },
+    "traces": []
+  },
+  "case_id": "registry-node",
+  "ended_at": "2026-10-31T10:37:01Z",
+  "environment": {
+    "clock_synced": true,
+    "cores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "free_disk_mb": 974310,
+    "governor": null,
+    "host_load_controlled": false,
+    "load_before": 0.477,
+    "preflight": {
+      "failed": [],
+      "live_capable": true,
+      "timing_capable": true
+    },
+    "smt": "smt",
+    "work_root": "repo:bench/.tmp"
+  },
+  "host_id": "hwsl2-1",
+  "invalid_reason": null,
+  "kb": {
+    "max_age_days": 400,
+    "sha256": "sha256:3e9e7771679dc66bc52670265516cf133a0a4d7b2ec9b0bc591dc11aada28271",
+    "snapshot_version": "2026-09-26/gvisor-20260921.0"
+  },
+  "notes": "harness 0.1.0; static-only scan; exit=2; max_kb_age_days=400; order=abba-block2; report_status=incomplete",
+  "order_index": 3,
+  "order_pattern": "abba-block2",
+  "predicted": {
+    "class": "indeterminate",
+    "complete": false,
+    "finding_severities": [],
+    "incomplete_reason_codes": [
+      "static-only"
+    ],
+    "status": "incomplete",
+    "tier": "static-only"
+  },
+  "repetitions": {
+    "native_durations_ms": [],
+    "native_exits": [],
+    "sandbox_durations_ms": [],
+    "sandbox_exits": []
+  },
+  "resources": {
+    "disk_mb": 1.126825,
+    "peak_rss_mb": null
+  },
+  "run_id": "r-registry-node-bm04-20261031T103701Z",
+  "runtime": {
+    "binary_sha256": null,
+    "name": "gvisor",
+    "platform": null,
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "seed": 20261031,
+  "started_at": "2026-10-31T10:35:36Z",
+  "suite": "BM-04",
+  "timings_ms": {
+    "scan": 84475,
+    "total": 84475
+  },
+  "tool": {
+    "binary_sha256": "sha256:407337980e8cf119441bd33b7ffbac4e1624b0e7f34aafe81d625b3944005775",
+    "git_commit": null,
+    "name": "sentrycheck",
+    "version": "0.5.0"
+  },
+  "valid": true
+}

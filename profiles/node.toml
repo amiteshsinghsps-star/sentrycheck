@@ -1,0 +1,7 @@
+name = "node-filesystem-crypto-timers"
+description = "Exercise asynchronous filesystem operations, cryptography, and timers with deterministic assertions."
+command = ["node", "-e", "const fs=require('node:fs/promises'),os=require('node:os'),path=require('node:path'),crypto=require('node:crypto');(async()=>{let d=await fs.mkdtemp(path.join(os.tmpdir(),'sc-'));let p=path.join(d,'data');await fs.writeFile(p,'sentrycheck');let b=await fs.readFile(p);if(b.toString()!=='sentrycheck')throw Error('io');if(crypto.createHash('sha256').update(b).digest('hex').length!==64)throw Error('hash');await new Promise(r=>setTimeout(r,25));await fs.rm(d,{recursive:true});console.log('sentrycheck-node-ok')})().catch(e=>{console.error(e);process.exit(1)})"]
+timeout_seconds = 30
+repetitions = 3
+compare_stdout = true
+coverage = "representative"

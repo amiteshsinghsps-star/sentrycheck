@@ -1,0 +1,54 @@
+{
+  "added_in": "bench-0.1",
+  "case_id": "baseline-go",
+  "expected_interfaces": [
+    "futex",
+    "epoll_wait",
+    "openat"
+  ],
+  "group": "application",
+  "host_classes": [
+    "wsl2-ext4",
+    "linux-bare"
+  ],
+  "image": {
+    "architecture": "amd64",
+    "digest": "sha256:69f65f24b1faa90c21a3672683191babf95b7d902f76b38877db71d0caccc3a6",
+    "layer_digests": [
+      "sha256:9de4bea00cd798ab8591301f911db6b4148f879e524075de38ce1086099a3b0f"
+    ],
+    "license": "Apache-2.0 (workload source in corpus/go; Go runtime is BSD-3-Clause)",
+    "local_path": "artifacts/live-images/go",
+    "media_type": "application/vnd.oci.image.manifest.v1+json",
+    "reference": null,
+    "source_url": null
+  },
+  "label": null,
+  "notes": "Corpus Go binary: file I/O, hashing and goroutines.",
+  "profile": {
+    "coverage_notes": "workload input is the local OCI layout artifacts/live-images/go (index artifacts/live-images/go/index.json); no registry or daemon is contacted",
+    "kind": "oci-layout",
+    "path": "profiles/go.toml",
+    "sha256": "sha256:fdb33ef3bff377dfc9c5ddf112a426a42d7fffa4344c90a5ad62be57224375c7"
+  },
+  "retired_in": null,
+  "runtime": {
+    "flags": [],
+    "name": "gvisor",
+    "platform": "systrap",
+    "release": "20260921.0"
+  },
+  "schema_version": "1.0",
+  "split": "development",
+  "suites": [
+    "BM-01",
+    "BM-04",
+    "BM-08",
+    "BM-14"
+  ],
+  "tags": [
+    "go",
+    "static-binary",
+    "baseline"
+  ]
+}

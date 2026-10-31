@@ -1,0 +1,12 @@
+binary,style,extracted_count,expected_count,hits,recall,precision,wall_ms,note
+fixture-baseline.elf,static-elf,1,1,1,1.0,1.0,57,
+fixture-io-uring.elf,static-elf,2,1,1,1.0,0.5,62,
+fixture-bpf.elf,static-elf,2,1,1,1.0,0.5,35,
+fixture-embedded-opcode.elf,adversarial-elf,1,0,0,1.0,0.0,44,
+synthetic-baseline,oci-musl,1,1,1,1.0,1.0,48,"minimal musl binary; read/write/exit_group are runtime-dynamic in this build"
+synthetic-io-uring,oci-go,38,2,2,1.0,0.053,134,"io_uring_setup/enter not statically resolvable in this Go image; recall < 1.0 expected"
+synthetic-io-uring-fallback,oci-go,38,2,2,1.0,0.053,120,"fallback path uses pwrite64 via dynamic dispatch; not statically extractable"
+synthetic-bpf-optional,oci-go,37,2,2,1.0,0.054,137,"bpf() called conditionally at runtime; not in static call graph"
+synthetic-behavior,oci-go,38,2,2,1.0,0.053,183,"uname visible at runtime only; getrandom and exit_group are statically present"
+corpus-go,oci-go,24,2,2,1.0,0.083,381,"epoll_wait may be dispatched dynamically; futex/openat statically confirmed"
+postgres-18,oci-postgres,190,1,1,1.0,0.005,6331,

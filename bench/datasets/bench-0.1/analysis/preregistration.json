@@ -1,0 +1,223 @@
+{
+  "arms": {
+    "B0_naive": "baseline: flag any binary that mentions a syscall the runtime does not implement",
+    "B5_justrun": "baseline: run once and report the exit code only",
+    "S1_full": "the current scanner with the KB, static plus dynamic evidence",
+    "S2_static": "the same input scanned with --static-only",
+    "S3_native": "native execution under runc as the reference run",
+    "S4_sandbox": "execution under the digest-pinned runsc",
+    "ordering": "ABBA within each case block, with the position recorded as order_index and the sequence as order_pattern"
+  },
+  "claims_ceiling": {
+    "level": "L2",
+    "published_constraint": "every claim in the dataset card and the results tables states its ceiling",
+    "reason": "ground truth comes from raw exit codes, runsc debug logs and stdout diffs adjudicated by a documented rule, not by two independent human raters, so the study cannot support L3 or above"
+  },
+  "corpus": {
+    "blocked_cases": [
+      "registry-python",
+      "registry-node",
+      "cilium-ebpf-optional"
+    ],
+    "blocked_reason": "A case is registered only when its workload artifact is present and digest-verifiable on this host; three planned cases stay unregistered until their images are fetched.",
+    "labels_at_registration": "every ready case has label null; no class is assigned before registration",
+    "ready_cases": [
+      "baseline-go",
+      "postgres-18-io-uring",
+      "synthetic-baseline",
+      "synthetic-behavior-divergence",
+      "synthetic-optional-bpf",
+      "synthetic-optional-io-uring",
+      "synthetic-required-io-uring"
+    ],
+    "registry": "bench/cases",
+    "v1_bar": "PRD v1.0 requires 60 cases with 20 or more positives and documented kappa. This study does not reach that bar and reports it as unmet rather than relaxing the requirement."
+  },
+  "deviation_log": {
+    "path": "bench/analysis/DEVIATIONS.md",
+    "rule": "entries are appended with a date, the affected hypothesis and the reason; the sealed registration content above never changes"
+  },
+  "exclusion_rules": {
+    "handling": "an invalidated run keeps its record and its artifacts in bench/runs with valid false and an invalid_reason; nothing is deleted, and no run is dropped because of its outcome",
+    "invalidates_a_run": [
+      "the driver timed out",
+      "the scanner produced no report",
+      "the report fails its schema",
+      "the recorded digests do not re-verify"
+    ],
+    "never_invalidates": [
+      "an incomplete status",
+      "a fallback observation",
+      "a verdict that disagrees with the label",
+      "a slow measurement"
+    ],
+    "preflight": "a failed blocking check marks the run invalid rather than preventing it, so the attempt stays on the record"
+  },
+  "fixed_inputs": {
+    "alpha": 0.05,
+    "bootstrap_replicates": 2000,
+    "float_rule": "values are rounded to 6 digits before they enter any hashed artifact, so interpreter differences cannot change a digest",
+    "practical_threshold_ratio": 0.2,
+    "quantization_digits": 6,
+    "repetitions_per_cell": 3,
+    "required_confirmations": 2,
+    "seed": 20261031
+  },
+  "harness_version": "0.1.0",
+  "hosts": {
+    "constraint": "Live work runs on the ext4 WSL home, never under /mnt/c, because the 9p mount breaks symlinks and distorts timings; preflight work-root rejects it",
+    "windows-1": "bench/hosts/windows-1.json - Windows 11 host, analysis and static scanning only; no live sandbox execution",
+    "wsl2-1": "bench/hosts/wsl2-1.json - WSL2 Ubuntu host with the digest-pinned runsc; native versus sandbox execution happens here"
+  },
+  "hypotheses": [
+    {
+      "comparator": "B0_naive and B5_justrun on the identical case set",
+      "decision_rule": "claim an advantage only when the paired exact test survives Holm correction and the direction is consistent across the development and validation splits",
+      "estimator": "Wilson 95 percent interval for each rate, McNemar exact test with discordant counts for the paired comparison",
+      "id": "H1",
+      "primary_endpoint": "presence and absence of a hard-failure or silent-degradation verdict against the adjudicated label",
+      "statement": "The scanner separates runtime-incompatible behaviour from compatible behaviour better than B0 and B5 on the registered cases.",
+      "suite": [
+        "BM-01",
+        "BM-04",
+        "BM-14"
+      ]
+    },
+    {
+      "comparator": "the dynamic ground truth recorded for the same binary",
+      "decision_rule": "report the intervals; no threshold is invented, and a link style with fewer than 10 binaries is labelled exploratory",
+      "estimator": "Clopper-Pearson 95 percent interval on recall, geometric mean across link styles",
+      "id": "H2",
+      "primary_endpoint": "per-binary precision, recall and resolution rate over a known-behaviour gcc corpus",
+      "statement": "Static syscall extraction recovers the syscalls a compiled binary actually reaches, and its rate does not depend on link style.",
+      "suite": [
+        "BM-02"
+      ]
+    },
+    {
+      "comparator": "the unmodified trace of the same workload",
+      "decision_rule": "acceptance requires zero false-complete; any positive count is a product defect and is published, not re-run until it passes",
+      "estimator": "exact count plus Clopper-Pearson upper bound on the false-complete rate",
+      "id": "H3",
+      "primary_endpoint": "count of injected-fault cases whose prediction class is compatible",
+      "statement": "A corrupted or truncated trace never yields a completed compatibility claim.",
+      "suite": [
+        "BM-03"
+      ]
+    },
+    {
+      "comparator": "the well-formed seed corpus",
+      "decision_rule": "acceptance requires zero unresolved crashers; each crash is recorded with its digest and either fixed or listed as open",
+      "estimator": "counts by input class with Holm-corrected proportions",
+      "id": "H4",
+      "primary_endpoint": "crash, timeout and limit-violation counts over the seeded mutation corpus",
+      "statement": "Malformed inputs are handled within the documented limits: no crash, no unbounded memory, no silent success.",
+      "suite": [
+        "BM-07"
+      ]
+    },
+    {
+      "comparator": "the preceding ladder step",
+      "decision_rule": "a regression claim requires more than 20 percent worsening confirmed by two consecutive runs",
+      "estimator": "median and nearest-rank percentiles over repetitions, Mann-Whitney U with Cliff's delta between steps, geometric mean across workloads",
+      "id": "H5",
+      "primary_endpoint": "wall time and peak RSS at each ladder point (256 MiB file, 1 GiB rootfs, 4 GiB expanded layers, 100000 paths, 512 layers, 128 MiB report)",
+      "statement": "Scanner runtime and peak memory grow predictably with input size up to the documented caps in LIMITATIONS.md.",
+      "suite": [
+        "BM-08"
+      ]
+    },
+    {
+      "comparator": "the same artifact produced on the other host and interpreter",
+      "decision_rule": "acceptance requires the empty mismatch set; a single differing byte is a failure and is diagnosed, not excused",
+      "estimator": "digest equality, reported as a set of mismatches",
+      "id": "H6",
+      "primary_endpoint": "sha256 of every generated table and figure",
+      "statement": "Analysis output is reproducible byte for byte from the recorded inputs, on either interpreter.",
+      "suite": [
+        "BM-13"
+      ]
+    },
+    {
+      "comparator": "the same case on the other platform with everything else pinned",
+      "decision_rule": "verdict disagreement on any case is a finding regardless of the timing result; timing claims are reported separately from compatibility claims",
+      "estimator": "bootstrap BCa interval on the ratio with 2000 replicates, percentile and BCa reported together",
+      "id": "H7",
+      "primary_endpoint": "paired runtime ratio and verdict equality per case",
+      "statement": "The gVisor platform axis (systrap versus KVM) changes measured runtime but not the compatibility verdict.",
+      "suite": [
+        "BM-09",
+        "BM-04"
+      ]
+    }
+  ],
+  "kb_age_policy": {
+    "compatibility_arm": "--max-kb-age-days 400 so a stale knowledge base cannot make a compatibility verdict indeterminate for a reason unrelated to the workload",
+    "reason": "the snapshot is older than 30 days, so the product default marks every scan incomplete; conflating that with workload behaviour would mislabel the entire corpus",
+    "rule": "two arms, declared before any run",
+    "staleness_arm": "the product default of 30 days is exercised separately as the thing being measured, not as a confounder to be removed"
+  },
+  "known_limitations": [
+    "single gVisor release and amd64 only; the Kata and arm64 axes are not run here",
+    "a desktop host with about 7 GiB RAM and no cpufreq governor control: the governor is recorded as null and timing claims are marked as uncontrolled-host measurements",
+    "the corpus is author-selected, which is a documented sampling bias",
+    "the registry is pinned by digest but a re-resolve of a mutable tag can drift; only digests are trusted",
+    "B0 and B5 baselines are reimplemented in the harness, so they are the harness reading of those baselines rather than the original tools"
+  ],
+  "mapping_validation_snapshot": {
+    "distribution": {
+      "compatible": 1,
+      "hard-failure": 6,
+      "indeterminate": 6,
+      "performance-regression": 14,
+      "silent-degradation": 5,
+      "tolerated": 2
+    },
+    "reading": "The mapping reaches every class the schema permits and sends no static-only or incomplete report to compatible, which is the failure mode PRD section 4.5 forbids.",
+    "reports": 34,
+    "table": "bench/analysis/predictions-retained.json"
+  },
+  "prediction_map": {
+    "path": "bench/analysis/prediction-map.json",
+    "sha256": "sha256:5ea0d857c40b0e97fa0553b8dfc1ec3dd5f682aa73080d0bc3e5dedf891039ea",
+    "validated_on": "34 retained reports in artifacts/ that pre-date this registration; the mapping was fixed before that snapshot and is not refitted to scored data"
+  },
+  "preregistration_rule": "This document is sealed before any scored run. Registered content is immutable; anything that departs from it is appended to the deviation log with the reason and the date, never edited in place.",
+  "primary_analysis": {
+    "method": "bench analyze reads bench/runs only; a table cell whose inputs have no run.json fails the build instead of being filled",
+    "no_fabrication": "no number in any published table or figure is authored by hand",
+    "population": "every recorded run that is valid for its suite, in full"
+  },
+  "registered_at": "2026-10-31T09:12:27Z",
+  "registration_sha256": "sha256:4b016c3201c3024b0b3d39dcb96c1d9af06dcf4478dad0a22895087d9b5f33c5",
+  "schema_version": "1.0",
+  "splits": {
+    "development": [
+      "baseline-go",
+      "synthetic-baseline"
+    ],
+    "rule": "The test split is scored once, after the development and validation analysis is written, and is never used to choose a threshold or to re-fit a rule.",
+    "test": [
+      "postgres-18-io-uring"
+    ],
+    "validation": [
+      "synthetic-behavior-divergence",
+      "synthetic-optional-bpf",
+      "synthetic-optional-io-uring",
+      "synthetic-required-io-uring"
+    ]
+  },
+  "statistics": {
+    "aggregation": "geometric mean across workloads, never arithmetic",
+    "agreement": "Cohen's kappa for two raters, Fleiss' kappa for more; a rule-adjudicator is never counted as a human rater",
+    "distributions": "nearest-rank percentiles 50/90/99, Mann-Whitney U with tie and continuity correction, Cliff's delta",
+    "intervals_for_ratios": "BCa bootstrap, 2000 replicates, fixed seed, cluster bootstrap by case so a case with several repetitions does not outweigh a case with one",
+    "multiplicity": "Holm step-down across the registered hypothesis family at alpha 0.05",
+    "multiplicity_free_monitoring": "two-sided DKW bound reported where a distribution comparison is descriptive only",
+    "paired_binary": "exact McNemar on discordant counts, normal approximation only when counts exceed 25",
+    "proportions": "Wilson 95 percent (default), Clopper-Pearson for a conservative bound on recall and false-complete rates",
+    "regression_detection": "change-point comparison against a warm-up baseline, requiring two consecutive confirmations past a 20 percent practical threshold"
+  },
+  "study_id": "bench-0.1",
+  "title": "SENTRYCHECK runtime-compatibility benchmark: measurement plan and pre-registration"
+}

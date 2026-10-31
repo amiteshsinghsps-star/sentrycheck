@@ -1,0 +1,836 @@
+ SARIF support for code scanning - GitHub Docs Skip to main content Skip to content GitHub Docs Search or ask Copilot / Menu Collapse sidebar Expand sidebar Scroll breadcrumbs left Home Security and code quality Reference Code scanning SARIF files SARIF support Scroll breadcrumbs right Security and code quality Getting started GitHub security features Secure repository quickstart Concepts Secret security Secret leakage risks Secret scanning Public monitoring Push protection Secret security with GitHub Secret scanning alerts Custom patterns Validity checks Delegated bypass Bypass requests Secret scanning for partners Secret types Push protection metrics Command line push protection Push protection and the GitHub MCP server Push protection from the REST API Code scanning Code scanning Code scanning alerts Risk assessment Autofix AI Scan Setup types Integration with code scanning SARIF files Alert tracking with issues Merge protection Multi-repository variant analysis CodeQL CodeQL code scanning CodeQL for compiled languages CodeQL query suites Custom queries CodeQL CLI CodeQL for VS Code CodeQL workspaces Query reference files Query packs Tool status page Pull request alert metrics Repository properties Supply chain security Supply chain security Open source license compliance Dependency best practices Dependency graph Dependency graph data Dependency review Dependabot alerts Malware alerts Dependabot alert metrics Dependabot security updates Dependabot version updates Dependabot pull requests Multi-ecosystem updates dependabot.yml file Automatic registry access Dependabot auto-triage rules Dependabot on Actions Dependabot job logs Immutable releases Linked artifacts Code quality GitHub Code Quality Enablement at scale Automatic code coverage Vulnerability reporting and management GitHub Advisory database Innersource advisories Repository security advisories Global security advisories Coordinated disclosure Vulnerability exposure Security at scale Select pilot repositories Organization security Security overview Security campaigns Audit security alerts Delegated alert dismissal How-tos Secure at scale Configure enterprise security Manage your coverage Enable public monitoring Configure specific tools Allow Code Quality Configure VNET Configure organization security Establish complete coverage Create custom configuration Apply custom configuration Configure global settings Manage your coverage Edit custom configuration Filter repositories Detach security configuration Delete custom configuration Configure specific tools Assess your secret risk Assess your vulnerability risk View risk report Estimate price Protect your secrets Code scanning at scale CodeQL advanced setup at scale Enforce dependency review Manage usage and access Give access to private registries Manage paid GHAS use Secure your secrets Detect secret leaks Enable secret scanning Enable for generic patterns Enable generic secret detection Customize leak detection Define custom patterns Generate regular expressions Manage custom patterns Exclude folders and files Enable validity checks Enable metadata checks Prevent future leaks Enable push protection Manage user push protection Block merges with secrets Work with leak prevention Push protection on the command line Push protection in the GitHub UI Manage bypass requests Enable delegated bypass Grant exemptions Manage bypass requests Review bypass requests Find and fix code vulnerabilities Configure code scanning Configure code scanning Configure advanced setup Manage your configuration Edit default setup Use tool status page Set merge protection Configure larger runners CodeQL for compiled languages Scan from the command line Set up CodeQL CLI Write custom queries Publish and use packs Test custom queries Test query help files Download databases Check out source code Speed up PR scans Specify command options Create database bundles Scan from VS Code Install CodeQL for VS Code Manage CodeQL databases Run CodeQL queries Explore data flow Run queries at scale Use the model editor Create custom query Manage CodeQL packs Explore code structure Test CodeQL queries Customize settings Set up CodeQL workspace Manage CodeQL CLI Access logs Integrate with existing tools Use with existing CI system Upload SARIF file Secure your supply chain Secure your dependencies Configure Dependabot alerts Configure malware alerts Configure security updates Configure version updates Manage innersource advisories Auto-update actions Configure multi-ecosystem updates Enable dependency graph Explore dependencies Submit dependencies automatically Use dependency submission API Verify release integrity Manage your dependency security Configure license policies Auto-triage Dependabot alerts Prioritize with preset rules Customize Dependabot PRs Control dependency update Configure dependency review action Configure Dependabot notifications Configure access to private registries Remove access to public registries Manage Dependabot PRs Configure on GitHub-hosted runners Configure on self-hosted runners Re-run Dependabot jobs List configured dependencies Configure private registries Establish provenance and integrity Prevent release changes Export dependencies as SBOM Upload linked artifacts View linked artifacts Remove linked artifacts Manage security alerts Remediate at scale Filter security alerts Create security campaign Track security campaign Fix alerts in campaign Review alert dismissal requests Secret scanning alerts Monitor alerts View alerts Resolve alerts Enable delegated dismissal Code scanning alerts Assess alerts Triage alerts in pull requests Track alerts in issues Resolve alerts Enable delegated alert dismissal Disable autofix Dependabot alerts View Dependabot alerts Manage malware alerts Manage auto-dismissed alerts Enable delegated alert dismissal Maintain quality code Enable Code Quality Disable Code Quality Roll out at scale Set quality thresholds Set up code coverage Set coverage thresholds Fix findings on a PR Unblock your PR View coverage on PRs Fix backlog findings Fix findings in recent merges Interpret results Explore code quality View and manage cost Report and fix vulnerabilities Configure vulnerability reporting Add security policy Configure for a repository Report privately Fix vulnerabilities Manage vulnerability reports Create repository advisory Publish repository advisory Add collaborators Remove collaborators Edit repository advisories Delete repository advisories Browse Advisory Database Edit Advisory Database Advanced Security with AI agents Scan for secrets with MCP View and interpret data Analyze organization data Assess security risk of code Assess adoption of features Find insecure repositories Export data View security insights View PR alert metrics View secret scanning metrics View public monitoring alerts View Dependabot metrics Export risk report CSV View code scanning logs View Dependabot logs View custom pattern metrics Change "used by" data Reference Security at scale Overview dashboard metrics Overview dashboard filters Configuration enforcement Configuration statuses Troubleshoot security configurations A repository is using advanced setup for code scanning Unexpected default setup Configuration issue diagnosis Not enough GHAS licenses Secret security Secret types Supported patterns Secret scanning scope Custom patterns Risk report CSV contents Secret pattern data Code scanning Workflow configuration options SARIF files SARIF support Troubleshoot SARIF uploads GitHub token missing SARIF file invalid Results exceed limits Results file too large GitHub Code Security disabled Default setup is enabled CodeQL Hardware resources for CodeQL Build options for compiled languages Built-in CodeQL queries Built-in queries Actions queries C and C++ queries C# queries Go queries Java and Kotlin queries JavaScript and TypeScript queries Python queries Ruby queries Rust queries Swift queries CodeQL CLI SARIF output CSV output CodeQL query packs Extractor options Exit codes CodeQL CLI manual bqrs decode bqrs diff bqrs hash bqrs info bqrs interpret database add-diagnostic database analyze database bundle database cleanup database create database export-diagnostics database finalize database import database index-files database init database interpret-results database print-baseline database run-queries database trace-command database unbundle database upgrade dataset check dataset cleanup dataset import dataset measure dataset upgrade diagnostic add diagnostic export execute cli-server execute language-server execute queries execute query-server execute query-server2 execute upgrades generate extensible-predicate-metadata generate log-summary generate overlay-changes generate query-help github merge-results github upload-results pack add pack bundle pack ci pack create pack download pack init pack install pack ls pack packlist pack publish pack resolve-dependencies pack upgrade query compile query decompile query format query run resolve database resolve extensions resolve extensions-by-pack resolve extractor resolve files resolve languages resolve library-path resolve library-paths resolve metadata resolve ml-models resolve packs resolve qlpacks resolve qlref resolve queries resolve ram resolve tests resolve upgrades test accept test extract test run version CodeQL for VS Code Telemetry Controller repository warning Troubleshoot analysis errors Alerts in generated code Automatic build failed C# compiler failing Private repository enablement Analysis takes too long Fewer lines scanned than expected Default setup timeout Code Security must be enabled Out of disk or memory Resource not accessible Not recognized No source code seen during build Server error Extraction errors Logs not detailed enough Results different than expected Some languages not analyzed Two CodeQL workflows Unclear what triggered a workflow Unnecessary step found Kotlin detected in no build Code scanning logs Supply chain security Automatic dependency submission Dependabot options Dependabot alerts filters Dependency scope Dependabot PR comment commands Dependabot ecosystems Dependabot security updates Dependency graph ecosystems Dependabot on Actions Criteria for preset rules Troubleshoot Dependabot Dependency graph errors Dependabot stopped working Dependabot on Actions Vulnerability detection Dependabot errors Java package metadata Code quality Metrics and scores Code coverage CodeQL analysis CodeQL queries C# queries Go queries Java queries JavaScript queries Python queries Ruby queries Permissions for security features Repository security advisory Security overview Incident response Investigation tools Investigation areas Tutorials Secret protection Code quality Trial GitHub Advanced Security Plan GHAS trial Trial Advanced Security Enable security features in trial Trial Secret Protection Trial Code Security Secure your organization Prevent data leaks Fix alerts at scale Prioritize alerts in production code Interpret secret risk assessment Interpret code security risk assessment Organize leak remediation Protect against threats Prepare for a security incident Respond to a security incident Remediate leaked secrets Calculate cost savings Assess GHSP impact Evaluate alerts Remediate a leaked secret Partner program Customize code scanning Evaluate default setup Prepare code for analysis Analyze code Upload results Run in a container Customize analysis Create query suites Create and work with CodeQL packs Secure your dependencies Dependabot quickstart Automate Dependabot with Actions Optimize PR creation Configure ARC Customize Dependabot PRs Customize dependency review action Implement supply chain best practices Overview Secure accounts Secure code Secure builds Manage security alerts Prioritize Dependabot alerts using metrics Participate in campaigns Improve code quality Catch issues before merge Raise your quality score Fix reported vulnerabilities Collaborate in a fork Write security advisories Responsible use Security and quality AI features In this article SARIF support for code scanning Ensure your SARIF files from third-party tools comply with GitHub's standards. Copy markdown Who can use this feature? Code scanning is available for the following repository types: 
+ 
+ Public repositories on GitHub.com 
+ Organization-owned repositories on GitHub Team, GitHub Enterprise Cloud, or GitHub Enterprise Server, with GitHub Code Security enabled. 
+ In this article Data for preventing duplicated alerts Rules and results Source file locations File compatibility Supported properties SARIF output file examples GitHub can parse SARIF files produced by third-party tools to display code scanning alerts in repositories. For more information, see About SARIF files for code scanning . 
+ This article highlights key properties of SARIF files to help you upload SARIF files that meet GitHub's requirements and can be converted into useful alerts. 
+ If you're using GitHub Actions with the CodeQL analysis workflow or using the CodeQL CLI, then the code scanning results will automatically use the supported subset of SARIF 2.1.0. 
+ Data for preventing duplicated alerts 
+ Each time the results of a new code scan are uploaded, the results are processed and alerts are added to the repository. To prevent duplicate alerts for the same problem, code scanning uses fingerprints to match results across various runs so they only appear once in the latest run for the selected branch. This makes it possible to match alerts to the correct line of code when files are edited. The ruleId for a result has to be the same across analysis. 
+ Consistent filepaths 
+ The filepath has to be consistent across the runs to enable a computation of a stable fingerprint. If the filepaths differ for the same result, each time there is a new analysis a new alert will be created, and the old one will be closed. This will cause having multiple alerts for the same result. 
+ Fingerprint generation 
+ GitHub uses the partialFingerprints property in the OASIS standard to detect when two results are logically identical. For more information, see the partialFingerprints property entry in the OASIS documentation. 
+ SARIF files created by the CodeQL analysis workflow, or using the CodeQL CLI include fingerprint data. If you upload a SARIF file using the upload-sarif action and this data is missing, GitHub attempts to populate the partialFingerprints field from the source files. For more information about uploading results, see Uploading a SARIF file to GitHub . 
+ If you upload a SARIF file without fingerprint data using the /code-scanning/sarifs API endpoint, the code scanning alerts will be processed and displayed, but users may see duplicate alerts. To avoid seeing duplicate alerts, you should calculate fingerprint data and populate the partialFingerprints property before you upload the SARIF file. You may find the script that the upload-sarif action uses a helpful starting point: https://github.com/github/codeql-action/blob/main/src/fingerprints.ts . For more information about the API, see REST API endpoints for code scanning . 
+ Rules and results 
+ SARIF files support both rules and results. The information stored in these elements is similar but serves different purposes. 
+ 
+ Rules are an array of reportingDescriptor objects that are included in the toolComponent object. This is where you store details of the rules that are run during analysis. Information in these objects should change infrequently, typically when you update the tool. 
+ Results are stored as a series of result objects under results in the run object. Each result object contains details for one alert in the codebase. Within the results object, you can reference the rule that detected the alert. 
+ 
+ When you compare SARIF files generated by analyzing different codebases with the same tool and rules, you should see differences in the results of the analyses but not in the rules. 
+ Source file locations 
+ Specifying source file locations and lines of code ensures code scanning alerts are displayed accurately within the file containing the identified problem, allowing for targeted issue resolution. 
+ This precision enhances the efficiency of code review and resolution processes, streamlining development workflows by enabling developers to address issues directly in the context of their codebase. 
+ Code scanning will also display alerts in pull request check results when all the lines of code identified by the alert exist in the pull request diff. 
+ For display in a pull request check, an alert must meet all the following conditions: 
+ 
+ All the lines of code identified by the alert exist in the pull request diff, including the first line of the alert. 
+ The alert must exist in the lines of code added or edited in the pull request, not lines that were deleted. 
+ 
+ The physicalLocation object in a submitted SARIF file identifies the lines of code for an alert. For more information, see physicalLocation object . 
+ Root location for source files 
+ Code scanning interprets results that are reported with relative paths as relative to the root of the repository analyzed. If a result contains an absolute URI, the URI is converted to a relative URI. The relative URI can then be matched against a file committed to the repository. 
+ You can provide the source root for conversion from absolute to relative URIs in one of the following ways. 
+ 
+ checkout_path input to the github/codeql-action/analyze action 
+ checkout_uri parameter to the SARIF upload API endpoint. For more information, see REST API endpoints for code scanning . 
+ invocations[0].workingDirectory.uri property in the run object in the SARIF file 
+ 
+ If you provide a source root, any location of an artifact specified using an absolute URI must use the same URI scheme. If there is a mismatch between the URI scheme for the source root and one or more of the absolute URIs, the upload is rejected. 
+ For example, a SARIF file is uploaded using a source root of file:///github/workspace . 
+ # Conversion of absolute URIs to relative URIs for location artifacts 
+
+file:///github/workspace/src/main.go -> src/main.go
+file:///tmp/go-build/tmp.go -> file:///tmp/go-build/tmp.go
+ 
+ The file is successfully uploaded as both absolute URIs use the same URI scheme as the source root. 
+ Symlink resolution 
+ If the relative URI for a result is matched against a file defined using a symlink, code scanning is unable to display the result. So you need to resolve any symlinked files, and report any results in those files using the resolved URI. 
+ File compatibility 
+ You can check a SARIF file is compatible with code scanning by testing it against the GitHub ingestion rules. For more information, visit the Microsoft SARIF validator . 
+ For each gzip-compressed SARIF file, SARIF upload supports a maximum size of 10 MB. Any uploads over this limit will be rejected. If your SARIF file is too large because it contains too many results, you should update the configuration to focus on results for the most important rules or queries. For more information, see SARIF results file is too large . 
+ Code scanning supports uploading a maximum number of entries for the data objects in the following table. If any of these objects exceeds its maximum value the SARIF file is rejected. For some objects, there is also an additional limit on the number of values that will be displayed. Whenever possible the most important values are shown. To get the most out of your analysis when it includes data above the supported limits, try to optimize the analysis configuration (for example, for the CodeQL tool, identify and disable the most noisy queries). For more information, see SARIF results exceed one or more limits . 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ SARIF data Maximum values Data truncation limits Runs per file 20 None Results per run 25,000 Only the top 5,000 results will be included, prioritized by severity. Rules per run 25,000 None Tool extensions per run 100 None Thread Flow Locations per result 10,000 Only the top 1,000 Thread Flow Locations will be included, using prioritization. Location per result 1,000 Only 100 locations will be included. Tags per rule 20 Only 10 tags will be included. Alert Limit 1,000,000 None 
+ 
+ For information about other errors, see Troubleshooting SARIF uploads . 
+ Supported properties 
+ If you use a code analysis engine other than CodeQL, you can review the supported SARIF properties to optimize how your analysis results will appear on GitHub. 
+ Note 
+ 
+You must supply an explicit value for any property marked as "required". The empty string is not supported for required properties. 
+ 
+ Any valid SARIF 2.1.0 output file can be uploaded, however, code scanning will only use the following supported properties. 
+ sarifLog object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description $schema The URI of the SARIF JSON schema for version 2.1.0. For example, https:/ / json.schemastore.org/ sarif-2.1.0.json . version Code scanning only supports SARIF version 2.1.0 . runs[] A SARIF file contains an array of one or more runs. Each run represents a single run of an analysis tool. For more information about a run , see the run object . 
+ run object 
+ Code scanning uses the run object to filter results by tool and provide information about the source of a result. The run object contains the tool.driver tool component object, which contains information about the tool that generated the results. Each run can only have results for one analysis tool. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description tool.driver A toolComponent object that describes the analysis tool. For more information, see the toolComponent object . tool.extensions[] An array of toolComponent objects that represent any plugins or extensions used by the tool during analysis. For more information, see the toolComponent object . invocation.working Directory.uri This field is used only when checkout_uri (SARIF upload API only) or checkout_path (GitHub Actions only) are not provided. The value is used to convert absolute URIs used in physicalLocation objects to relative URIs. For more information, see Specifying the root for source files . results[] The results of the analysis tool. Code scanning displays the results on GitHub. For more information, see the result object . 
+ toolComponent object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description name The name of the analysis tool. Code scanning displays the name on GitHub to allow you to filter results by tool. version The version of the analysis tool. Code scanning uses the version number to track when results may have changed due to a tool version change rather than a change in the code being analyzed. If the SARIF file includes the semanticVersion field, version is not used by code scanning. semanticVersion The version of the analysis tool, specified by the Semantic Versioning 2.0 format. Code scanning uses the version number to track when results may have changed due to a tool version change rather than a change in the code being analyzed. If the SARIF file includes the semanticVersion field, version is not used by code scanning. For more information, see Semantic Versioning 2.0.0 in the Semantic Versioning documentation. rules[] An array of reporting Descriptor objects that represent rules. The analysis tool uses rules to find problems in the code being analyzed. For more information, see the reporting Descriptor object . 
+ reportingDescriptor object 
+ This is where you store details of the rules that are run during analysis. Information in these objects should change infrequently, typically when you update the tool. For more information, see Rules and results above. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description id A unique identifier for the rule. The id is referenced from other parts of the SARIF file and may be used by code scanning to display URLs on GitHub. name The name of the rule. Code scanning displays the name to allow results to be filtered by rule on GitHub. Limited to 255 characters. short Description.text A concise description of the rule. Code scanning displays the short description on GitHub next to the associated results. Limited to 1024 characters. full Description.text A description of the rule. Code scanning displays the full description on GitHub next to the associated results. Limited to 1024 characters. default Configuration.level Default severity level of the rule. Code scanning uses severity levels to help you understand how critical the result is for a given rule. By default, the default Configuration.level is set to warning . However, you can override the default level for a rule by setting the level attribute in the result object associated with the result. For more information, please refer to the documentation on the result object . The valid values for default Configuration.level are: note , warning and error . help.text Documentation for the rule using text format. Code scanning displays this help documentation next to the associated results. help.markdown (Recommended) Documentation for the rule using Markdown format. Code scanning displays this help documentation next to the associated results. When help.markdown is available, it is displayed instead of help.text . properties.tags[] An array of strings. Code scanning uses tags to allow you to filter results on GitHub. For example, it is possible to filter to all results that have the tag security . properties.precision (Recommended) A string that indicates how often the results indicated by this rule are true. For example, if a rule has a known high false-positive rate, the precision should be low . Code scanning orders results by precision on GitHub so that the results with the highest level , and highest precision are shown first. Can be one of: very-high , high , medium , or low . properties.problem.severity (Recommended) A string that indicates the level of severity of any alerts generated by a non-security query. This, with the properties.precision property, determines whether the results are displayed by default on GitHub so that the results with the highest problem.severity , and highest precision are shown first. Can be one of: error , warning , or recommendation . properties.security-severity (Recommended only for security rules) If you include a value for this field, results for the rule are treated as security results. A string representing a score that indicates the level of severity, a value that is greater than 0.0 up to 10.0, for security queries ( @tags includes security ). This, with the properties.precision property, determines whether the results are displayed by default on GitHub so that the results with the highest security-severity , and highest precision are shown first. Code scanning translates numerical scores as follows: over 9.0 is critical , from 7.0 to 8.9 is high , from 4.0 to 6.9 is medium and from 0.1 to 3.9 is low . A value of 0.0 or any other value outside the given range is regarded as having no security severity. 
+ result object 
+ Each result object contains details for one alert in the codebase. Within the results object, you can reference the rule that detected the alert. For more information, see Rules and results above. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description ruleId The unique identifier of the rule ( reporting Descriptor.id ). For more information, see the reporting Descriptor object . Code scanning uses the rule identifier to filter results by rule on GitHub. ruleIndex The index of the associated rule ( reporting Descriptor object) in the tool component rules array. For more information, see the run object . The allowed range for this property 0 to 2^63 - 1. rule A reference used to locate the rule (reporting descriptor) for this result. For more information, see the reporting Descriptor object . level The severity of the result. This level overrides the default severity defined by the rule. Code scanning uses the level to filter results by severity on GitHub. message.text A message that describes the result. Code scanning displays the message text as the title of the result. Only the first sentence of the message will be displayed when visible space is limited. locations[] The set of locations where the result was detected up to a maximum of 10. Only one location should be included unless the problem can only be corrected by making a change at every specified location. Note: At least one location is required for code scanning to display a result. Code scanning will use this property to decide which file to annotate with the result. Only the first value of this array is used. All other values are ignored. partial Fingerprints A set of strings used to track the unique identity of the result. Code scanning uses partial Fingerprints to accurately identify which results are the same across commits and branches. Code scanning will attempt to use partial Fingerprints if they exist. If you are uploading third-party SARIF files with the upload-action , the action will create partial Fingerprints for you when they are not included in the SARIF file. For more information, see Providing data to track code scanning alerts across runs . Note: Code scanning only uses the primary Location Line Hash . code Flows[].thread Flows[].locations[] An array of location objects for a threadFlow object, which describes the progress of a program through a thread of execution. A codeFlow object describes a pattern of code execution used to detect a result. If code flows are provided, code scanning will expand code flows on GitHub for the relevant result. For more information, see the location object . related Locations[] A set of locations relevant to this result. Code scanning will link to related locations when they are embedded in the result message. For more information, see the location object . 
+ location object 
+ A location within a programming artifact, such as a file in the repository or a file that was generated during a build. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description location.id A unique identifier that distinguishes this location from all other locations within a single result object. The allowed range for this property 0 to 2^63 - 1. location.physical Location Identifies the artifact and region. For more information, see the physicalLocation . location.message.text A message relevant to the location. 
+ physicalLocation object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description artifact Location.uri A URI indicating the location of an artifact, usually a file either in the repository or generated during a build. For the best results we recommend that this is a relative path from the root of the GitHub repository being analyzed. For example, src/main.js . For more information about artifact URIs, see Specifying the root for source files . region.startLine The line number of the first character in the region. region.start Column The column number of the first character in the region. region.endLine The line number of the last character in the region. region.endColumn The column number of the character following the end of the region. 
+ runAutomationDetails object 
+ The runAutomationDetails object contains information that specifies the identity of a run. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Name Required Description id A string that identifies the category of the analysis and the run ID. Use if you want to upload multiple SARIF files for the same tool and commit, but performed on different languages or different parts of the code. 
+ The use of the runAutomationDetails object is optional. 
+ The id field can include an analysis category and a run ID. We don't use the run ID part of the id field, but we store it. 
+ Use the category to distinguish between multiple analyses for the same tool or commit, but performed on different languages or different parts of the code. Use the run ID to identify the specific run of the analysis, such as the date the analysis was run. 
+ id is interpreted as category/run-id . If the id contains no forward slash ( / ), then the entire string is the run_id and the category is empty. Otherwise, category is everything in the string until the last forward slash, and run_id is everything after. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ id category run_id my-analysis/tool1/2022-01-02 my-analysis/tool1 2022-01-02 my-analysis/tool1/ my-analysis/tool1 None my-analysis for tool1 None my-analysis for tool1 
+ 
+ The run with an id of "my-analysis/tool1/2021-02-01" belongs to the category "my-analysis/tool1". 
+ The run with an id of "my-analysis/tool1/" belongs to the category "my-analysis/tool1" but is not distinguished from other runs in that category. 
+ The run whose id is "my-analysis for tool1 " has a unique identifier but cannot be inferred to belong to any category. 
+ 
+ For more information about the runAutomationDetails object and the id field, see runAutomationDetails object in the OASIS documentation. 
+ Note that the rest of the supported fields are ignored. 
+ SARIF output file examples 
+ These example SARIF output files show supported properties and example values. 
+ Example with minimum required properties 
+ This SARIF output file has example values to show the minimum required properties for code scanning results to work as expected. If you remove any properties, omit values, or use an empty string, this data will not be displayed correctly or sync on GitHub. 
+ { 
+ "$schema" : "https://json.schemastore.org/sarif-2.1.0.json" , 
+ "version" : "2.1.0" , 
+ "runs" : [ 
+ { 
+ "tool" : { 
+ "driver" : { 
+ "name" : "Tool Name" , 
+ "rules" : [ 
+ { 
+ "id" : "R01" 
+ ...
+ "properties" : { 
+ "id" : "java/unsafe-deserialization" , 
+ "kind" : "path-problem" , 
+ "name" : "..." , 
+ "problem.severity" : "error" , 
+ "security-severity" : "9.8" , 
+ } 
+ } 
+ ] 
+ } 
+ } , 
+ "results" : [ 
+ { 
+ "ruleId" : "R01" , 
+ "message" : { 
+ "text" : "Result text. This result does not have a rule associated." 
+ } , 
+ "locations" : [ 
+ { 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "fileURI" 
+ } , 
+ "region" : { 
+ "startLine" : 2 , 
+ "startColumn" : 7 , 
+ "endColumn" : 10 
+ } 
+ } 
+ } 
+ ] , 
+ "partialFingerprints" : { 
+ "primaryLocationLineHash" : "39fa2ee980eb94b0:1" 
+ } 
+ } 
+ ] 
+ } 
+ ] 
+ } 
+ 
+ Relative URI Guidance for SARIF Producers 
+ This SARIF output file has example of values for the field originalUriBaseIds , showing the minimum required properties a SARIF producer should include when using relative URI references. 
+ Note 
+ 
+While this property is not required by GitHub for the code scanning results to be displayed correctly, it is required to produce a valid SARIF output when using relative URI references. 
+ 
+ { 
+ "$schema" : "https://json.schemastore.org/sarif-2.1.0.json" , 
+ "version" : "2.1.0" , 
+ "runs" : [ 
+ { 
+ "tool" : { 
+ "driver" : { 
+ "name" : "Tool Name" , 
+ "rules" : [ 
+ { 
+ "id" : "R01" 
+ ...
+ "properties" : { 
+ "id" : "java/unsafe-deserialization" , 
+ "kind" : "path-problem" , 
+ "name" : "..." , 
+ "problem.severity" : "error" , 
+ "security-severity" : "9.8" , 
+ } 
+ } 
+ ] 
+ } 
+ } , 
+ "originalUriBaseIds" : { 
+ "PROJECTROOT" : { 
+ "uri" : "file:///C:/Users/Mary/code/TheProject/" , 
+ "description" : { 
+ "text" : "The root directory for all project files." 
+ } 
+ } , 
+ "%SRCROOT%" : { 
+ "uri" : "src/" , 
+ "uriBaseId" : "PROJECTROOT" , 
+ "description" : { 
+ "text" : "The root of the source tree." 
+ } 
+ } 
+ } , 
+ "results" : [ 
+ { 
+ "ruleId" : "R01" , 
+ "message" : { 
+ "text" : "Result text. This result does not have a rule associated." 
+ } , 
+ "locations" : [ 
+ { 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "fileURI" , 
+ "uriBaseId" : "%SRCROOT%" 
+ } , 
+ "region" : { 
+ "startLine" : 2 , 
+ "startColumn" : 7 , 
+ "endColumn" : 10 
+ } 
+ } 
+ } 
+ ] , 
+ "partialFingerprints" : { 
+ "primaryLocationLineHash" : "39fa2ee980eb94b0:1" 
+ } 
+ } 
+ ] 
+ } 
+ ] 
+ } 
+ 
+ Example showing all supported SARIF properties 
+ This SARIF output file has example values to show all supported SARIF properties for code scanning. 
+ { 
+ "$schema" : "https://json.schemastore.org/sarif-2.1.0.json" , 
+ "version" : "2.1.0" , 
+ "runs" : [ 
+ { 
+ "tool" : { 
+ "driver" : { 
+ "name" : "Tool Name" , 
+ "semanticVersion" : "2.0.0" , 
+ "rules" : [ 
+ { 
+ "id" : "3f292041e51d22005ce48f39df3585d44ce1b0ad" , 
+ "name" : "js/unused-local-variable" , 
+ "shortDescription" : { 
+ "text" : "Unused variable, import, function or class" 
+ } , 
+ "fullDescription" : { 
+ "text" : "Unused variables, imports, functions or classes may be a symptom of a bug and should be examined carefully." 
+ } , 
+ "defaultConfiguration" : { 
+ "level" : "note" 
+ } , 
+ "properties" : { 
+ "tags" : [ 
+ "maintainability" 
+ ] , 
+ "precision" : "very-high" 
+ } 
+ } , 
+ { 
+ "id" : "d5b664aefd5ca4b21b52fdc1d744d7d6ab6886d0" , 
+ "name" : "js/inconsistent-use-of-new" , 
+ "shortDescription" : { 
+ "text" : "Inconsistent use of 'new'" 
+ } , 
+ "fullDescription" : { 
+ "text" : "If a function is intended to be a constructor, it should always be invoked with 'new'. Otherwise, it should always be invoked as a normal function, that is, without 'new'." 
+ } , 
+ "properties" : { 
+ "tags" : [ 
+ "reliability" , 
+ "correctness" , 
+ "language-features" 
+ ] , 
+ "precision" : "very-high" 
+ } 
+ } , 
+ { 
+ "id" : "R01" 
+ } 
+ ] 
+ } 
+ } , 
+ "automationDetails" : { 
+ "id" : "my-category/" 
+ } , 
+ "results" : [ 
+ { 
+ "ruleId" : "3f292041e51d22005ce48f39df3585d44ce1b0ad" , 
+ "ruleIndex" : 0 , 
+ "message" : { 
+ "text" : "Unused variable foo." 
+ } , 
+ "locations" : [ 
+ { 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "main.js" , 
+ "uriBaseId" : "%SRCROOT%" 
+ } , 
+ "region" : { 
+ "startLine" : 2 , 
+ "startColumn" : 7 , 
+ "endColumn" : 10 
+ } 
+ } 
+ } 
+ ] , 
+ "partialFingerprints" : { 
+ "primaryLocationLineHash" : "39fa2ee980eb94b0:1" , 
+ "primaryLocationStartColumnFingerprint" : "4" 
+ } 
+ } , 
+ { 
+ "ruleId" : "d5b664aefd5ca4b21b52fdc1d744d7d6ab6886d0" , 
+ "ruleIndex" : 1 , 
+ "message" : { 
+ "text" : "Function resolvingPromise is sometimes invoked as a constructor (for example [here](1)), and sometimes as a normal function (for example [here](2))." 
+ } , 
+ "locations" : [ 
+ { 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "src/promises.js" , 
+ "uriBaseId" : "%SRCROOT%" 
+ } , 
+ "region" : { 
+ "startLine" : 2 
+ } 
+ } 
+ } 
+ ] , 
+ "partialFingerprints" : { 
+ "primaryLocationLineHash" : "5061c3315a741b7d:1" , 
+ "primaryLocationStartColumnFingerprint" : "7" 
+ } , 
+ "relatedLocations" : [ 
+ { 
+ "id" : 1 , 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "src/ParseObject.js" , 
+ "uriBaseId" : "%SRCROOT%" 
+ } , 
+ "region" : { 
+ "startLine" : 2281 , 
+ "startColumn" : 33 , 
+ "endColumn" : 55 
+ } 
+ } , 
+ "message" : { 
+ "text" : "here" 
+ } 
+ } , 
+ { 
+ "id" : 2 , 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "src/LiveQueryClient.js" , 
+ "uriBaseId" : "%SRCROOT%" 
+ } , 
+ "region" : { 
+ "startLine" : 166 
+ } 
+ } , 
+ "message" : { 
+ "text" : "here" 
+ } 
+ } 
+ ] 
+ } , 
+ { 
+ "ruleId" : "R01" , 
+ "message" : { 
+ "text" : "Specifying both [ruleIndex](1) and [ruleId](2) might lead to inconsistencies." 
+ } , 
+ "level" : "error" , 
+ "locations" : [ 
+ { 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "full.sarif" , 
+ "uriBaseId" : "%SRCROOT%" 
+ } , 
+ "region" : { 
+ "startLine" : 54 , 
+ "startColumn" : 10 , 
+ "endLine" : 55 , 
+ "endColumn" : 25 
+ } 
+ } 
+ } 
+ ] , 
+ "relatedLocations" : [ 
+ { 
+ "id" : 1 , 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "full.sarif" 
+ } , 
+ "region" : { 
+ "startLine" : 81 , 
+ "startColumn" : 10 , 
+ "endColumn" : 18 
+ } 
+ } , 
+ "message" : { 
+ "text" : "here" 
+ } 
+ } , 
+ { 
+ "id" : 2 , 
+ "physicalLocation" : { 
+ "artifactLocation" : { 
+ "uri" : "full.sarif" 
+ } , 
+ "region" : { 
+ "startLine" : 82 , 
+ "startColumn" : 10 , 
+ "endColumn" : 21 
+ } 
+ } , 
+ "message" : { 
+ "text" : "here" 
+ } 
+ } 
+ ] , 
+ "codeFlows" : [ 
+ { 
+ "threadFlows" : [ 
+ { 
+ "locations" : [ 
+ { 
+ "location" : { 
+ "physicalLocation" : { 
+ "region" : { 
+ "startLine" : 11 , 
+ "endLine" : 29 , 
+ "startColumn" : 10 , 
+ "endColumn" : 18 
+ } , 
+ "artifactLocation" : { 
+ "uriBaseId" : "%SRCROOT%" , 
+ "uri" : "full.sarif" 
+ } 
+ } , 
+ "message" : { 
+ "text" : "Rule has index 0" 
+ } 
+ } 
+ } , 
+ { 
+ "location" : { 
+ "physicalLocation" : { 
+ "region" : { 
+ "endColumn" : 47 , 
+ "startColumn" : 12 , 
+ "startLine" : 12 
+ } , 
+ "artifactLocation" : { 
+ "uriBaseId" : "%SRCROOT%" , 
+ "uri" : "full.sarif" 
+ } 
+ } 
+ } 
+ } 
+ ] 
+ } 
+ ] 
+ } 
+ ] , 
+ "partialFingerprints" : { 
+ "primaryLocationLineHash" : "ABC:2" 
+ } 
+ } 
+ ] , 
+ "columnKind" : "utf16CodeUnits" 
+ } 
+ ] 
+ } 
+ Back to top Help and support Was this Doc helpful? Yes No Help us make GitHub Docs great! All Docs are open source. See something that's wrong or unclear? Submit a pull request. Make a contribution Still need help? Ask the GitHub community Contact support Expert services Blog GitHub Inc. © 2026 Terms Privacy Status Pricing 
