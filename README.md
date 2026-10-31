@@ -1,3 +1,5 @@
+[![CI](https://github.com/amiteshsinghsps-star/sentrycheck/actions/workflows/ci.yml/badge.svg)](https://github.com/amiteshsinghsps-star/sentrycheck/actions/workflows/ci.yml)
+
 ## Overview
 
 SENTRYCHECK predicts whether a container workload will run correctly under a restricted runtime such as gVisor or Kata Containers.
