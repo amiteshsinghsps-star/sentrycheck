@@ -1,9 +1,0 @@
-SENTRYCHECK is licensed under MIT OR Apache-2.0.
-
-Knowledge-base support descriptions are derived from the gVisor project,
-Copyright The gVisor Authors, licensed under Apache-2.0. Every entry identifies
-its source URL and source revision. Source documentation excerpts retain the
-attribution and licensing of their originating projects.
-
-Bundled generated fixtures and synthetic traces are test data produced by
-SENTRYCHECK; they are not gVisor production measurements.
