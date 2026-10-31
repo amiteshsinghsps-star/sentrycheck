@@ -1,3 +1,5 @@
+#![allow(unknown_lints)]
+#![allow(clippy::chunks_exact_to_as_chunks)]
 //! Upper-bound capability candidates. This crate cannot produce a compatibility verdict.
 pub mod elf;
 pub mod syscalls;
