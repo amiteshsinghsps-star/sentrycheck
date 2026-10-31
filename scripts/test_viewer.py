@@ -214,6 +214,7 @@ def check_viewer(playwright, browser_path, paths, summary, artifacts):
             link.click()
             page.wait_for_function("wanted => location.hash === wanted", arg=target)
             ready()
+            page.wait_for_selector("#main-content .detail-title", timeout=15000)
             detail_text = page.locator("#main-content").inner_text()
             require("causality" in detail_text.lower(), "Finding detail omitted evidence causality | hash=" + page.evaluate("location.hash") + " | text=" + detail_text[:1800].replace("\n", " / "))
             citations = page.locator("#main-content a[href^='https://']")
