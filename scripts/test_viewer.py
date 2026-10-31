@@ -213,6 +213,7 @@ def check_viewer(playwright, browser_path, paths, summary, artifacts):
             target = link.get_attribute("href")
             link.click()
             page.wait_for_function("wanted => location.hash === wanted", arg=target)
+            ready()
             require("causality" in page.locator("#main-content").inner_text().lower(), "Finding detail omitted evidence causality")
             citations = page.locator("#main-content a[href^='https://']")
             require(citations.count() > 0, "Finding detail has no source citation")
